@@ -73,6 +73,7 @@ import benefitOne from "../assets/benefit-1.png";
 import benefitTwo from "../assets/benefit-2.png";
 import benefitThree from "../assets/benefit-3.png";
 import benefitFour from "../assets/benefit-4.png";
+import benefitFive from "../assets/benefit-5.png";
 import benefitSix from "../assets/benefit-6.png";
 import greenArrow from "../assets/green-arrow.png";
 import cup from "../assets/cup.png";
@@ -468,6 +469,7 @@ const LandingPage = () => {
               <Box sx={{ maxWidth: "40px", width: "40px" }} component="img" src={scalesIcon} alt="Scales Icon" />
               <SubtitleText>Sales</SubtitleText>
             </Box>
+            
             <Box
               sx={{
                 display: "flex",
