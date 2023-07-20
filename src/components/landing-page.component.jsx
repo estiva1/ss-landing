@@ -452,8 +452,9 @@ const LandingPage = () => {
           sx={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-between",
+            justifyContent: "space-between !important",
             margin: "50px 0px",
+            gap: "50px"
           }}
         >
           <Box sx={{ width: "480px", maxWidth: "480px" }}>
