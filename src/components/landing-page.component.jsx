@@ -379,7 +379,7 @@ const LandingPage = () => {
                     height: "100%",
                   }}
                   component="img"
-                  src={benefitFour}
+                  src={benefitFive}
                   alt="Benefit"
                 />
                 <Box
