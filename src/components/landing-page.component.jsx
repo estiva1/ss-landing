@@ -77,6 +77,7 @@ import benefitFive from "../assets/benefit-5.png";
 import benefitSix from "../assets/benefit-6.png";
 import greenArrow from "../assets/green-arrow.png";
 import cup from "../assets/cup.png";
+import sticker from "../assets/sticker.png"
 
 const LandingPage = () => {
   const [email, setEmail] = useState("");
@@ -121,9 +122,18 @@ const LandingPage = () => {
 
   const handleDragStart = (e) => e.preventDefault();
   const items = [
-    <img src={repricerFrameOne} style={{ width: "100%" }} onDragStart={handleDragStart} role="presentation" />,
-    <img src={repricerFrameTwo} style={{ width: "100%" }} onDragStart={handleDragStart} role="presentation" />,
-    <img src={repricerFrameThree} style={{ width: "100%" }} onDragStart={handleDragStart} role="presentation" />,
+    <div>
+      <img src={repricerFrameOne} style={{ position: "relative", width: "95%" }} onDragStart={handleDragStart} role="presentation" />
+      <img src={sticker} style={{ width: "100px", position: "absolute", top: "0px", right: "40px" }} />
+    </div>,
+    <div>
+      <img src={repricerFrameTwo} style={{ position: "relative", width: "95%" }} onDragStart={handleDragStart} role="presentation" />
+      <img src={sticker} style={{ width: "100px", position: "absolute", top: "0px", right: "40px" }} />
+    </div>,
+    <div>
+      <img src={repricerFrameThree} style={{ position: "relative", width: "95%" }} onDragStart={handleDragStart} role="presentation" />
+      <img src={sticker} style={{ width: "100px", position: "absolute", top: "0px", right: "40px" }} />
+    </div>
   ];
 
   return (
@@ -454,7 +464,7 @@ const LandingPage = () => {
             flexDirection: "row",
             justifyContent: "space-between !important",
             margin: "50px 0px",
-            gap: "50px"
+            gap: "50px",
           }}
         >
           <Box sx={{ width: "480px", maxWidth: "480px" }}>
@@ -470,7 +480,7 @@ const LandingPage = () => {
               <Box sx={{ maxWidth: "40px", width: "40px" }} component="img" src={scalesIcon} alt="Scales Icon" />
               <SubtitleText>Sales</SubtitleText>
             </Box>
-            
+
             <Box
               sx={{
                 display: "flex",
