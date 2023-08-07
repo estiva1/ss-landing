@@ -38,46 +38,47 @@ import {
 
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
 
-import companyLogo from "../assets/logo.png";
-import companyLogoWhite from "../assets/logo-white.png";
-import flyingPeople from "../assets/section-one-image.png";
-import lock from "../assets/lock.png";
-import scalesIcon from "../assets/scales-icon.png";
-import marginIcon from "../assets/margin-icon.png";
-import buyBoxIcon from "../assets/buy-box-icon.png";
-import manMovingForward from "../assets/man-moving-forward.png";
-import increasing from "../assets/increasing.png";
-import timer from "../assets/timer.png";
-import dataReport from "../assets/data-report.png";
-import diamond from "../assets/diamond.png";
-import decal from "../assets/decal.svg";
-import decalWhite from "../assets/decal-white.svg";
-import managingOne from "../assets/managing-1.png";
-import managingTwo from "../assets/managing-2.png";
-import managingThree from "../assets/managing-3.png";
-import managingFour from "../assets/managing-4.png";
-import managingFive from "../assets/managing-5.png";
-import adjustingOne from "../assets/adjusting-1.png";
-import adjustingTwo from "../assets/adjusting-2.png";
-import adjustingThree from "../assets/adjusting-3.png";
-import adjustingFour from "../assets/adjusting-4.png";
-import adjustingFive from "../assets/adjusting-5.png";
-import automationOne from "../assets/automation-1.png";
-import automationTwo from "../assets/automation-2.png";
-import automationThree from "../assets/automation-3.png";
-import automationFour from "../assets/automation-4.png";
-import repricerFrameOne from "../assets/repricer-frame-1.png";
-import repricerFrameTwo from "../assets/repricer-frame-2.png";
-import repricerFrameThree from "../assets/repricer-frame-3.png";
-import benefitOne from "../assets/benefit-1.png";
-import benefitTwo from "../assets/benefit-2.png";
-import benefitThree from "../assets/benefit-3.png";
-import benefitFour from "../assets/benefit-4.png";
-import benefitFive from "../assets/benefit-5.png";
-import benefitSix from "../assets/benefit-6.png";
-import greenArrow from "../assets/green-arrow.png";
-import cup from "../assets/cup.png";
-import sticker from "../assets/sticker.png"
+import companyLogo from "../../assets/logo.png";
+import companyLogoWhite from "../../assets/logo-white.png";
+import flyingPeople from "../../assets/section-one-image.png";
+import lock from "../../assets/lock.png";
+import scalesIcon from "../../assets/scales-icon.png";
+import marginIcon from "../../assets/margin-icon.png";
+import buyBoxIcon from "../../assets/buy-box-icon.png";
+import manMovingForward from "../../assets/man-moving-forward.png";
+import increasing from "../../assets/increasing.png";
+import timer from "../../assets/timer.png";
+import dataReport from "../../assets/data-report.png";
+import diamond from "../../assets/diamond.png";
+import decal from "../../assets/decal.svg";
+import decalWhite from "../../assets/decal-white.svg";
+import managingOne from "../../assets/managing-1.png";
+import managingTwo from "../../assets/managing-2.png";
+import managingThree from "../../assets/managing-3.png";
+import managingFour from "../../assets/managing-4.png";
+import managingFive from "../../assets/managing-5.png";
+import adjustingOne from "../../assets/adjusting-1.png";
+import adjustingTwo from "../../assets/adjusting-2.png";
+import adjustingThree from "../../assets/adjusting-3.png";
+import adjustingFour from "../../assets/adjusting-4.png";
+import adjustingFive from "../../assets/adjusting-5.png";
+import automationOne from "../../assets/automation-1.png";
+import automationTwo from "../../assets/automation-2.png";
+import automationThree from "../../assets/automation-3.png";
+import automationFour from "../../assets/automation-4.png";
+import repricerFrameOne from "../../assets/repricer-frame-1.png";
+import repricerFrameTwo from "../../assets/repricer-frame-2.png";
+import repricerFrameThree from "../../assets/repricer-frame-3.png";
+import benefitOne from "../../assets/benefit-1.png";
+import benefitTwo from "../../assets/benefit-2.png";
+import benefitThree from "../../assets/benefit-3.png";
+import benefitFour from "../../assets/benefit-4.png";
+import benefitFive from "../../assets/benefit-5.png";
+import benefitSix from "../../assets/benefit-6.png";
+import greenArrow from "../../assets/green-arrow.png";
+import cup from "../../assets/cup.png";
+import sticker from "../../assets/sticker.png";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   const [email, setEmail] = useState("");
@@ -108,32 +109,35 @@ const LandingPage = () => {
     setTab(newTab);
   };
 
-  const repricerImages = [
-    {
-      image: repricerFrameOne,
-    },
-    {
-      image: repricerFrameTwo,
-    },
-    {
-      image: repricerFrameThree,
-    },
-  ];
-
   const handleDragStart = (e) => e.preventDefault();
   const items = [
     <div>
-      <img src={repricerFrameOne} style={{ position: "relative", width: "95%" }} onDragStart={handleDragStart} role="presentation" />
+      <img
+        src={repricerFrameOne}
+        style={{ position: "relative", width: "95%" }}
+        onDragStart={handleDragStart}
+        role="presentation"
+      />
       <img src={sticker} style={{ width: "100px", position: "absolute", top: "0px", right: "40px" }} />
     </div>,
     <div>
-      <img src={repricerFrameTwo} style={{ position: "relative", width: "95%" }} onDragStart={handleDragStart} role="presentation" />
+      <img
+        src={repricerFrameTwo}
+        style={{ position: "relative", width: "95%" }}
+        onDragStart={handleDragStart}
+        role="presentation"
+      />
       <img src={sticker} style={{ width: "100px", position: "absolute", top: "0px", right: "40px" }} />
     </div>,
     <div>
-      <img src={repricerFrameThree} style={{ position: "relative", width: "95%" }} onDragStart={handleDragStart} role="presentation" />
+      <img
+        src={repricerFrameThree}
+        style={{ position: "relative", width: "95%" }}
+        onDragStart={handleDragStart}
+        role="presentation"
+      />
       <img src={sticker} style={{ width: "100px", position: "absolute", top: "0px", right: "40px" }} />
-    </div>
+    </div>,
   ];
 
   return (
@@ -148,7 +152,9 @@ const LandingPage = () => {
           src={companyLogo}
           alt="Company Logo"
         />
-        <StyledBlueButton variant="contained">Start free trial</StyledBlueButton>
+        <Link to="/registration">
+          <StyledBlueButton variant="contained">Start free trial</StyledBlueButton>
+        </Link>
       </SectionWrapper>
 
       <SectionWrapper sx={{ padding: "40px 130px" }}>
@@ -176,10 +182,12 @@ const LandingPage = () => {
               Sign up for free today!
             </DescriptionStandart>
             <form onSubmit={handleSubmit} style={{ display: "flex", gap: "10px" }}>
-              <StyledTextField id="message" name="message" placeholder="Email" value={email} onChange={handleChange} />
-              <StyledBlueButton type="submit" variant="contained" endIcon={<EastRoundedIcon />}>
-                Start free trial
-              </StyledBlueButton>
+              <StyledTextField id="email" name="email" placeholder="Email" value={email} onChange={handleChange} />
+              <Link to="/registration">
+                <StyledBlueButton type="submit" variant="contained" endIcon={<EastRoundedIcon />}>
+                  Start free trial
+                </StyledBlueButton>
+              </Link>
             </form>
             <Box
               sx={{
@@ -437,9 +445,11 @@ const LandingPage = () => {
             </Box>
           </Stack>
         </Box>
-        <StyledBlueButton type="submit" variant="contained" endIcon={<EastRoundedIcon />}>
-          Start free trial
-        </StyledBlueButton>
+        <Link to="/registration">
+          <StyledBlueButton type="submit" variant="contained" endIcon={<EastRoundedIcon />}>
+            Start free trial
+          </StyledBlueButton>
+        </Link>
       </SectionWrapper>
 
       <SectionWrapper
@@ -583,14 +593,16 @@ const LandingPage = () => {
             <DescriptionSmall style={{ color: "#fff" }}>*No credit card required</DescriptionSmall>
           </Box>
 
-          <StyledBlueButton
-            textColor="#1565D8"
-            backgroundColor="#fff"
-            variant="contained"
-            endIcon={<EastRoundedIcon />}
-          >
-            Start free trial
-          </StyledBlueButton>
+          <Link to="/registration">
+            <StyledBlueButton
+              textColor="#1565D8"
+              backgroundColor="#fff"
+              variant="contained"
+              endIcon={<EastRoundedIcon />}
+            >
+              Start free trial
+            </StyledBlueButton>
+          </Link>
 
           <Box
             sx={{ position: "absolute", right: "130px", bottom: "20px", maxWidth: "350px", width: "350px" }}
@@ -633,7 +645,9 @@ const LandingPage = () => {
           items={items}
         />
 
-        <StyledBlueButton variant="contained">Turn On the Repricer NOW</StyledBlueButton>
+        <Link to="/registration">
+          <StyledBlueButton variant="contained">Turn On the Repricer NOW</StyledBlueButton>
+        </Link>
       </SectionWrapper>
 
       <SectionWrapper
@@ -1021,9 +1035,11 @@ const LandingPage = () => {
           </MutableContentBox>
         </Box>
 
-        <StyledBlueButton type="submit" variant="contained" endIcon={<EastRoundedIcon />}>
-          Start free trial
-        </StyledBlueButton>
+        <Link to="/registration">
+          <StyledBlueButton type="submit" variant="contained" endIcon={<EastRoundedIcon />}>
+            Start free trial
+          </StyledBlueButton>
+        </Link>
       </SectionWrapper>
 
       <SectionWrapper
@@ -1081,9 +1097,11 @@ const LandingPage = () => {
                 background: "#6FD5F6",
               }}
             >
-              <StyledBlueButton variant="contained" endIcon={<EastRoundedIcon />}>
-                Start free trial
-              </StyledBlueButton>
+              <Link to="/registration">
+                <StyledBlueButton variant="contained" endIcon={<EastRoundedIcon />}>
+                  Start free trial
+                </StyledBlueButton>
+              </Link>
             </Box>
           </Box>
 

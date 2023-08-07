@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import { Box, Button, Chip, TextField, Typography } from "@mui/material";
+import { Box, Button, Chip } from "@mui/material";
 
 export const SectionWrapper = styled(Box)`
   display: flex;

@@ -1,11 +1,17 @@
 import { GlobalStyle } from "./global.styles";
-import LandingPage from "./components/landing-page.component";
+import { Routes, Route } from "react-router-dom";
+
+import LandingPage from "./components/landing-page/landing-page.component";
+import Registration from "./components/registration/registration.component";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <LandingPage />
+      <Routes>
+        <Route index element={<LandingPage />} />
+        <Route path="registration" element={<Registration />} />
+      </Routes>
     </>
   );
 }
