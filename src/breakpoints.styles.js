@@ -1,5 +1,5 @@
 const size = {
-  xs: "400px", // for small screen mobile
+  xs: "450px", // for small screen mobile
   sm: "600px", // for mobile screen
   md: "960px", // for tablets
   lg: "1280px", // for laptops
