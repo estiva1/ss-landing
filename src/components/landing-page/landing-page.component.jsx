@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Fragment } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
@@ -79,10 +79,15 @@ import greenArrow from "../../assets/green-arrow.png";
 import cup from "../../assets/cup.png";
 import sticker from "../../assets/sticker.png";
 import { Link } from "react-router-dom";
+import Header from "../header/header.component";
+import Hero from "../hero/hero.component";
+import StickyCursor from "../../utils/framer-animations/sticky-cursor/sticky-cursor.component";
 
 const LandingPage = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState(null);
+
+  const stickyElement = useRef(null);
 
   function isValidEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
@@ -142,87 +147,11 @@ const LandingPage = () => {
 
   return (
     <Fragment>
-      <SectionWrapper sx={{ padding: "32px 130px" }}>
-        <Box
-          sx={{
-            minHeight: "32px",
-            height: "32px",
-          }}
-          component="img"
-          src={companyLogo}
-          alt="Company Logo"
-        />
-        <Link to="/registration">
-          <StyledBlueButton variant="contained">Start free trial</StyledBlueButton>
-        </Link>
-      </SectionWrapper>
+      <StickyCursor />
+      <Header />
+      <Hero />
 
-      <SectionWrapper sx={{ padding: "40px 130px" }}>
-        <Box
-          sx={{
-            maxWidth: "680px",
-            width: "680px",
-            paddingTop: "60px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-          }}
-        >
-          <Box sx={{ display: "flex", flexDirection: "column" }}>
-            <HeroText>{`With our Ai Repricing, it's\nPrime day…`}</HeroText>
-            <HeroText highlighted="true">Every day!</HeroText>
-            <HeroSpanText>
-              The only Ai Repricer that will automatically boost your Amazon sales by 30%, or we'll pay you $100 for
-              wasting your time
-            </HeroSpanText>
-          </Box>
-
-          <Box>
-            <DescriptionStandart style={{ color: "#000", fontWeight: "600", margin: "14px 0px" }}>
-              Sign up for free today!
-            </DescriptionStandart>
-            <form onSubmit={handleSubmit} style={{ display: "flex", gap: "10px" }}>
-              <StyledTextField id="email" name="email" placeholder="Email" value={email} onChange={handleChange} />
-              <Link to="/registration">
-                <StyledBlueButton type="submit" variant="contained" endIcon={<EastRoundedIcon />}>
-                  Start free trial
-                </StyledBlueButton>
-              </Link>
-            </form>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                gap: "6px",
-              }}
-            >
-              <Box
-                sx={{
-                  maxWidth: "10px",
-                  width: "10px",
-                }}
-                component="img"
-                src={lock}
-                alt="Lock Icon"
-              />
-              <DescriptionExtraSmall>No credit card required</DescriptionExtraSmall>
-            </Box>
-          </Box>
-        </Box>
-
-        <Box
-          sx={{
-            maxWidth: "400px",
-            width: "400px",
-          }}
-          component="img"
-          src={flyingPeople}
-          alt="Company Logo"
-        />
-      </SectionWrapper>
-
-      <SectionWrapper sx={{ padding: "90px 130px", background: "#1565D8", justifyContent: "space-evenly" }}>
+      {/* <SectionWrapper sx={{ padding: "90px 130px", background: "#1565D8", justifyContent: "space-evenly" }}>
         <Box
           sx={{
             display: "flex",
@@ -1144,7 +1073,7 @@ const LandingPage = () => {
         <Box sx={{ display: "flex", justifyContent: "center", width: "100%" }}>
           <Box sx={{ maxHeight: "32px", height: "32px" }} component="img" src={companyLogoWhite} alt="Logo" />
         </Box>
-      </SectionWrapper>
+      </SectionWrapper> */}
     </Fragment>
   );
 };
