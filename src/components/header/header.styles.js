@@ -3,9 +3,16 @@ import { device } from "../../breakpoints.styles";
 import { Link } from "react-router-dom";
 
 export const HeaderContainer = styled.div`
+  position: fixed;
+  top: 0px;
+  width: 100%;
   padding: 24px 130px;
+  background-color: #ffffffbf; //bf === 75% of transparency
+  backdrop-filter: blur(20px);
+  //border-bottom: 1px solid #1565d8;
   overflow-x: clip;
   cursor: none;
+  z-index: 10;
 
   @media ${device.xl} {
     padding: 24px 80px;

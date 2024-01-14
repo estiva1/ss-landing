@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 
 import CustomButton from "../UI/button/button.component";
 import CustomTextField from "../UI/textfield/textfield.component";
 
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
-import FramerMagnetic from "../../utils/framer-animations/framer-magnetic.component";
+import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 
 import {
   FormBox,
@@ -23,7 +22,7 @@ import {
   StyledHeroSvg,
   SubHeadline,
 } from "./hero.styles";
-import ScrollReveal from "../../utils/framer-animations/scroll-reveal/scroll-reveal.component";
+import ScrollReveal from "../../utils/framer-animations/scroll-reveal/simple-scroll-reveal/scroll-reveal.component";
 
 const Hero = () => {
   const [email, setEmail] = useState("");

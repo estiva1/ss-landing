@@ -37,16 +37,14 @@ const StickyCursor = () => {
   });
 
   return (
-    <div>
-      <StyledMotionDiv
-        style={{
-          left: smoothMouse.x,
-          top: smoothMouse.y,
-          scaleX: scale.x,
-          scaleY: scale.y,
-        }}
-      ></StyledMotionDiv>
-    </div>
+    <StyledMotionDiv
+      style={{
+        left: smoothMouse.x,
+        top: smoothMouse.y,
+        scaleX: scale.x,
+        scaleY: scale.y,
+      }}
+    />
   );
 };
 

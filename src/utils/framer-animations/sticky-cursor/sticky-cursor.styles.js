@@ -9,6 +9,7 @@ export const StyledMotionDiv = styled(motion.div)`
   background-color: #1565D8;
   border-radius: 50%;
   pointer-events: none;
+  z-index: 11;
 
   @media ${device.xs} {
     display: none;

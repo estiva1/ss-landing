@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack } from "@mui/material";
 import CustomButton from "../UI/button/button.component";
-import FramerMagnetic from "../../utils/framer-animations/framer-magnetic.component";
+import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 
 import logo from "../../assets/logo.png";
 import { HeaderContainer, HeaderLogo, StyledLink } from "./header.styles";

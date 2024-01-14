@@ -82,6 +82,7 @@ import { Link } from "react-router-dom";
 import Header from "../header/header.component";
 import Hero from "../hero/hero.component";
 import StickyCursor from "../../utils/framer-animations/sticky-cursor/sticky-cursor.component";
+import ProfitSection from "../profit-section/profit-section.component";
 
 const LandingPage = () => {
   const [email, setEmail] = useState("");
@@ -150,6 +151,7 @@ const LandingPage = () => {
       <StickyCursor />
       <Header />
       <Hero />
+      <ProfitSection />
 
       {/* <SectionWrapper sx={{ padding: "90px 130px", background: "#1565D8", justifyContent: "space-evenly" }}>
         <Box
