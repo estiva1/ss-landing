@@ -17,7 +17,6 @@ export const HeroContainer = styled.div`
     padding: 30px 80px 60px 80px;
   }
   @media ${device.xs} {
-    margin-top: 62px;
     padding: 60px 15px;
     flex-direction: column;
     row-gap: 40px;
