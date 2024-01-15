@@ -52,23 +52,24 @@ const UniqueBenefits = () => {
     },
     {
       image: benefit4,
-      captionPrimary: "INTUITIVE",
-      captionSecondary: "DASHBOARD",
-      paragraph: "Adjust to competitor price changes rapidly to keep your products competitive",
+      captionPrimary: "QUICK STRATEGY",
+      captionSecondary: "ADJUSTMENTS",
+      paragraph: "Set default rules and competitor's rule",
     },
     {
       image: benefit5,
-      captionPrimary: "INTUITIVE",
-      captionSecondary: "DASHBOARD",
-      paragraph: "Adjust to competitor price changes rapidly to keep your products competitive",
+      captionPrimary: "DATA-DRIVEN",
+      captionSecondary: "FORECASTING",
+      paragraph: "Predict best outcome based on historical data",
     },
     {
       image: benefit6,
-      captionPrimary: "INTUITIVE",
-      captionSecondary: "DASHBOARD",
-      paragraph: "Adjust to competitor price changes rapidly to keep your products competitive",
+      captionPrimary: "AUTO-PRICING",
+      captionSecondary: "CONTROL",
+      paragraph: "Automatically set the minimum and maximum prices",
     },
   ];
+
   return (
     <UniqueBenefitsContainer>
       <Heading>

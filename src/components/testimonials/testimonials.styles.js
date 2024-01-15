@@ -12,6 +12,7 @@ export const TestimonialsContainer = styled.div`
   background: #fff;
   gap: 50px;
   cursor: none;
+  overflow: hidden; // for floating shapes
   z-index: 0;
 
   @media ${device.xl} {
