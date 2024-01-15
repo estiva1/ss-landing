@@ -21,6 +21,7 @@ import {
   MutableContentBox,
   ProfitValue,
   ReasonContainer,
+  RootContainer,
   SectionHeaderText,
   SectionHeaderTextHighlighted,
   SectionWrapper,
@@ -73,7 +74,8 @@ const LandingPage = () => {
   };
 
   return (
-    <Fragment>
+
+    <RootContainer>
       <StickyCursor />
       <Header />
       <Hero />
@@ -1004,7 +1006,7 @@ const LandingPage = () => {
           <Box sx={{ maxHeight: "32px", height: "32px" }} component="img" src={companyLogoWhite} alt="Logo" />
         </Box>
       </SectionWrapper> */}
-    </Fragment>
+    </RootContainer>
   );
 };
 
