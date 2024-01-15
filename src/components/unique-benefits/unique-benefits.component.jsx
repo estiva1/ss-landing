@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import CustomButton from "../UI/button/button.component";
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
+import TextTypingAnimation from "../../utils/framer-animations/text-typing-animation/text-typing-animation.componen";
 
 import benefit1 from "../../assets/benefit-1.png";
 import benefit2 from "../../assets/benefit-2.png";
@@ -27,8 +28,6 @@ import {
   Paragraph,
   UniqueBenefitsContainer,
 } from "./unique-benefits.styles";
-import DelayedScrollReveal from "../../utils/framer-animations/scroll-reveal/delayed-scroll-reveal/delayed-scroll-reveal.component";
-import TextTypingAnimation from "../../utils/framer-animations/text-typing-animation/text-typing-animation.componen";
 
 const UniqueBenefits = () => {
   const heading = "Embrace the unique benefits that elevate your experience";
@@ -75,10 +74,9 @@ const UniqueBenefits = () => {
       <Heading>
         <TextTypingAnimation text={heading} />
       </Heading>
-      
+
       <Columns>
         {benefits.map((benefit, index) => (
-          //   <DelayedScrollReveal key={`profit-amount-box-${index}`} index={index} speed={20}>
           <ColumnContainer key={index}>
             <BenefitContainer>
               <BenefitImageBox>
@@ -95,7 +93,6 @@ const UniqueBenefits = () => {
               <Paragraph>{benefit.paragraph}</Paragraph>
             </BenefitContainer>
           </ColumnContainer>
-          //   </DelayedScrollReveal>
         ))}
       </Columns>
 

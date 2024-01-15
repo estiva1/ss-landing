@@ -6,6 +6,8 @@ export const HeaderContainer = styled.div`
   position: fixed;
   top: 0px;
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 16px 130px;
   background-color: #ffffffbf; //bf === 75% of transparency
   backdrop-filter: blur(20px);
