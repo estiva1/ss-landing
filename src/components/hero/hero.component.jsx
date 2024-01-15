@@ -5,6 +5,7 @@ import CustomTextField from "../UI/textfield/textfield.component";
 
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
+import ScrollReveal from "../../utils/framer-animations/scroll-reveal/simple-scroll-reveal/scroll-reveal.component";
 
 import {
   FormBox,
@@ -22,7 +23,6 @@ import {
   StyledHeroSvg,
   SubHeadline,
 } from "./hero.styles";
-import ScrollReveal from "../../utils/framer-animations/scroll-reveal/simple-scroll-reveal/scroll-reveal.component";
 
 const Hero = () => {
   const [email, setEmail] = useState("");

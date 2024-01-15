@@ -1,0 +1,20 @@
+.alice-carousel__dots-item.__active {
+  width: 18px !important;
+  height: 18px !important;
+  background-color: #1565d8 !important;
+  transition: all ease 0.4s;
+  cursor: none !important;
+}
+
+.alice-carousel__dots-item {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: #4E5969 !important;
+  transition: all ease 0.4s;
+  cursor: none !important;
+}
+
+.alice-carousel__dots-item.__active:hover,
+.alice-carousel__dots-item:hover {
+  transform: scale(2.5);
+}

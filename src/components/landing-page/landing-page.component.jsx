@@ -38,51 +38,13 @@ import {
 
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
 
-import companyLogo from "../../assets/logo.png";
-import companyLogoWhite from "../../assets/logo-white.png";
-import flyingPeople from "../../assets/section-one-image.png";
-import lock from "../../assets/lock.png";
-import scalesIcon from "../../assets/scales-icon.png";
-import marginIcon from "../../assets/margin-icon.png";
-import buyBoxIcon from "../../assets/buy-box-icon.png";
-import manMovingForward from "../../assets/man-moving-forward.png";
-import increasing from "../../assets/increasing.png";
-import timer from "../../assets/timer.png";
-import dataReport from "../../assets/data-report.png";
-import diamond from "../../assets/diamond.png";
-import decal from "../../assets/decal.svg";
-import decalWhite from "../../assets/decal-white.svg";
-import managingOne from "../../assets/managing-1.png";
-import managingTwo from "../../assets/managing-2.png";
-import managingThree from "../../assets/managing-3.png";
-import managingFour from "../../assets/managing-4.png";
-import managingFive from "../../assets/managing-5.png";
-import adjustingOne from "../../assets/adjusting-1.png";
-import adjustingTwo from "../../assets/adjusting-2.png";
-import adjustingThree from "../../assets/adjusting-3.png";
-import adjustingFour from "../../assets/adjusting-4.png";
-import adjustingFive from "../../assets/adjusting-5.png";
-import automationOne from "../../assets/automation-1.png";
-import automationTwo from "../../assets/automation-2.png";
-import automationThree from "../../assets/automation-3.png";
-import automationFour from "../../assets/automation-4.png";
-import repricerFrameOne from "../../assets/repricer-frame-1.png";
-import repricerFrameTwo from "../../assets/repricer-frame-2.png";
-import repricerFrameThree from "../../assets/repricer-frame-3.png";
-import benefitOne from "../../assets/benefit-1.png";
-import benefitTwo from "../../assets/benefit-2.png";
-import benefitThree from "../../assets/benefit-3.png";
-import benefitFour from "../../assets/benefit-4.png";
-import benefitFive from "../../assets/benefit-5.png";
-import benefitSix from "../../assets/benefit-6.png";
-import greenArrow from "../../assets/green-arrow.png";
-import cup from "../../assets/cup.png";
-import sticker from "../../assets/sticker.png";
 import { Link } from "react-router-dom";
 import Header from "../header/header.component";
 import Hero from "../hero/hero.component";
 import StickyCursor from "../../utils/framer-animations/sticky-cursor/sticky-cursor.component";
 import ProfitSection from "../profit-section/profit-section.component";
+import SetUpRepricer from "../set-up-repricer/set-up-repricer.component";
+import UniqueBenefits from "../unique-benefits/unique-benefits.component";
 
 const LandingPage = () => {
   const [email, setEmail] = useState("");
@@ -110,48 +72,14 @@ const LandingPage = () => {
     }
   };
 
-  const [tab, setTab] = useState(1);
-  const handleTabChange = (newTab) => {
-    setTab(newTab);
-  };
-
-  const handleDragStart = (e) => e.preventDefault();
-  const items = [
-    <div>
-      <img
-        src={repricerFrameOne}
-        style={{ position: "relative", width: "95%" }}
-        onDragStart={handleDragStart}
-        role="presentation"
-      />
-      <img src={sticker} style={{ width: "100px", position: "absolute", top: "0px", right: "40px" }} />
-    </div>,
-    <div>
-      <img
-        src={repricerFrameTwo}
-        style={{ position: "relative", width: "95%" }}
-        onDragStart={handleDragStart}
-        role="presentation"
-      />
-      <img src={sticker} style={{ width: "100px", position: "absolute", top: "0px", right: "40px" }} />
-    </div>,
-    <div>
-      <img
-        src={repricerFrameThree}
-        style={{ position: "relative", width: "95%" }}
-        onDragStart={handleDragStart}
-        role="presentation"
-      />
-      <img src={sticker} style={{ width: "100px", position: "absolute", top: "0px", right: "40px" }} />
-    </div>,
-  ];
-
   return (
     <Fragment>
       <StickyCursor />
       <Header />
       <Hero />
       <ProfitSection />
+      <SetUpRepricer />
+      <UniqueBenefits />
 
       {/* <SectionWrapper sx={{ padding: "90px 130px", background: "#1565D8", justifyContent: "space-evenly" }}>
         <Box

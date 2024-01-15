@@ -6,7 +6,7 @@ export const HeaderContainer = styled.div`
   position: fixed;
   top: 0px;
   width: 100%;
-  padding: 24px 130px;
+  padding: 16px 130px;
   background-color: #ffffffbf; //bf === 75% of transparency
   backdrop-filter: blur(20px);
   //border-bottom: 1px solid #1565d8;
@@ -15,7 +15,7 @@ export const HeaderContainer = styled.div`
   z-index: 10;
 
   @media ${device.xl} {
-    padding: 24px 80px;
+    padding: 16px 80px;
   }
 
   @media ${device.xs} {

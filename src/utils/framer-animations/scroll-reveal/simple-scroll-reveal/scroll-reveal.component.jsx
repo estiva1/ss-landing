@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const ScrollReveal = ({ index, children }) => {
+const ScrollReveal = ({ index, children, ...props }) => {
   return (
     <motion.div
+      {...props}
       initial={{
         opacity: 0,
         x: index % 2 === 0 ? 50 : -50,

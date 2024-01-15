@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const DelayedScrollReveal = ({ index, children, ...props }) => {
+const DelayedScrollReveal = ({ index, children, speed = 2, ...props }) => {
   return (
     <motion.div
       {...props}
@@ -14,7 +14,7 @@ const DelayedScrollReveal = ({ index, children, ...props }) => {
         scale: 1,
         transition: {
           duration: 0.5,
-          delay: index === 0 ? 0 : index / 2,
+          delay: index === 0 ? 0 : index / speed,
         },
       }}
       viewport={{ once: true }}
