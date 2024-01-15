@@ -31,7 +31,7 @@ export const StyledButton = styled(Button)`
     &:hover {
       .MuiButton-endIcon {
         transition: 0.15s;
-        transform: translateX(3px);
+        transform: translateX(10px);
       }
     }
   }
