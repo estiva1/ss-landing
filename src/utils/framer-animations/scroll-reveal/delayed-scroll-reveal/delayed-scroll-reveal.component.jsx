@@ -13,8 +13,8 @@ const DelayedScrollReveal = ({ index, children, speed = 2, ...props }) => {
         opacity: 1,
         scale: 1,
         transition: {
-          duration: 0.5,
-          delay: index === 0 ? 0 : index / speed,
+          duration: 1,
+          delay: (index * 0.25) / speed,
         },
       }}
       viewport={{ once: true }}

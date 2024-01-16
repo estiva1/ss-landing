@@ -7,16 +7,17 @@ const ScrollReveal = ({ index, children, ...props }) => {
       {...props}
       initial={{
         opacity: 0,
-        x: index % 2 === 0 ? 50 : -50,
+        x: index % 2 === 0 ? 100 : -100,
       }}
       whileInView={{
         opacity: 1,
         x: 0,
         transition: {
-          duration: 1,
+          duration: 1.5,
+          ease: [0.33, 1, 0.68, 1],
         },
       }}
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.7 }}
     >
       {children}
     </motion.div>

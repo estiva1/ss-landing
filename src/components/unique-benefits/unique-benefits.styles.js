@@ -57,7 +57,7 @@ export const Columns = styled.div`
   }
 `;
 
-export const ColumnContainer = styled(DelayedScrollReveal)`
+export const ColumnContainer = styled.div`
   width: 33.3%;
   height: max-content;
   padding-inline: 16px;
@@ -70,7 +70,19 @@ export const ColumnContainer = styled(DelayedScrollReveal)`
   }
 `;
 
-export const BenefitContainer = styled.div`
+export const BenefitImageBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 292px;
+  border-radius: 32px;
+  background: #fff;
+  box-shadow: 3.235px 3.235px 20.217px 0px rgba(111, 213, 246, 0.25), 1.2px 1.2px 2px #00a3ff;
+  transition: box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+`;
+
+export const BenefitContainer = styled(DelayedScrollReveal)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -79,29 +91,33 @@ export const BenefitContainer = styled.div`
   @media ${device.xs} {
     gap: 8px;
   }
+
+  &:hover {
+    ${BenefitImageBox} {
+      box-shadow: 3.235px 3.235px 20.217px 0px rgba(111, 213, 246, 0.25), 3px 3px 3px #00a3ff;
+      transition: box-shadow 0.3s ease-in-out;
+    }
+  }
 `;
 
-export const BenefitImageBox = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 292px;
-  border-radius: 32px;
-  border: 1.617px solid #00a3ff;
-  background: #fff;
-  box-shadow: 3.235px 3.235px 20.217px 0px rgba(111, 213, 246, 0.25);
-  overflow: hidden;
+export const BenefitCaptionBox = styled.div`
+  width: max-content;
 `;
-
-export const BenefitCaptionBox = styled.div``;
 
 export const CaptionSecondaryBorderBox = styled.div`
   display: flex;
+  width: max-content;
   padding: 2.4px 18px;
   align-items: flex-start;
   gap: 6px;
   border-radius: 60px;
-  border: 1px solid #000;
+  box-shadow: inset 0px 0px 0px 1.2px #000;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: inset 0px 0px 0px 3px #000;
+    transition: box-shadow 0.3s ease-in-out;
+  }
 `;
 
 export const BenefitImage = styled.img`

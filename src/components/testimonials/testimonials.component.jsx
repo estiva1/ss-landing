@@ -70,7 +70,7 @@ const Testimonials = () => {
       <Columns>
         {clients.map((client, index) => (
           <ColumnContainer key={index}>
-            <TestimonialContainer>
+            <TestimonialContainer index={index}>
               <TestimonialBox
                 avatar={client.avatar}
                 clientName={client.name}

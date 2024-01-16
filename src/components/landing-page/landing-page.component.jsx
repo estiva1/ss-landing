@@ -47,6 +47,7 @@ import ProfitSection from "../profit-section/profit-section.component";
 import SetUpRepricer from "../set-up-repricer/set-up-repricer.component";
 import UniqueBenefits from "../unique-benefits/unique-benefits.component";
 import Testimonials from "../testimonials/testimonials.component";
+import Pricing from "../pricing/pricing.component";
 
 const LandingPage = () => {
   const [email, setEmail] = useState("");
@@ -83,6 +84,7 @@ const LandingPage = () => {
       <SetUpRepricer />
       <UniqueBenefits />
       <Testimonials />
+      <Pricing />
 
       {/* <SectionWrapper sx={{ padding: "90px 130px", background: "#1565D8", justifyContent: "space-evenly" }}>
         <Box

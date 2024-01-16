@@ -59,7 +59,7 @@ export const Paragraph = styled.p`
 export const Columns = styled.div`
   display: flex;
   flex-flow: row wrap;
-  margin-inline: -16px;
+  margin-inline: -20px;
   //background-color: red;
   > *:nth-last-child(-n + 3) {
     margin-bottom: -40px;
@@ -76,10 +76,10 @@ export const Columns = styled.div`
   }
 `;
 
-export const ColumnContainer = styled(DelayedScrollReveal)`
+export const ColumnContainer = styled.div`
   width: 33.3%;
   height: max-content;
-  padding-inline: 16px;
+  padding-inline: 20px;
   padding-bottom: 40px;
   //background-color: rebeccapurple;
 
@@ -89,7 +89,7 @@ export const ColumnContainer = styled(DelayedScrollReveal)`
   }
 `;
 
-export const TestimonialContainer = styled.div`
+export const TestimonialContainer = styled(DelayedScrollReveal)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;

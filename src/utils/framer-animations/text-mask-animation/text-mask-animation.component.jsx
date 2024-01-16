@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 const TextMaskAnimation = ({ phrases, delay = 0.075 }) => {
   const animation = {
     initial: { y: "100%" },
-    enter: (i) => ({ y: "0", transition: { duration: 0.75, ease: [0.33, 1, 0.68, 1], delay: delay } }),
+    enter: (i) => ({ y: "0", transition: { duration: 1.25, ease: [0.33, 1, 0.68, 1], delay: delay } }),
   };
 
   const { ref, inView, entry } = useInView({

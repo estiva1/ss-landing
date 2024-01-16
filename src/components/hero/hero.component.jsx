@@ -23,13 +23,15 @@ import {
   StyledHeroSvg,
   SubHeadline,
 } from "./hero.styles";
+import TextTypingAnimation from "../../utils/framer-animations/text-typing-animation/text-typing-animation.componen";
+import TextMaskAnimation from "../../utils/framer-animations/text-mask-animation/text-mask-animation.component";
 
 const Hero = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState(null);
 
   const heroTextOne = "With our Ai Repricing, it's\n Prime day…";
-  const heroTextTwo = "Every day!";
+  const heroTextTwo = ["Every day!"];
 
   function isValidEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
@@ -55,30 +57,11 @@ const Hero = () => {
     <HeroContainer>
       <HeroContent>
         <Headline>
-          {heroTextOne.split(" ").map((el, i) => (
-            <HeroText
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                duration: 0.75,
-                delay: i / 10,
-              }}
-              key={i}
-            >
-              {el}{" "}
-            </HeroText>
-          ))}
-
-          <HeroText
-            highlighted
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{
-              duration: 0.5,
-              delay: 1,
-            }}
-          >
-            {heroTextTwo}
+          <HeroText>
+            <TextTypingAnimation text={heroTextOne} />
+          </HeroText>
+          <HeroText highlighted>
+            <TextMaskAnimation phrases={heroTextTwo} delay={2} />
           </HeroText>
         </Headline>
         <SubHeadline>

@@ -28,6 +28,7 @@ import {
   Paragraph,
   UniqueBenefitsContainer,
 } from "./unique-benefits.styles";
+import TextDipserse from "../../utils/framer-animations/text-disperse/text-disperse.component";
 
 const UniqueBenefits = () => {
   const heading = "Embrace the unique benefits that elevate your experience";
@@ -79,13 +80,15 @@ const UniqueBenefits = () => {
       <Columns>
         {benefits.map((benefit, index) => (
           <ColumnContainer key={index}>
-            <BenefitContainer>
+            <BenefitContainer index={index}>
               <BenefitImageBox>
                 <BenefitImage src={benefit.image} />
               </BenefitImageBox>
 
               <BenefitCaptionBox>
-                <CaptionPrimary>{benefit.captionPrimary}</CaptionPrimary>
+                <TextDipserse>
+                  <p style={{ margin: 0 }}>{benefit.captionPrimary}</p>
+                </TextDipserse>
                 <CaptionSecondaryBorderBox>
                   <CaptionSecondary>{benefit.captionSecondary}</CaptionSecondary>
                 </CaptionSecondaryBorderBox>

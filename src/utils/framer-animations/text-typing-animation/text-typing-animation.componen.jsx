@@ -9,7 +9,7 @@ const TextTypingAnimation = ({ text }) => {
   };
 
   const { ref, inView, entry } = useInView({
-    threshold: 0.75,
+    threshold: 0.9,
     triggerOnce: true,
   });
 
@@ -21,10 +21,9 @@ const TextTypingAnimation = ({ text }) => {
           initial={{ opacity: 0 }}
           variants={animation}
           animate={inView ? { opacity: 1 } : ""}
-
           transition={{
-            duration: 0.45,
-            delay: i / 10,
+            duration: 0.75,
+            delay: i / 5,
           }}
           key={i}
         >
