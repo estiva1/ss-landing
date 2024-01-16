@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 import CustomButton from "../UI/button/button.component";
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
-import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
+
+import TextDipserse from "../../utils/framer-animations/text-disperse/text-disperse.component";
 import TextTypingAnimation from "../../utils/framer-animations/text-typing-animation/text-typing-animation.componen";
 
 import benefit1 from "../../assets/benefit-1.png";
@@ -27,7 +28,6 @@ import {
   Paragraph,
   UniqueBenefitsContainer,
 } from "./unique-benefits.styles";
-import TextDipserse from "../../utils/framer-animations/text-disperse/text-disperse.component";
 
 const UniqueBenefits = () => {
   const heading = "Embrace the unique benefits that elevate your experience";
@@ -100,13 +100,11 @@ const UniqueBenefits = () => {
       </Columns>
 
       <MobileButtonBox>
-        <FramerMagnetic>
-          <Link to="/registration">
-            <CustomButton variant="contained" endIcon={<EastRoundedIcon />}>
-              Try for FREE
-            </CustomButton>
-          </Link>
-        </FramerMagnetic>
+        <Link to="/registration">
+          <CustomButton variant="contained" endIcon={<EastRoundedIcon />}>
+            Try for FREE
+          </CustomButton>
+        </Link>
       </MobileButtonBox>
     </UniqueBenefitsContainer>
   );

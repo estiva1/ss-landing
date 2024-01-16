@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { device } from "../../breakpoints.styles";
 import DelayedScrollReveal from "../../utils/framer-animations/scroll-reveal/delayed-scroll-reveal/delayed-scroll-reveal.component";
+import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 
 export const UniqueBenefitsContainer = styled.div`
   display: flex;
@@ -155,7 +156,7 @@ export const Paragraph = styled.p`
   margin: 0;
 `;
 
-export const MobileButtonBox = styled.div`
+export const MobileButtonBox = styled(FramerMagnetic)`
   @media ${device.xs} {
     align-self: stretch;
   }

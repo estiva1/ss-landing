@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import CustomButton from "../UI/button/button.component";
 import TestimonialBox from "../UI/testimonial-box/testimonial-box.component";
-import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 import TextTypingAnimation from "../../utils/framer-animations/text-typing-animation/text-typing-animation.componen";
 
 import client1 from "../../assets/client-1.jpg";
@@ -83,11 +82,9 @@ const Testimonials = () => {
       </Columns>
 
       <MobileButtonBox>
-        <FramerMagnetic>
-          <Link to="/registration">
-            <CustomButton variant="contained">Become a Client Now</CustomButton>
-          </Link>
-        </FramerMagnetic>
+        <Link to="/registration">
+          <CustomButton variant="contained">Become a Client Now</CustomButton>
+        </Link>
       </MobileButtonBox>
     </TestimonialsContainer>
   );

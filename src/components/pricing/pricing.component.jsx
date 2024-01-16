@@ -7,7 +7,6 @@ import {
   ColumnContainer,
   Columns,
   Heading,
-  MobileButtonBox,
   Option,
   OptionText,
   Options,
@@ -90,15 +89,14 @@ const Pricing = () => {
 
           <Stack spacing="12px" alignItems="center">
             <OptionText $inverted>See for yourself with our 3 month trial</OptionText>
-            <MobileButtonBox>
-              <FramerMagnetic>
-                <Sparkles>
-                  <Link to="/registration">
-                    <CustomButton variant="contained">Try it For Free</CustomButton>
-                  </Link>
-                </Sparkles>
-              </FramerMagnetic>
-            </MobileButtonBox>
+
+            <FramerMagnetic>
+              <Sparkles>
+                <Link to="/registration">
+                  <CustomButton variant="contained">Try it For Free</CustomButton>
+                </Link>
+              </Sparkles>
+            </FramerMagnetic>
           </Stack>
         </PremiumSubscription>
       </PricingVariantsBox>

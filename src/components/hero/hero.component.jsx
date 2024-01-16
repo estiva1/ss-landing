@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 
 import CustomButton from "../UI/button/button.component";
+import Sparkles from "../UI/sparkles/sparkles.component";
 import CustomTextField from "../UI/textfield/textfield.component";
 
-import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
+import TextMaskAnimation from "../../utils/framer-animations/text-mask-animation/text-mask-animation.component";
 import ScrollReveal from "../../utils/framer-animations/scroll-reveal/simple-scroll-reveal/scroll-reveal.component";
+import TextTypingAnimation from "../../utils/framer-animations/text-typing-animation/text-typing-animation.componen";
+
+import EastRoundedIcon from "@mui/icons-material/EastRounded";
 
 import {
   FormBox,
@@ -24,9 +28,6 @@ import {
   StyledHeroSvg,
   SubHeadline,
 } from "./hero.styles";
-import TextTypingAnimation from "../../utils/framer-animations/text-typing-animation/text-typing-animation.componen";
-import TextMaskAnimation from "../../utils/framer-animations/text-mask-animation/text-mask-animation.component";
-import Sparkles from "../UI/sparkles/sparkles.component";
 
 const Hero = () => {
   const [email, setEmail] = useState("");

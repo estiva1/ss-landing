@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { device } from "../../breakpoints.styles";
 import DelayedScrollReveal from "../../utils/framer-animations/scroll-reveal/delayed-scroll-reveal/delayed-scroll-reveal.component";
+import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 
 export const PricingContainer = styled.div`
   display: flex;
@@ -155,10 +156,4 @@ export const CheckMark = styled.span`
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3e%3cg clip-path='url(%23a)'%3e%3ccircle cx='12' cy='12' r='12' fill='%2301CB99'/%3e%3cpath fill='%23fff' d='m13.1 15.14 4.74-4.57a1 1 0 0 0-1.39-1.44L11.7 13.7a1 1 0 0 1-1.44-.03l-2.28-2.11a1 1 0 0 0-1.36 1.46l2.25 2.1a3 3 0 0 0 4.23 0Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='%23fff' d='M0 0h24v24H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
-`;
-
-export const MobileButtonBox = styled.div`
-  @media ${device.xs} {
-    align-self: stretch;
-  }
 `;

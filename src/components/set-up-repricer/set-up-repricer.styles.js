@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { device } from "../../breakpoints.styles";
+import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 
 export const SetUpRepricerContainer = styled.div`
   position: relative;
@@ -97,7 +98,7 @@ export const MobileImageBoxForCarousel = styled.div`
   gap: 30px;
 `;
 
-export const MobileButtonBox = styled.div`
+export const MobileButtonBox = styled(FramerMagnetic)`
   @media ${device.xs} {
     align-self: stretch;
   }

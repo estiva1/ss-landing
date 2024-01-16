@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import CustomButton from "../UI/button/button.component";
-import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
+import Sparkles from "../UI/sparkles/sparkles.component";
 import TextMaskAnimation from "../../utils/framer-animations/text-mask-animation/text-mask-animation.component";
 import ScrollReveal from "../../utils/framer-animations/scroll-reveal/simple-scroll-reveal/scroll-reveal.component";
 
@@ -36,7 +36,6 @@ import {
   ShapeThree,
   ShapeTwo,
 } from "./set-up-repricer.styles";
-import Sparkles from "../UI/sparkles/sparkles.component";
 
 const SetUpRepricer = () => {
   const phrases = ["Set up your", "Repricer in less then 5 Minutes", "or else we give you 3 months free!"];
@@ -173,11 +172,9 @@ const SetUpRepricer = () => {
       </MobileCarousel>
 
       <MobileButtonBox>
-        <FramerMagnetic>
-          <Link to="/registration">
-            <CustomButton variant="contained">Turn On the Repricer NOW</CustomButton>
-          </Link>
-        </FramerMagnetic>
+        <Link to="/registration">
+          <CustomButton variant="contained">Turn On the Repricer NOW</CustomButton>
+        </Link>
       </MobileButtonBox>
     </SetUpRepricerContainer>
   );
