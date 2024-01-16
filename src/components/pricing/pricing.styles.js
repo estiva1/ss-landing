@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../breakpoints.styles";
+import DelayedScrollReveal from "../../utils/framer-animations/scroll-reveal/delayed-scroll-reveal/delayed-scroll-reveal.component";
 
 export const PricingContainer = styled.div`
   display: flex;
@@ -73,29 +74,14 @@ export const PremiumSubscription = styled(BasicSubscription)`
 export const Columns = styled.div`
   display: flex;
   flex-flow: row wrap;
-  margin-inline: -20px;
-  //background-color: red;
-  /* > *:nth-last-child(-n + 3) {
-    margin-bottom: -12px;
-  } */
-
-  @media ${device.xs} {
-    > *:nth-last-child(-n + 3) {
-      margin-bottom: 0;
-    }
-
-    /* > *:nth-last-child(-n + 1) {
-      margin-bottom: -30px;
-    } */
-  }
+  margin-inline: -12px;
 `;
 
 export const ColumnContainer = styled.div`
   width: 33.3%;
   height: max-content;
-  padding-inline: 20px;
+  padding-inline: 12px;
   padding-bottom: 24px;
-  //background-color: rebeccapurple;
 
   @media ${device.xs} {
     width: 100%;
@@ -121,6 +107,7 @@ export const PriceVariantsHeading = styled.span`
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
+  white-space: pre;
 
   @media ${device.xs} {
     font-size: ${({ $enlarged }) => ($enlarged ? "1.875rem" : "1.5rem")};
@@ -145,7 +132,7 @@ export const Options = styled.div`
   align-self: stretch;
 `;
 
-export const Option = styled.div`
+export const Option = styled(DelayedScrollReveal)`
   display: flex;
   align-items: center;
   gap: 12px;

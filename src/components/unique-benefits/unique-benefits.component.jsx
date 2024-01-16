@@ -18,7 +18,6 @@ import {
   BenefitContainer,
   BenefitImage,
   BenefitImageBox,
-  CaptionPrimary,
   CaptionSecondary,
   CaptionSecondaryBorderBox,
   ColumnContainer,

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { motion } from "framer-motion";
 
 import { Stack } from "@mui/material";
@@ -132,7 +132,14 @@ export const ResponsiveStack = styled(Stack)`
     column-gap: 14px;
   }
 `;
+export const InfoTopBox = styled.div`
+  margin-left: 84px;
+  margin-bottom: 14px;
 
+  @media ${device.xs} {
+    margin-left: 0;
+  }
+`;
 export const InfoTop = styled.span`
   display: inline-block;
   color: #000;
@@ -141,12 +148,6 @@ export const InfoTop = styled.span`
   font-style: normal;
   font-weight: 600;
   line-height: 1.5rem;
-  margin-left: 84px;
-  margin-bottom: 14px;
-
-  @media ${device.xs} {
-    margin-left: 0;
-  }
 `;
 
 export const InfoBottomGroup = styled(Stack)`
@@ -179,12 +180,18 @@ export const LockLogo = styled.span`
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='none'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='%234E5969' d='M7.9193 3.3333v-.4166a2.9167 2.9167 0 1 0-5.8334 0v.4166H.836V8.75A1.25 1.25 0 0 0 2.086 10h5.8334a1.25 1.25 0 0 0 1.25-1.25V3.3333h-1.25ZM5.4193 7.5h-.8334V5.8333h.8334V7.5Zm1.6666-4.1667H2.9193v-.4166a2.0833 2.0833 0 1 1 4.1666 0v.4166Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='%23fff' d='M0 0h10v10H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 `;
 
+const applyBaseStyleForSvgPath = () => {
+  return css`
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+  `;
+};
+
 export const StyledHeroSvg = styled.svg`
   width: 400px;
 
   .big-gear {
-    transform-origin: 50% 50%;
-    transform-box: fill-box;
+    ${applyBaseStyleForSvgPath};
     animation: rotateBigGear 7s linear infinite;
   }
   @keyframes rotateBigGear {
@@ -194,13 +201,94 @@ export const StyledHeroSvg = styled.svg`
   }
 
   .small-gear {
-    transform-origin: 50% 50%;
-    transform-box: fill-box;
+    ${applyBaseStyleForSvgPath};
     animation: rotateSmallGear 5s linear infinite;
   }
   @keyframes rotateSmallGear {
     to {
       transform: rotate(-360deg);
+    }
+  }
+
+  .particles {
+    ${applyBaseStyleForSvgPath};
+    animation: moveParticles 3s ease-in-out infinite;
+  }
+  @keyframes moveParticles {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(5deg) scale(1.03);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .sparkle {
+    ${applyBaseStyleForSvgPath};
+    animation: pulsSparkle 2.5s linear infinite;
+  }
+  @keyframes pulsSparkle {
+    0% {
+      transform: scale(0.3);
+    }
+    50% {
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(0.3);
+    }
+  }
+
+  .dollar-contour-inner {
+    ${applyBaseStyleForSvgPath};
+    animation: dollarContourInner 2.5s ease-in-out infinite;
+  }
+  @keyframes dollarContourInner {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .robot-face-shield,
+  .robot-eyes {
+    ${applyBaseStyleForSvgPath};
+    animation: robotFaceShieldMove 5s ease infinite;
+  }
+  @keyframes robotFaceShieldMove {
+    0% {
+      transform: translateX(0);
+    }
+    33% {
+      transform: translateX(-20px);
+    }
+    66% {
+      transform: translateX(3px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+  .robot-face-shield {
+    animation-delay: 150ms;
+  }
+
+  .robot-body {
+    ${applyBaseStyleForSvgPath};
+    animation: robotBodyMove 5s ease infinite;
+  }
+  @keyframes robotBodyMove {
+    0% {
+      transform: translateY(-2px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(-2px);
     }
   }
 

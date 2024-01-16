@@ -17,7 +17,7 @@ const ScrollReveal = ({ index, children, ...props }) => {
           ease: [0.33, 1, 0.68, 1],
         },
       }}
-      viewport={{ once: true, amount: 0.7 }}
+      viewport={{ once: true }}
     >
       {children}
     </motion.div>

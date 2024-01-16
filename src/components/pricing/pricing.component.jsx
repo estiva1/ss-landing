@@ -22,6 +22,7 @@ import { Stack } from "@mui/material";
 import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 import { Link } from "react-router-dom";
 import CustomButton from "../UI/button/button.component";
+import Sparkles from "../UI/sparkles/sparkles.component";
 
 const Pricing = () => {
   const heading = "Unlock the price for our all-in-one Repricing solution";
@@ -55,7 +56,7 @@ const Pricing = () => {
 
           <Options>
             {basicSubscriptionOptions.map((option, index) => (
-              <Option key={index}>
+              <Option key={index} index={index}>
                 <CheckMark />
                 <OptionText>{option}</OptionText>
               </Option>
@@ -65,7 +66,9 @@ const Pricing = () => {
 
         <PremiumSubscription>
           <SubscriptionHeadline>
-            <PriceVariantsHeading $inverted>Premium Plan</PriceVariantsHeading>
+            <Sparkles>
+              <PriceVariantsHeading $inverted>Premium Plan</PriceVariantsHeading>
+            </Sparkles>
             <Price $inverted>
               <PriceVariantsHeading $inverted $enlarged>
                 $99&nbsp;
@@ -77,7 +80,7 @@ const Pricing = () => {
           <Columns>
             {premiumPlanOptions.map((option, index) => (
               <ColumnContainer key={index}>
-                <Option key={index}>
+                <Option index={index}>
                   <CheckMark />
                   <OptionText $inverted>{option}</OptionText>
                 </Option>
@@ -89,9 +92,11 @@ const Pricing = () => {
             <OptionText $inverted>See for yourself with our 3 month trial</OptionText>
             <MobileButtonBox>
               <FramerMagnetic>
-                <Link to="/registration">
-                  <CustomButton variant="contained">Try it For Free</CustomButton>
-                </Link>
+                <Sparkles>
+                  <Link to="/registration">
+                    <CustomButton variant="contained">Try it For Free</CustomButton>
+                  </Link>
+                </Sparkles>
               </FramerMagnetic>
             </MobileButtonBox>
           </Stack>

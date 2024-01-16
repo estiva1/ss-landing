@@ -36,6 +36,7 @@ import {
   ShapeThree,
   ShapeTwo,
 } from "./set-up-repricer.styles";
+import Sparkles from "../UI/sparkles/sparkles.component";
 
 const SetUpRepricer = () => {
   const phrases = ["Set up your", "Repricer in less then 5 Minutes", "or else we give you 3 months free!"];
@@ -122,7 +123,9 @@ const SetUpRepricer = () => {
             <TextMaskAnimation phrases={phrases.slice(0, 1)} delay={0.075} />
           </Heading>
           <HeadingHighlighted>
-            <TextMaskAnimation phrases={phrases.slice(1, 2)} delay={0.15} />
+            <Sparkles>
+              <TextMaskAnimation phrases={phrases.slice(1, 2)} delay={0.15} />
+            </Sparkles>
           </HeadingHighlighted>
           <Heading>
             <TextMaskAnimation phrases={phrases.slice(2)} delay={0.225} />
