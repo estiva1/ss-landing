@@ -14,7 +14,7 @@ export const HeaderContainer = styled.div`
   //border-bottom: 1px solid #1565d8;
   overflow-x: clip;
   cursor: none;
-  z-index: 999;
+  z-index: 5;
 
   @media ${device.xl} {
     padding: 16px 80px;

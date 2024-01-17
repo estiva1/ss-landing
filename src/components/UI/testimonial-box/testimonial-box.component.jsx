@@ -29,7 +29,7 @@ const TestimonialBox = ({ avatar, clientName, clientHeadline, testimonialText })
       <TestimonialBoxBody>
         <Stack direction="row" gap="12px" alignItems="center">
           <AvatarContainer>
-            <Avatar src={avatar} alt={clientName} />
+            <Avatar src={avatar} alt={clientName} loading="lazy" />
           </AvatarContainer>
 
           <About>

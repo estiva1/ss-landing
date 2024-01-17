@@ -7,7 +7,7 @@ const DelayedScrollReveal = ({ index, children, speed = 2, ...props }) => {
       {...props}
       initial={{
         opacity: 0,
-        scale: 0,
+        scale: 0.5,
       }}
       whileInView={{
         opacity: 1,

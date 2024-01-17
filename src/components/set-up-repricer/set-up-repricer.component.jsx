@@ -48,18 +48,21 @@ const SetUpRepricer = () => {
       style={{ width: "100%" }}
       onDragStart={handleDragStart}
       role="presentation"
+      loading="lazy"
     />,
     <img
       src={setUpRepricerDesktopFrame2}
       style={{ width: "100%" }}
       onDragStart={handleDragStart}
       role="presentation"
+      loading="lazy"
     />,
     <img
       src={setUpRepricerDesktopFrame3}
       style={{ width: "100%" }}
       onDragStart={handleDragStart}
       role="presentation"
+      loading="lazy"
     />,
   ];
 
@@ -70,12 +73,14 @@ const SetUpRepricer = () => {
         style={{ width: "95%" }}
         onDragStart={handleDragStart}
         role="presentation"
+        loading="lazy"
       />
       <img
         src={setUpRepricerMobileBottomFrame1}
         style={{ width: "95%" }}
         onDragStart={handleDragStart}
         role="presentation"
+        loading="lazy"
       />
     </MobileImageBoxForCarousel>,
 
@@ -85,12 +90,14 @@ const SetUpRepricer = () => {
         style={{ width: "95%" }}
         onDragStart={handleDragStart}
         role="presentation"
+        loading="lazy"
       />
       <img
         src={setUpRepricerMobileBottomFrame2}
         style={{ width: "95%" }}
         onDragStart={handleDragStart}
         role="presentation"
+        loading="lazy"
       />
     </MobileImageBoxForCarousel>,
 
@@ -100,12 +107,14 @@ const SetUpRepricer = () => {
         style={{ width: "95%" }}
         onDragStart={handleDragStart}
         role="presentation"
+        loading="lazy"
       />
       <img
         src={setUpRepricerMobileBottomFrame3}
         style={{ width: "95%" }}
         onDragStart={handleDragStart}
         role="presentation"
+        loading="lazy"
       />
     </MobileImageBoxForCarousel>,
   ];

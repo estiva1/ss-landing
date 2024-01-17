@@ -81,7 +81,7 @@ const UniqueBenefits = () => {
           <ColumnContainer key={index}>
             <BenefitContainer index={index}>
               <BenefitImageBox>
-                <BenefitImage src={benefit.image} />
+                <BenefitImage src={benefit.image} loading="lazy" />
               </BenefitImageBox>
 
               <BenefitCaptionBox>

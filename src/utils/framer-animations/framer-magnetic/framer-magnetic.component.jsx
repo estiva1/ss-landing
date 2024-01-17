@@ -26,7 +26,7 @@ const FramerMagnetic = ({ children }) => {
       onMouseMove={handleMouse}
       onMouseLeave={reset}
       animate={{ x, y }}
-      transition={{ type: "spring", damping: 3, stiffness: 50, mass: 0.1 }}
+      transition={{type: "spring", stiffness: 120, damping: 15, mass: 0.1}}
     >
       {children}
     </motion.div>
