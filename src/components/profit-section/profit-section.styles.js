@@ -5,7 +5,7 @@ export const ProfitSectionContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 130px 100px 130px;
+  padding: 40px 130px;
   background: #1565d8;
   cursor: none;
 

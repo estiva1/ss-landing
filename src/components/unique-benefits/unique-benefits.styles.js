@@ -12,6 +12,7 @@ export const UniqueBenefitsContainer = styled.div`
   background: #f1fbfe;
   gap: 50px;
   cursor: none;
+  overflow: hidden;
 
   @media ${device.xl} {
     padding: 100px 80px;
@@ -42,7 +43,7 @@ export const Columns = styled.div`
   display: flex;
   flex-flow: row wrap;
   margin-inline: -16px;
-  //background-color: red;
+
   > *:nth-last-child(-n + 3) {
     margin-bottom: -40px;
   }

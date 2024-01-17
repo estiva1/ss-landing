@@ -5,11 +5,16 @@ export const ProfitAmountBoxContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 379px;
-  padding: 16px 10px;
+  padding: 16px 24px;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
   background: #0b2447;
+
+  @media ${device.xl} {
+    width: 340px;
+    padding: 16px;
+  }
 
   @media ${device.xs} {
     flex-direction: row;
