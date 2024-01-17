@@ -15,7 +15,8 @@ import {
   SpanText,
   StyledTextField,
 } from "./registration.styles";
-import { StyledBlueButton } from "../landing-page/landing-page.style";
+
+import { StyledButton } from "../UI/button/button.styles";
 
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import WestRoundedIcon from "@mui/icons-material/WestRounded";
@@ -79,9 +80,9 @@ const Registration = () => {
                 />
               </InputItem>
             </InputsContainer>
-            <StyledBlueButton sx={{ minWidth: "100%" }} type="submit" variant="contained" endIcon={<EastRoundedIcon />}>
+            <StyledButton sx={{ minWidth: "100%" }} type="submit" variant="contained" endIcon={<EastRoundedIcon />}>
               Start free trial
-            </StyledBlueButton>
+            </StyledButton>
           </CreatePasswordFrameContentBottom>
         </CreatePasswordFrameContent>
 

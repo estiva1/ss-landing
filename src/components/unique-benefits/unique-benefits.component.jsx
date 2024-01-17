@@ -7,12 +7,12 @@ import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import TextDipserse from "../../utils/framer-animations/text-disperse/text-disperse.component";
 import TextTypingAnimation from "../../utils/framer-animations/text-typing-animation/text-typing-animation.componen";
 
-import benefit1 from "../../assets/benefit-1.png";
-import benefit2 from "../../assets/benefit-2.png";
-import benefit3 from "../../assets/benefit-3.png";
-import benefit4 from "../../assets/benefit-4.png";
-import benefit5 from "../../assets/benefit-5.png";
-import benefit6 from "../../assets/benefit-6.png";
+import benefit1 from "../../assets/benefits/benefit-1.png"
+import benefit2 from "../../assets/benefits/benefit-2.png";
+import benefit3 from "../../assets/benefits/benefit-3.png";
+import benefit4 from "../../assets/benefits/benefit-4.png";
+import benefit5 from "../../assets/benefits/benefit-5.png";
+import benefit6 from "../../assets/benefits/benefit-6.png";
 
 import {
   BenefitCaptionBox,

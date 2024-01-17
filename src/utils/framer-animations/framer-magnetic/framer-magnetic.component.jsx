@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-const FramerMagnetic = ({ children }) => {
+const FramerMagnetic = ({ children, ...props }) => {
   const ref = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -27,6 +27,7 @@ const FramerMagnetic = ({ children }) => {
       onMouseLeave={reset}
       animate={{ x, y }}
       transition={{type: "spring", stiffness: 120, damping: 15, mass: 0.1}}
+      {...props}
     >
       {children}
     </motion.div>

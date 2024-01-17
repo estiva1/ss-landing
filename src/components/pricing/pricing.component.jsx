@@ -1,4 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+import { Stack } from "@mui/material";
+import CustomButton from "../UI/button/button.component";
+import Sparkles from "../UI/sparkles/sparkles.component";
+
+import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 import TextTypingAnimation from "../../utils/framer-animations/text-typing-animation/text-typing-animation.componen";
 
 import {
@@ -17,11 +24,6 @@ import {
   PricingVariantsBox,
   SubscriptionHeadline,
 } from "./pricing.styles";
-import { Stack } from "@mui/material";
-import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
-import { Link } from "react-router-dom";
-import CustomButton from "../UI/button/button.component";
-import Sparkles from "../UI/sparkles/sparkles.component";
 
 const Pricing = () => {
   const heading = "Unlock the price for our all-in-one Repricing solution";

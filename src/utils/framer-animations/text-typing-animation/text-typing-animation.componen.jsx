@@ -14,6 +14,7 @@ const TextTypingAnimation = ({ text }) => {
   });
 
   const words = text.split(" ");
+
   return (
     <div ref={ref}>
       {words.map((el, i) => (
