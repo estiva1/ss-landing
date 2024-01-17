@@ -7,3 +7,16 @@ export const RootContainer = styled.div`
   max-width: 1440px;
   width: 100%;
 `;
+
+export const HeaderHolder = styled.div`
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  backdrop-filter: blur(20px);
+  overflow-x: clip;
+  z-index: 5;
+`;

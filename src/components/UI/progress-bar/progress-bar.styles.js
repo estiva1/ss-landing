@@ -9,6 +9,5 @@ export const MotionProgressBar = styled(motion.div)`
   height: 4px;
   background: #0057d3;
   transform-origin: 0%;
-  backdrop-filter: blur(20px);
   z-index: 999;
 `;

@@ -11,7 +11,7 @@ import SetUpRepricer from "../set-up-repricer/set-up-repricer.component";
 import UniqueBenefits from "../unique-benefits/unique-benefits.component";
 import StickyCursor from "../../utils/framer-animations/sticky-cursor/sticky-cursor.component";
 
-import { RootContainer } from "./landing-page.style";
+import { HeaderHolder, RootContainer } from "./landing-page.style";
 
 const LandingPage = () => {
   const [email, setEmail] = useState("");
@@ -40,8 +40,10 @@ const LandingPage = () => {
   return (
     <RootContainer>
       <StickyCursor />
-      <ProgressBar/>
-      <Header />
+      <HeaderHolder>
+        <ProgressBar />
+        <Header />
+      </HeaderHolder>
       <Hero />
       <ProfitSection />
       <SetUpRepricer />
