@@ -14,7 +14,6 @@ import {
   TestimonialBoxHeader,
   TestimonialText,
 } from "./testimonial-box.styles";
-import TextTypingAnimation from "../../../utils/framer-animations/text-typing-animation/text-typing-animation.componen";
 
 const TestimonialBox = ({ avatar, clientName, clientHeadline, testimonialText }) => {
   return (
@@ -41,10 +40,7 @@ const TestimonialBox = ({ avatar, clientName, clientHeadline, testimonialText })
 
         <Stack spacing="8px">
           <Quotes />
-
-          <TestimonialText>
-            <TextTypingAnimation text={testimonialText} />
-          </TestimonialText>
+          <TestimonialText>{testimonialText}</TestimonialText>
         </Stack>
       </TestimonialBoxBody>
     </TestimonialBoxContainer>

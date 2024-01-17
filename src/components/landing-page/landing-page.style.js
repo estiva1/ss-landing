@@ -16,6 +16,5 @@ export const HeaderHolder = styled.div`
   max-width: 1440px;
   margin: 0 auto;
   backdrop-filter: blur(20px);
-  overflow-x: clip;
   z-index: 5;
 `;
