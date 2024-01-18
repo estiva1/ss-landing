@@ -10,6 +10,7 @@ export const ProfitAmountBoxContainer = styled.div`
   justify-content: center;
   border-radius: 20px;
   background: #0b2447;
+  cursor: none;
 
   @media ${device.xl} {
     width: 340px;

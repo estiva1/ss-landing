@@ -6,6 +6,7 @@ export const RootContainer = styled.div`
   margin: 0 auto;
   max-width: 1440px;
   width: 100%;
+  scroll-behavior: smooth;
 `;
 
 export const HeaderHolder = styled.div`
@@ -16,6 +17,6 @@ export const HeaderHolder = styled.div`
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
   z-index: 5;
 `;

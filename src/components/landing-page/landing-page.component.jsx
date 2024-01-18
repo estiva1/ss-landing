@@ -12,6 +12,8 @@ import UniqueBenefits from "../unique-benefits/unique-benefits.component";
 import StickyCursor from "../../utils/framer-animations/sticky-cursor/sticky-cursor.component";
 
 import { HeaderHolder, RootContainer } from "./landing-page.style";
+import SmoothScroll from "../../utils/framer-animations/smooth-scroll/smooth-scroll.component";
+import CtaSection from "../cta-section/cta-section.component";
 
 const LandingPage = () => {
   const [email, setEmail] = useState("");
@@ -51,6 +53,7 @@ const LandingPage = () => {
       <Testimonials />
       <Pricing />
       <Products />
+      <CtaSection />
     </RootContainer>
   );
 };

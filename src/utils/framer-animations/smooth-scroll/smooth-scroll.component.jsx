@@ -1,4 +1,6 @@
-import { useState, useRef, useEffect } from "react";
+// UNSTABLE
+
+import { useState, useRef, useEffect, useLayoutEffect } from "react";
 
 import { useScroll, useSpring, useTransform } from "framer-motion";
 import { ScrollBody } from "./smooth-scroll.styles";
@@ -7,7 +9,7 @@ const SmoothScroll = ({ children }) => {
   const { scrollYProgress } = useScroll();
 
   // Use framer motion's useSpring() hook to smooth the scrollYProgress value
-  const smoothProgress = useSpring(scrollYProgress, { mass: 0.1 });
+  const smoothProgress = useSpring(scrollYProgress);
 
   // The height of the content in pixels
   const [contentHeight, setContentHeight] = useState(0);
@@ -19,7 +21,8 @@ const SmoothScroll = ({ children }) => {
   const contentRef = useRef(null);
 
   // Reset the `contentHeight` value when the children change, or when the window resizes
-  useEffect(() => {
+  // useEffect causes jump to the end of the page on mounting
+  useLayoutEffect(() => {
     const handleResize = () => {
       if (contentRef.current) {
         setContentHeight(contentRef.current.scrollHeight);

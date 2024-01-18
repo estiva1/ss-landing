@@ -7,6 +7,7 @@ export const StyledMotionDiv = styled(motion.div)`
   width: 15px;
   height: 15px;
   background-color: #1565D8;
+  border: 1px solid #fff;
   border-radius: 50%;
   pointer-events: none;
   z-index: 11;

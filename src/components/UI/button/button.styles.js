@@ -17,6 +17,18 @@ export const StyledButton = styled(Button)`
     background-color: #0057d3;
     white-space: nowrap;
 
+    ${(props) =>
+      props.white &&
+      `
+      color: #1565D8;
+      background-color: #fff;
+
+      &:hover {
+        //color: #fff;
+        background-color: #EBFBFF;
+      }
+  `}
+
     @media ${device.xs} {
       width: 100%;
       height: 48px;
