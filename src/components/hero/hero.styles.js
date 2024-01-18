@@ -61,8 +61,8 @@ export const HeroText = styled(motion.span)`
   //white-space: pre-wrap;
   margin: 0;
   transition: all 0.25s ease-in;
-  ${(props) =>
-    props.highlighted &&
+  ${({ $highlighted }) =>
+    $highlighted &&
     `
       display: block;
       width: max-content;
@@ -83,7 +83,7 @@ export const HeroText = styled(motion.span)`
   @media ${device.xs} {
     font-size: 1.875rem;
     line-height: 2.175rem;
-    ${(props) => props.highlighted && `background-size: 100% 20%`}
+    ${({ $highlighted }) => $highlighted && `background-size: 100% 20%`}
   }
 `;
 

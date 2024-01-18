@@ -117,8 +117,8 @@ export const ProfitIn = styled.span`
   font-weight: 700;
   line-height: 120%;
 
-  ${({ mobile }) =>
-    mobile &&
+  ${({ $mobile }) =>
+    $mobile &&
     css`
       display: none;
 

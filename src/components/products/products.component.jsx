@@ -84,7 +84,7 @@ const Products = () => {
         <Heading>
           Not just Repricing, unleash&nbsp;
           <span>
-            <Heading highlighted>the full suite of products&nbsp;</Heading>
+            <Heading $highlighted>the full suite of products&nbsp;</Heading>
           </span>
         </Heading>
       </ScrollReveal>

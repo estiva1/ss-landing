@@ -17,8 +17,8 @@ export const StyledButton = styled(Button)`
     background-color: #0057d3;
     white-space: nowrap;
 
-    ${(props) =>
-      props.white &&
+    ${({ $white }) =>
+      $white &&
       `
       color: #1565D8;
       background-color: #fff;

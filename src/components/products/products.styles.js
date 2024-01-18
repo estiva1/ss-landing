@@ -33,8 +33,8 @@ export const Heading = styled.h2`
   margin: 0;
   transition: all 0.25s ease-in;
 
-  ${(props) =>
-    props.highlighted &&
+  ${({ $highlighted }) =>
+    $highlighted &&
     `
       display: inline-flex;
       width: max-content;

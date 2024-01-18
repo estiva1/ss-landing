@@ -14,6 +14,7 @@ import StickyCursor from "../../utils/framer-animations/sticky-cursor/sticky-cur
 import { HeaderHolder, RootContainer } from "./landing-page.style";
 import SmoothScroll from "../../utils/framer-animations/smooth-scroll/smooth-scroll.component";
 import CtaSection from "../cta-section/cta-section.component";
+import Metrics from "../metrics/metrics.component";
 
 const LandingPage = () => {
   const [email, setEmail] = useState("");
@@ -54,6 +55,7 @@ const LandingPage = () => {
       <Pricing />
       <Products />
       <CtaSection />
+      <Metrics />
     </RootContainer>
   );
 };

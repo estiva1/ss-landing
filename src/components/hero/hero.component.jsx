@@ -63,7 +63,7 @@ const Hero = () => {
           <HeroText>
             <TextTypingAnimation text={heroTextOne} />
           </HeroText>
-          <HeroText highlighted>
+          <HeroText $highlighted>
             <TextMaskAnimation phrases={heroTextTwo} delay={2} />
           </HeroText>
         </Headline>
@@ -516,7 +516,7 @@ const Hero = () => {
             <path
               fill="#1565D8"
               stroke="#1565D8"
-              stroke-width=".169"
+              strokeWidth=".169"
               d="M262.641 289.181h-1.2v-8.004l1.2-.662v8.666Zm-2.224 0h-1.199v-6.748l1.199-.561v7.309Zm-2.224.001h-1.199v-5.649l1.199-.471v6.12Zm-2.223-.001h-1.2v-4.706l1.2-.395v5.101Z"
             />
           </StyledHeroSvg>

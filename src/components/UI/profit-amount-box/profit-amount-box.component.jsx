@@ -62,7 +62,7 @@ const ProfitAmountBox = ({ profit, profitIn }) => {
           </div>
           <Stack>
             <ProfitAmountLabel>Increase in</ProfitAmountLabel>
-            <ProfitIn mobile>{profitIn}</ProfitIn>
+            <ProfitIn $mobile>{profitIn}</ProfitIn>
           </Stack>
         </TopSection>
 

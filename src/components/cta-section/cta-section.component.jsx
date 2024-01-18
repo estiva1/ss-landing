@@ -4,6 +4,7 @@ import {
   ActionContainer,
   CtaBanner,
   CtaSectionContainer,
+  Decal,
   Heading,
   Headline,
   Info,
@@ -18,7 +19,8 @@ import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer
 const CtaSection = () => {
   return (
     <CtaSectionContainer>
-      <ScrollReveal key="hero-image" index={1}>
+      <Decal />
+      <ScrollReveal key="cta-banner-image" index={1}>
         <FramerMagnetic>
           <CtaBanner
             id="CTA_Banner_Image"
@@ -143,7 +145,7 @@ const CtaSection = () => {
 
           <MobileButtonBox>
             <Link to="/registration">
-              <CustomButton white variant="contained" endIcon={<EastRoundedIcon />}>
+              <CustomButton $white variant="contained" endIcon={<EastRoundedIcon />}>
                 Start free trial
               </CustomButton>
             </Link>

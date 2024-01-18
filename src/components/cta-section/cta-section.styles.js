@@ -3,6 +3,7 @@ import { device } from "../../breakpoints.styles";
 import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 
 export const CtaSectionContainer = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,6 +74,27 @@ export const CtaBanner = styled.svg`
 
   @media ${device.xs} {
     width: 100%;
+  }
+`;
+
+export const Decal = styled.span`
+  position: absolute;
+  bottom: 20px;
+  right: 130px;
+  min-width: 350px;
+  min-height: 28px;
+  width: 350px;
+  height: 28px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='350' height='28' fill='none'%3e%3crect width='270' height='6' y='22' fill='%23E8F0FC' rx='3'/%3e%3crect width='16' height='10' x='274' y='18' fill='%23E8F0FC' rx='4'/%3e%3crect width='16' height='14' x='294' y='14' fill='%23E8F0FC' rx='4'/%3e%3crect width='16' height='20' x='314' y='8' fill='%23E8F0FC' rx='4'/%3e%3crect width='16' height='28' x='334' fill='%23E8F0FC' rx='4'/%3e%3c/svg%3e");
+
+  @media ${device.xl} {
+    right: 80px;
+  }
+
+  @media ${device.xs} {
+    display: none;
   }
 `;
 

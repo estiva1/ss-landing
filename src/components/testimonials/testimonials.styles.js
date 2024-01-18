@@ -41,7 +41,7 @@ export const MotionHeading = styled.h2`
   }
 `;
 
-export const Paragraph = styled.p`
+export const Paragraph = styled.span`
   color: #4e5969;
   text-align: center;
   font-family: Titillium Web;
