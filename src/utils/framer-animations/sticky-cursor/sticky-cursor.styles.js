@@ -30,8 +30,7 @@ export const StyledMotionDiv = styled(motion.div)`
   height: 40px;
   opacity: 0.75;
   transform: ${({ $pointer }) => ($pointer ? "translate(-50%, -50%) scale(0.5)" : "")};
-  transition: transform 600ms cubic-bezier(0.19, 1, 0.22, 1);
-  transition: border 600ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 600ms cubic-bezier(0.19, 1, 0.22, 1), border 600ms cubic-bezier(0.19, 1, 0.22, 1);
 
   @media ${device.xs} {
     display: none;

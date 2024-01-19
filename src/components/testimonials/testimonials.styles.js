@@ -60,7 +60,7 @@ export const Columns = styled.div`
   display: flex;
   flex-flow: row wrap;
   margin-inline: -20px;
-  //background-color: red;
+
   > *:nth-last-child(-n + 3) {
     margin-bottom: -40px;
   }
@@ -113,7 +113,7 @@ const applyBaseShapeStyles = () => {
     height: 500px;
     mix-blend-mode: multiply;
     filter: blur(40px);
-    animation: scale-up-center 7s cubic-bezier(0.39, 0.575, 0.565, 1) infinite both;
+    //animation: scale-up-center 7s cubic-bezier(0.39, 0.575, 0.565, 1) infinite both;
     z-index: -5;
   `;
 };

@@ -177,7 +177,7 @@ const applyBaseShapeStyles = () => {
     height: 500px;
     mix-blend-mode: multiply;
     filter: blur(40px);
-    animation: scale-up-center 7s cubic-bezier(0.39, 0.575, 0.565, 1) infinite both;
+    //animation: scale-up-center 7s cubic-bezier(0.39, 0.575, 0.565, 1) infinite both;
     z-index: -5;
   `;
 };
