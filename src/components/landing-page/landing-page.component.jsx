@@ -15,6 +15,7 @@ import { HeaderHolder, RootContainer } from "./landing-page.style";
 import SmoothScroll from "../../utils/framer-animations/smooth-scroll/smooth-scroll.component";
 import CtaSection from "../cta-section/cta-section.component";
 import Metrics from "../metrics/metrics.component";
+import UnmatchableBenefits from "../unmatchable-benefits/unmatchable-benefits.component";
 
 const LandingPage = () => {
   const [email, setEmail] = useState("");
@@ -42,7 +43,7 @@ const LandingPage = () => {
 
   return (
     <RootContainer>
-      {/* <StickyCursor /> */}
+      <StickyCursor />
       <HeaderHolder>
         <ProgressBar />
         <Header />
@@ -56,6 +57,7 @@ const LandingPage = () => {
       <Products />
       <CtaSection />
       <Metrics />
+      <UnmatchableBenefits />
     </RootContainer>
   );
 };

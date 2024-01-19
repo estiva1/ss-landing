@@ -1,4 +1,7 @@
 import React from "react";
+import { Stack } from "@mui/material";
+import ScrollReveal from "../../utils/framer-animations/scroll-reveal/simple-scroll-reveal/scroll-reveal.component";
+
 import {
   BuyBoxIcon,
   ColumnContainer,
@@ -16,8 +19,6 @@ import {
   ShapeThree,
   ShapeTwo,
 } from "./metrics.styles";
-import ScrollReveal from "../../utils/framer-animations/scroll-reveal/simple-scroll-reveal/scroll-reveal.component";
-import { Stack } from "@mui/material";
 
 const Metrics = () => {
   const metrics = [
@@ -59,23 +60,25 @@ const Metrics = () => {
         </Heading>
       </ScrollReveal>
 
-      <Columns>
-        {metrics.map((item, index) => (
-          <ColumnContainer>
-            <ItemBox key={index}>
-              <Stack direction="row" gap="10px" alignItems="center">
-                {item.icon}
-                <ItemLabel>{item.label}</ItemLabel>
-              </Stack>
+      <ScrollReveal index={1}>
+        <Columns>
+          {metrics.map((item, index) => (
+            <ColumnContainer>
+              <ItemBox key={index}>
+                <Stack direction="row" gap="10px" alignItems="center">
+                  {item.icon}
+                  <ItemLabel>{item.label}</ItemLabel>
+                </Stack>
 
-              <Info>
-                <ItemStatement>{item.statement}</ItemStatement>
-                <ItemSummary>{item.summary}</ItemSummary>
-              </Info>
-            </ItemBox>
-          </ColumnContainer>
-        ))}
-      </Columns>
+                <Info>
+                  <ItemStatement>{item.statement}</ItemStatement>
+                  <ItemSummary>{item.summary}</ItemSummary>
+                </Info>
+              </ItemBox>
+            </ColumnContainer>
+          ))}
+        </Columns>
+      </ScrollReveal>
     </MetricsContainer>
   );
 };

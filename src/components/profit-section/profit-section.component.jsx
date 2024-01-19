@@ -13,7 +13,12 @@ const ProfitSection = () => {
   return (
     <ProfitSectionContainer>
       {profitSectionData.map((box, index) => (
-        <DelayedScrollReveal style={{width: "100%"}} key={`profit-amount-box-${index}`} index={index} speed={2}>
+        <DelayedScrollReveal
+          style={{ width: "100%" }}
+          key={`profit-amount-box-${index}`}
+          index={index}
+          speed={2}
+        >
           <ProfitAmountBox profit={box.profit} profitIn={box.profitIn} />
         </DelayedScrollReveal>
       ))}
