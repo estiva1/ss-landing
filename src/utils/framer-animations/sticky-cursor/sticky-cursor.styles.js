@@ -15,6 +15,10 @@ export const Container = styled.div`
   @media (hover: none) {
     display: none;
   }
+
+  @media ${device.xs} {
+    display: none;
+  }
 `;
 
 export const StyledMotionDiv = styled(motion.div)`
