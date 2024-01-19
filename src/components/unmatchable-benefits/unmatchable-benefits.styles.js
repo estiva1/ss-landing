@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
 import { device } from "../../breakpoints.styles";
 
-export const UnmatchableBenefitsContainer = styled.div`
+export const UnmatchableBenefitsContainer = styled.section`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -212,4 +213,24 @@ export const CostIcon = styled.span`
 export const IgniteIcon = styled.span`
   ${applyIconStyles};
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='none'%3e%3cpath fill='%23F0E996' d='M69.87 48.58 53.23 65.52a3.82 3.82 0 0 1-2.6 1.15h-24a6.7 6.7 0 0 0-5.33 2.66l-5.6 7.47a1.33 1.33 0 0 1-1.07.53H4A1.33 1.33 0 0 1 2.67 76v-7.1c0-.3.09-.58.26-.8 3.69-4.9 8.38-10.9 9.98-12.49a19.86 19.86 0 0 1 15.06-6.28 7.87 7.87 0 0 1 5.06 1.82c.7.56 1.57.86 2.47.85h13.58a2.89 2.89 0 0 1 2.85 2.2l.04.33a2.67 2.67 0 0 1-2.67 2.8H34.63a1.33 1.33 0 1 0 0 2.66H49.3a5.33 5.33 0 0 0 5.33-5.6v-.06l11.6-9.71a2.64 2.64 0 0 1 1.96-.62 2.67 2.67 0 0 1 2.44 2.8c-.03.66-.3 1.3-.76 1.78Zm-4.8-37.91h-12.8l6.4-7.31 6.4 7.3ZM40 38.09l-7.53-24.76h15.06L40 38.1Zm0-34.73 6.4 7.3H33.6l6.4-7.3Zm-9.33 6.62-6.4-7.31h12.8l-6.4 7.3Zm12.27-7.31h12.8l-6.4 7.3-6.4-7.3Zm-21.6.69 6.4 7.3h-12.8l6.4-7.3Zm-6.4 9.97h14.74l7.87 25.84-22.61-25.84Zm27.52 25.84 7.86-25.84h14.75l-22.6 25.84ZM12 36a1.33 1.33 0 0 1-1.33-1.33V32a1.33 1.33 0 1 1 2.66 0v2.67A1.33 1.33 0 0 1 12 36Zm0 8a1.33 1.33 0 0 1-1.33-1.33V40a1.33 1.33 0 1 1 2.66 0v2.67A1.33 1.33 0 0 1 12 44Zm-2.66-5.33H6.67a1.33 1.33 0 0 1 0-2.67h2.67a1.33 1.33 0 0 1 0 2.67Zm8 0h-2.67a1.33 1.33 0 1 1 0-2.67h2.67a1.33 1.33 0 1 1 0 2.67ZM72 24a1.33 1.33 0 0 1-1.33-1.33V20a1.33 1.33 0 1 1 2.66 0v2.67A1.33 1.33 0 0 1 72 24Zm0 8a1.33 1.33 0 0 1-1.33-1.33V28a1.33 1.33 0 1 1 2.66 0v2.67A1.33 1.33 0 0 1 72 32Zm-2.66-5.33h-2.67a1.33 1.33 0 1 1 0-2.67h2.67a1.33 1.33 0 1 1 0 2.67Zm8 0h-2.67a1.33 1.33 0 1 1 0-2.67h2.67a1.33 1.33 0 1 1 0 2.67Z'/%3e%3c/svg%3e");
+`;
+
+export const Decal = styled.span`
+  position: absolute;
+  bottom: 20px;
+  left: 130px;
+  min-width: 350px;
+  min-height: 28px;
+  width: 350px;
+  height: 28px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='350' height='28' fill='none'%3e%3crect width='270' height='6' fill='%23798AA1' rx='3' transform='matrix(-1 0 0 1 350 22)'/%3e%3crect width='16' height='10' fill='%23798AA1' rx='4' transform='matrix(-1 0 0 1 76 18)'/%3e%3crect width='16' height='14' fill='%23798AA1' rx='4' transform='matrix(-1 0 0 1 56 14)'/%3e%3crect width='16' height='20' fill='%23798AA1' rx='4' transform='matrix(-1 0 0 1 36 8)'/%3e%3crect width='16' height='28' fill='%23798AA1' rx='4' transform='matrix(-1 0 0 1 16 0)'/%3e%3c/svg%3e");
+  @media ${device.xl} {
+    left: 80px;
+  }
+
+  @media ${device.xs} {
+    display: none;
+  }
 `;

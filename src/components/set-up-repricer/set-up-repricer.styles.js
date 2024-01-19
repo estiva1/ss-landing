@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { device } from "../../breakpoints.styles";
 import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 
-export const SetUpRepricerContainer = styled.div`
+export const SetUpRepricerContainer = styled.section`
   position: relative;
   display: flex;
   align-items: center;

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Stack } from "@mui/material";
 import { device } from "../../breakpoints.styles";
 
-export const HeroContainer = styled.div`
+export const HeroContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;

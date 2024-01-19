@@ -6,6 +6,7 @@ import {
   ColumnContainer,
   Columns,
   CostIcon,
+  Decal,
   ExpirationDatesIcon,
   FlippingTextContainer,
   Heading,
@@ -76,7 +77,7 @@ const UnmatchableBenefits = () => {
               <UBenefitContainer>
                 <Headline>
                   {benefit.icon}
-                  <div style={{display: "block"}}>
+                  <div>
                     <FlippingText text={benefit.label} />
                   </div>
                 </Headline>
@@ -86,6 +87,7 @@ const UnmatchableBenefits = () => {
           </ColumnContainer>
         ))}
       </Columns>
+      <Decal />
     </UnmatchableBenefitsContainer>
   );
 };

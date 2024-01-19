@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { device } from "../../breakpoints.styles";
-import DelayedScrollReveal from "../../utils/framer-animations/scroll-reveal/delayed-scroll-reveal/delayed-scroll-reveal.component";
-import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 
-export const UniqueBenefitsContainer = styled.div`
+import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
+import DelayedScrollReveal from "../../utils/framer-animations/scroll-reveal/delayed-scroll-reveal/delayed-scroll-reveal.component";
+
+export const UniqueBenefitsContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -20,7 +20,6 @@ import Sparkles from "../UI/sparkles/sparkles.component";
 const CtaSection = () => {
   return (
     <CtaSectionContainer>
-      <Decal />
       <ScrollReveal key="cta-banner-image" index={1}>
         <FramerMagnetic>
           <CtaBanner
@@ -155,6 +154,7 @@ const CtaSection = () => {
           </MobileButtonBox>
         </ActionContainer>
       </ScrollReveal>
+      <Decal />
     </CtaSectionContainer>
   );
 };

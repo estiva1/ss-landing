@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { device } from "../../breakpoints.styles";
 import { Link } from "react-router-dom";
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
   width: 100%;
   padding: 16px 130px;
   background-color: #ffffffbf; //bf === 75% of transparency

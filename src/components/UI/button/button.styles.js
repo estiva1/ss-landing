@@ -14,7 +14,7 @@ export const StyledButton = styled(Button)`
     line-height: 1.5rem;
     text-transform: none;
     color: #fff;
-    background-color: #0057d3;
+    background-color: #1565D8;
     white-space: nowrap;
 
     ${({ $white }) =>

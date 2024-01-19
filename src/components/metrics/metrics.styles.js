@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { device } from "../../breakpoints.styles";
 
-export const MetricsContainer = styled.div`
+export const MetricsContainer = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;

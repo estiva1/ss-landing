@@ -3,7 +3,7 @@ import { device } from "../../breakpoints.styles";
 import DelayedScrollReveal from "../../utils/framer-animations/scroll-reveal/delayed-scroll-reveal/delayed-scroll-reveal.component";
 import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 
-export const TestimonialsContainer = styled.div`
+export const TestimonialsContainer = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;

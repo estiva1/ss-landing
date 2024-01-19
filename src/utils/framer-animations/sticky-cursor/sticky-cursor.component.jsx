@@ -82,20 +82,24 @@ const StickyCursor = () => {
   useEffect(() => {
     const onMouseEnterBackgroundColor = (event) => {
       const targetElement = event.target;
-
-      const computedStyle = window.getComputedStyle(targetElement);
-      const backgroundColor = computedStyle.backgroundColor;
+      const backgroundColor = window.getComputedStyle(targetElement).backgroundColor;
 
       const isBackgroundColorMatch = backgroundColor === "rgb(21, 101, 216)";
 
       setIsBackgroundColorMatch(isBackgroundColorMatch);
     };
 
-    const onMouseLeaveBackgroundColor = () => {
-      setIsBackgroundColorMatch(false);
+    const onMouseLeaveBackgroundColor = (event) => {
+      const targetElement = event.target;
+      const backgroundColor = window.getComputedStyle(targetElement).backgroundColor;
+
+      // for blue button hover color
+      const isBackgroundColorMatch = backgroundColor !== "rgb(21, 101, 192)";
+
+      setIsBackgroundColorMatch(isBackgroundColorMatch);
     };
 
-    const backgroundElements = [...document.querySelectorAll("section")];
+    const backgroundElements = [...document.querySelectorAll("button, header, section, [data-cursor='pointer']")];
 
     backgroundElements.forEach((element) => {
       element.addEventListener("mouseenter", onMouseEnterBackgroundColor, false);

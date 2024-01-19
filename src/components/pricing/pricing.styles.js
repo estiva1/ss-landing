@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { device } from "../../breakpoints.styles";
 import DelayedScrollReveal from "../../utils/framer-animations/scroll-reveal/delayed-scroll-reveal/delayed-scroll-reveal.component";
 
-export const PricingContainer = styled.div`
+export const PricingContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
