@@ -11,7 +11,6 @@ export const UniqueBenefitsContainer = styled.div`
   padding: 100px 130px;
   background: #f1fbfe;
   gap: 50px;
-  cursor: none;
   overflow: hidden;
 
   @media ${device.xl} {
@@ -79,7 +78,8 @@ export const BenefitImageBox = styled.div`
   height: 292px;
   border-radius: 32px;
   background: #fff;
-  box-shadow: 3.235px 3.235px 20.217px 0px rgba(111, 213, 246, 0.25), 1.2px 1.2px 2px #00a3ff;
+  border: 1px solid #c4c4c4;
+  //box-shadow: 3.235px 3.235px 20.217px 0px rgba(111, 213, 246, 0.25), 1.2px 1.2px 2px #00a3ff;
   transition: box-shadow 0.3s ease-in-out;
   overflow: hidden;
 `;
@@ -96,7 +96,7 @@ export const BenefitContainer = styled(DelayedScrollReveal)`
 
   &:hover {
     ${BenefitImageBox} {
-      box-shadow: 3.235px 3.235px 20.217px 0px rgba(111, 213, 246, 0.25), 3px 3px 3px #00a3ff;
+      //box-shadow: 3.235px 3.235px 20.217px 0px rgba(111, 213, 246, 0.25), 3px 3px 3px #00a3ff;
       transition: box-shadow 0.3s ease-in-out;
     }
   }

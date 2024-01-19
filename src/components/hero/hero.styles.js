@@ -11,7 +11,6 @@ export const HeroContainer = styled.div`
   //gap: 100px;
   padding: 40px 130px 100px 130px;
   overflow-x: clip;
-  cursor: none;
 
   @media ${device.xl} {
     padding: 30px 80px 60px 80px;

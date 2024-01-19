@@ -12,7 +12,6 @@ export const TestimonialsContainer = styled.div`
   padding: 100px 130px;
   background: #fff;
   gap: 50px;
-  cursor: none;
   overflow: hidden; // for floating shapes
   z-index: 0;
 
@@ -82,7 +81,6 @@ export const ColumnContainer = styled.div`
   height: max-content;
   padding-inline: 20px;
   padding-bottom: 40px;
-  //background-color: rebeccapurple;
 
   @media ${device.xs} {
     width: 100%;

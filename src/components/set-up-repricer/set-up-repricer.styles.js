@@ -9,7 +9,6 @@ export const SetUpRepricerContainer = styled.div`
   padding: 100px 130px;
   flex-direction: column;
   gap: 50px;
-  cursor: none;
   overflow: hidden; // for floating shapes
   z-index: 0; // to make Header's backdrop-filter working properly
 

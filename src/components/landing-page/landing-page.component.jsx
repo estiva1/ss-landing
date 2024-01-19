@@ -55,6 +55,7 @@ const LandingPage = () => {
       <Pricing />
       <Products />
       <CtaSection />
+      <CtaSection />
       <Metrics />
     </RootContainer>
   );

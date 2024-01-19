@@ -1,9 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useMotionValue, useSpring } from "framer-motion";
 
-import { StyledMotionDiv } from "./sticky-cursor.styles";
+import { Container, StyledMotionDiv } from "./sticky-cursor.styles";
 
 const StickyCursor = () => {
+  const cursor = useRef();
+  const [hasMoved, setHasMoved] = useState(false);
+  const [isPointer, setIsPointer] = useState(false);
+  const [isBackgroundColorMatch, setIsBackgroundColorMatch] = useState(false);
+
   const cursorSize = 20;
 
   const mouse = {
@@ -23,28 +28,101 @@ const StickyCursor = () => {
     y: useSpring(mouse.y, smoothOptions),
   };
 
-  const manageMouseMove = (e) => {
-    const { clientX, clientY } = e;
-    mouse.x.set(clientX - cursorSize / 2);
-    mouse.y.set(clientY - cursorSize / 2);
-  };
+  const manageMouseMove = useCallback(
+    (e) => {
+      const { clientX, clientY } = e;
+      mouse.x.set(clientX);
+      mouse.y.set(clientY);
+      setHasMoved(true);
+    },
+    [hasMoved]
+  );
 
   useEffect(() => {
     window.addEventListener("mousemove", manageMouseMove);
+
     return () => {
       window.removeEventListener("mousemove", manageMouseMove);
     };
-  });
+  }, [hasMoved]);
+
+  useEffect(() => {
+    document.documentElement.classList.add("has-custom-cursor");
+
+    return () => {
+      document.documentElement.classList.remove("has-custom-cursor");
+    };
+  }, []);
+
+  useEffect(() => {
+    let elements = [];
+
+    const onMouseEnter = () => {
+      setIsPointer(true);
+    };
+    const onMouseLeave = () => {
+      setIsPointer(false);
+    };
+
+    elements = [...document.querySelectorAll("button, a, input, [data-cursor='pointer']")];
+
+    elements.forEach((element) => {
+      element.addEventListener("mouseenter", onMouseEnter, false);
+      element.addEventListener("mouseleave", onMouseLeave, false);
+    });
+
+    return () => {
+      elements.forEach((element) => {
+        element.removeEventListener("mouseenter", onMouseEnter, false);
+        element.removeEventListener("mouseleave", onMouseLeave, false);
+      });
+    };
+  }, []);
+
+  useEffect(() => {
+    const onMouseEnterBackgroundColor = (event) => {
+      const targetElement = event.target;
+
+      const computedStyle = window.getComputedStyle(targetElement);
+      const backgroundColor = computedStyle.backgroundColor;
+
+      const isBackgroundColorMatch = backgroundColor === "rgb(21, 101, 216)";
+
+      setIsBackgroundColorMatch(isBackgroundColorMatch);
+    };
+
+    const onMouseLeaveBackgroundColor = () => {
+      setIsBackgroundColorMatch(false);
+    };
+
+    const backgroundElements = [...document.querySelectorAll("section")];
+
+    backgroundElements.forEach((element) => {
+      element.addEventListener("mouseenter", onMouseEnterBackgroundColor, false);
+      element.addEventListener("mouseleave", onMouseLeaveBackgroundColor, false);
+    });
+
+    return () => {
+      backgroundElements.forEach((element) => {
+        element.removeEventListener("mouseenter", onMouseEnterBackgroundColor, false);
+        element.removeEventListener("mouseleave", onMouseLeaveBackgroundColor, false);
+      });
+    };
+  }, []);
 
   return (
-    <StyledMotionDiv
-      style={{
-        left: smoothMouse.x,
-        top: smoothMouse.y,
-        scaleX: scale.x,
-        scaleY: scale.y,
-      }}
-    />
+    <Container style={{ opacity: hasMoved ? 1 : 0, transition: "opacity 0.6s ease" }}>
+      <div ref={cursor}>
+        <StyledMotionDiv
+          style={{
+            left: smoothMouse.x,
+            top: smoothMouse.y,
+          }}
+          $pointer={isPointer}
+          $white={isBackgroundColorMatch}
+        />
+      </div>
+    </Container>
   );
 };
 

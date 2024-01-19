@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { device } from "../../breakpoints.styles";
 import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 
-export const CtaSectionContainer = styled.div`
+export const CtaSectionContainer = styled.section`
   position: relative;
   display: flex;
   align-items: center;
@@ -10,7 +10,6 @@ export const CtaSectionContainer = styled.div`
   padding: 100px 130px;
   background: #1565d8;
   gap: 90px;
-  cursor: none;
 
   @media ${device.xl} {
     padding: 100px 80px;

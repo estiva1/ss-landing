@@ -10,7 +10,6 @@ export const PricingContainer = styled.div`
   padding: 100px 130px;
   background: #f1fbfe;
   gap: 50px;
-  cursor: none;
 
   @media ${device.xl} {
     padding: 100px 80px;

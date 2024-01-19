@@ -15,6 +15,7 @@ import CustomButton from "../UI/button/button.component";
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import ScrollReveal from "../../utils/framer-animations/scroll-reveal/simple-scroll-reveal/scroll-reveal.component";
 import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
+import Sparkles from "../UI/sparkles/sparkles.component";
 
 const CtaSection = () => {
   return (
@@ -145,9 +146,11 @@ const CtaSection = () => {
 
           <MobileButtonBox>
             <Link to="/registration">
-              <CustomButton $white variant="contained" endIcon={<EastRoundedIcon />}>
-                Start free trial
-              </CustomButton>
+              <Sparkles>
+                <CustomButton $white variant="contained" endIcon={<EastRoundedIcon />}>
+                  Start free trial
+                </CustomButton>
+              </Sparkles>
             </Link>
           </MobileButtonBox>
         </ActionContainer>

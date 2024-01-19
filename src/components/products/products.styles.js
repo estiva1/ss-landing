@@ -10,7 +10,6 @@ export const ProductsContainer = styled.div`
   padding: 100px 130px;
   background: #0b2447;
   gap: 50px;
-  cursor: none;
   overflow: hidden;
 
   @media ${device.xl} {

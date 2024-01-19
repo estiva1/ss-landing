@@ -1,13 +1,12 @@
 import styled from "styled-components";
 import { device } from "../../breakpoints.styles";
 
-export const ProfitSectionContainer = styled.div`
+export const ProfitSectionContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 40px 130px;
   background: #1565d8;
-  cursor: none;
 
   @media ${device.xl} {
     padding: 40px 80px;

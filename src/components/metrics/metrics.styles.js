@@ -9,7 +9,6 @@ export const MetricsContainer = styled.div`
   justify-content: center;
   padding: 100px 130px;
   gap: 50px;
-  cursor: none;
   overflow: hidden;
   z-index: 0;
 

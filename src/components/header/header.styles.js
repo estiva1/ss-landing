@@ -6,7 +6,6 @@ export const HeaderContainer = styled.div`
   width: 100%;
   padding: 16px 130px;
   background-color: #ffffffbf; //bf === 75% of transparency
-  cursor: none;
 
   @media ${device.xl} {
     padding: 16px 80px;
