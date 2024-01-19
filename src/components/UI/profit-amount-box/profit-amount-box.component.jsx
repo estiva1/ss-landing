@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Stack } from "@mui/material";
+import FramerCounter from "../../../utils/framer-animations/count-up/count-up.component";
 
 import {
   BottomSection,
@@ -11,7 +12,6 @@ import {
   FlippingTextContainer,
   ProfitAmountFlipped,
 } from "./profit-amount-box.styles";
-import FramerCounter from "../../../utils/framer-animations/count-up/count-up.component";
 
 const ProfitAmountBox = ({ profit, profitIn }) => {
   const plane = useRef(null);
@@ -37,10 +37,10 @@ const ProfitAmountBox = ({ profit, profitIn }) => {
     return (
       <FlippingTextContainer>
         <ProfitAmount ref={text1}>
-          +<FramerCounter endVal={profit} duration={4} />%
+          +<FramerCounter endVal={profit} duration={3} />%
         </ProfitAmount>
         <ProfitAmountFlipped ref={text2}>
-          +<FramerCounter endVal={profit} duration={4} />%
+          +<FramerCounter endVal={profit} duration={3} />%
         </ProfitAmountFlipped>
       </FlippingTextContainer>
     );

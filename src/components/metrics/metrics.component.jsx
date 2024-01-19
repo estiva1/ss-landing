@@ -63,8 +63,8 @@ const Metrics = () => {
       <ScrollReveal index={1}>
         <Columns>
           {metrics.map((item, index) => (
-            <ColumnContainer>
-              <ItemBox key={index}>
+            <ColumnContainer key={index}>
+              <ItemBox>
                 <Stack direction="row" gap="10px" alignItems="center">
                   {item.icon}
                   <ItemLabel>{item.label}</ItemLabel>

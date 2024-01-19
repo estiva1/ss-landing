@@ -78,7 +78,7 @@ export const ProfitAmount = styled.h2`
   }
 `;
 
-export const ProfitAmountFlipped = styled.div`
+export const ProfitAmountFlipped = styled.h2`
   color: #1565d8;
   text-align: center;
   font-family: Titillium Web;
@@ -89,7 +89,7 @@ export const ProfitAmountFlipped = styled.div`
   margin: 0;
   transition: all 0.4s;
 
-  transform: rotateX(-90deg) translateY(2.5rem);
+  transform: rotateX(-90deg) translateY(50%);
   transform-origin: bottom center;
   position: absolute;
   top: 0;
@@ -101,11 +101,9 @@ export const ProfitAmountFlipped = styled.div`
 
   @media ${device.xl} {
     font-size: 4.2rem;
-    transform: rotateX(-90deg) translateY(2.1rem);
   }
   @media ${device.xs} {
     font-size: 3.125rem;
-    transform: rotateX(-90deg) translateY(1.5625rem);
   }
 `;
 
