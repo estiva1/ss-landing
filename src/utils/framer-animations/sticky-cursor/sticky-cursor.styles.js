@@ -21,7 +21,7 @@ export const StyledMotionDiv = styled(motion.div)`
   position: absolute;
   transform: translate(-50%, -50%);
   border-radius: 100%;
-  border: 2px solid ${({$white}) => $white ? "#fff" : "#1565d8"};
+  border: 2px solid ${({ $white }) => ($white ? "#fff" : "#1565d8")};
   width: 40px;
   height: 40px;
   opacity: 0.75;
