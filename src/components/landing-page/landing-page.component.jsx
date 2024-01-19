@@ -42,7 +42,7 @@ const LandingPage = () => {
 
   return (
     <RootContainer>
-      <StickyCursor />
+      {/* <StickyCursor /> */}
       <HeaderHolder>
         <ProgressBar />
         <Header />
