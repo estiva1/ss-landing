@@ -1,5 +1,13 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+import CustomButton from "../UI/button/button.component";
+import Sparkles from "../UI/sparkles/sparkles.component";
+import EastRoundedIcon from "@mui/icons-material/EastRounded";
+import ParticlesUi from "../UI/particles/particles.component";
+import ScrollReveal from "../../utils/framer-animations/scroll-reveal/simple-scroll-reveal/scroll-reveal.component";
+import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
+
 import {
   ActionContainer,
   CtaBanner,
@@ -10,16 +18,12 @@ import {
   Info,
   MobileButtonBox,
 } from "./cta-section.styles";
-import { Link } from "react-router-dom";
-import CustomButton from "../UI/button/button.component";
-import EastRoundedIcon from "@mui/icons-material/EastRounded";
-import ScrollReveal from "../../utils/framer-animations/scroll-reveal/simple-scroll-reveal/scroll-reveal.component";
-import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
-import Sparkles from "../UI/sparkles/sparkles.component";
 
 const CtaSection = () => {
   return (
     <CtaSectionContainer>
+      <ParticlesUi color="#fff" />
+
       <ScrollReveal key="cta-banner-image" index={1}>
         <FramerMagnetic>
           <CtaBanner

@@ -5,10 +5,12 @@ import { Stack } from "@mui/material";
 import { device } from "../../breakpoints.styles";
 
 export const HeroContainer = styled.section`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   //gap: 100px;
+  margin-top: 90px;
   padding: 40px 130px 100px 130px;
   overflow-x: clip;
 
@@ -16,6 +18,7 @@ export const HeroContainer = styled.section`
     padding: 30px 80px 60px 80px;
   }
   @media ${device.xs} {
+    margin-top: 78px;
     padding: 60px 15px;
     flex-direction: column;
     row-gap: 40px;
