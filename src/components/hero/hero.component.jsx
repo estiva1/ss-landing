@@ -59,7 +59,7 @@ const Hero = () => {
 
   return (
     <HeroContainer>
-      <ParticlesUi />
+      {/* <ParticlesUi /> */}
       <HeroContent>
         <Headline>
           <HeroText>

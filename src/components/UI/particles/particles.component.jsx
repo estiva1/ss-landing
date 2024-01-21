@@ -61,7 +61,7 @@ const ParticlesUi = () => {
             default: "bounce",
           },
           random: false,
-          speed: 0.5,
+          speed: 0,
           straight: false,
         },
         number: {
