@@ -9,6 +9,7 @@ export const SetUpRepricerContainer = styled.section`
   padding: 100px 130px;
   flex-direction: column;
   gap: 50px;
+  background: ${({ $invertedColors }) => ($invertedColors ? "#0B2447" : "#fff")};
   overflow: hidden; // for floating shapes
   z-index: 0; // to make Header's backdrop-filter working properly
 
@@ -32,7 +33,7 @@ export const Headline = styled.div`
 `;
 
 export const Heading = styled.h2`
-  color: #000;
+  color: ${({ $invertColors }) => ($invertColors ? "#fff" : "#000")};
   text-align: center;
   font-family: Titillium Web;
   font-size: 2rem;
@@ -57,7 +58,7 @@ export const HeadingHighlighted = styled(Heading)`
   }
 `;
 export const Paragraph = styled.span`
-  color: #4e5969;
+  color: ${({ $invertColors }) => ($invertColors ? "#fff" : "#4e5969")};
   text-align: center;
   font-family: Titillium Web;
   font-size: 1.375rem;

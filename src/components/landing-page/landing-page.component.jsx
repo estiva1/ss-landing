@@ -15,6 +15,7 @@ import UnmatchableBenefits from "../unmatchable-benefits/unmatchable-benefits.co
 import StickyCursor from "../../utils/framer-animations/sticky-cursor/sticky-cursor.component";
 
 import { HeaderHolder, RootContainer } from "./landing-page.style";
+import Footer from "../footer/footer.component";
 
 const LandingPage = () => {
   const [email, setEmail] = useState("");
@@ -47,16 +48,20 @@ const LandingPage = () => {
         <ProgressBar />
         <Header />
       </HeaderHolder>
-      <Hero />
-      <ProfitSection />
-      <SetUpRepricer />
-      <UniqueBenefits />
-      <Testimonials />
-      <Pricing />
-      <Products />
-      <CtaSection />
-      <Metrics />
-      <UnmatchableBenefits />
+      <main>
+        <Hero />
+        <ProfitSection />
+        <SetUpRepricer />
+        <UniqueBenefits />
+        <Testimonials />
+        <Pricing />
+        <Products />
+        <CtaSection />
+        <Metrics />
+        <UnmatchableBenefits />
+        <SetUpRepricer invertColors />
+      </main>
+      <Footer />
     </RootContainer>
   );
 };

@@ -11,16 +11,24 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
 import sticker from "../../assets/sticker.png";
-import setUpRepricerDesktopFrame1 from "../../assets/set-up-repricer-desktop-frame-1.png";
-import setUpRepricerDesktopFrame2 from "../../assets/set-up-repricer-desktop-frame-2.png";
-import setUpRepricerDesktopFrame3 from "../../assets/set-up-repricer-desktop-frame-3.png";
+import setUpRepricerDesktopFrame1 from "../../assets/set-up-repricer/main/set-up-repricer-desktop-frame-1.png";
+import setUpRepricerDesktopFrame2 from "../../assets/set-up-repricer/main/set-up-repricer-desktop-frame-2.png";
+import setUpRepricerDesktopFrame3 from "../../assets/set-up-repricer/main/set-up-repricer-desktop-frame-3.png";
 
-import setUpRepricerMobileTopFrame1 from "../../assets/set-up-repricer-mobile-top-frame-1.png";
-import setUpRepricerMobileTopFrame2 from "../../assets/set-up-repricer-mobile-top-frame-2.png";
-import setUpRepricerMobileTopFrame3 from "../../assets/set-up-repricer-mobile-top-frame-3.png";
-import setUpRepricerMobileBottomFrame1 from "../../assets/set-up-repricer-mobile-bottom-frame-1.png";
-import setUpRepricerMobileBottomFrame2 from "../../assets/set-up-repricer-mobile-bottom-frame-2.png";
-import setUpRepricerMobileBottomFrame3 from "../../assets/set-up-repricer-mobile-bottom-frame-3.png";
+import setUpRepricerMobileTopFrame1 from "../../assets/set-up-repricer/main/set-up-repricer-mobile-top-frame-1.png";
+import setUpRepricerMobileTopFrame2 from "../../assets/set-up-repricer/main/set-up-repricer-mobile-top-frame-2.png";
+import setUpRepricerMobileTopFrame3 from "../../assets/set-up-repricer/main/set-up-repricer-mobile-top-frame-3.png";
+import setUpRepricerMobileBottomFrame1 from "../../assets/set-up-repricer/main/set-up-repricer-mobile-bottom-frame-1.png";
+import setUpRepricerMobileBottomFrame2 from "../../assets/set-up-repricer/main/set-up-repricer-mobile-bottom-frame-2.png";
+import setUpRepricerMobileBottomFrame3 from "../../assets/set-up-repricer/main/set-up-repricer-mobile-bottom-frame-3.png";
+
+import setUpRepricerDesktopFrameInverted1 from "../../assets/set-up-repricer/footer/set-up-repricer-desktop-frame-inverted-1.png";
+import setUpRepricerDesktopFrameInverted2 from "../../assets/set-up-repricer/footer/set-up-repricer-desktop-frame-inverted-2.png";
+import setUpRepricerDesktopFrameInverted3 from "../../assets/set-up-repricer/footer/set-up-repricer-desktop-frame-inverted-3.png";
+
+import setUpRepricerMobileBottomFrameInverted1 from "../../assets/set-up-repricer/footer/set-up-repricer-mobile-bottom-frame-inverted-1.png";
+import setUpRepricerMobileBottomFrameInverted2 from "../../assets/set-up-repricer/footer/set-up-repricer-mobile-bottom-frame-inverted-2.png";
+import setUpRepricerMobileBottomFrameInverted3 from "../../assets/set-up-repricer/footer/set-up-repricer-mobile-bottom-frame-inverted-3.png";
 
 import {
   DesktopCarousel,
@@ -37,28 +45,30 @@ import {
   ShapeTwo,
 } from "./set-up-repricer.styles";
 
-const SetUpRepricer = () => {
+const SetUpRepricer = ({ invertColors = false }) => {
   const phrases = ["Set up your", "Repricer in less then 5 Minutes", "or else we give you 3 months free!"];
   const paragraph = ["Sales.Support Ai Repricer is your ultimate Amazon repricing solution to:"];
+
+  const isInvertedColors = invertColors;
 
   const handleDragStart = (e) => e.preventDefault();
   const items = [
     <img
-      src={setUpRepricerDesktopFrame1}
+      src={isInvertedColors ? setUpRepricerDesktopFrameInverted1 : setUpRepricerDesktopFrame1}
       style={{ width: "100%" }}
       onDragStart={handleDragStart}
       role="presentation"
       loading="lazy"
     />,
     <img
-      src={setUpRepricerDesktopFrame2}
+      src={isInvertedColors ? setUpRepricerDesktopFrameInverted2 : setUpRepricerDesktopFrame2}
       style={{ width: "100%" }}
       onDragStart={handleDragStart}
       role="presentation"
       loading="lazy"
     />,
     <img
-      src={setUpRepricerDesktopFrame3}
+      src={isInvertedColors ? setUpRepricerDesktopFrameInverted3 : setUpRepricerDesktopFrame3}
       style={{ width: "100%" }}
       onDragStart={handleDragStart}
       role="presentation"
@@ -76,7 +86,7 @@ const SetUpRepricer = () => {
         loading="lazy"
       />
       <img
-        src={setUpRepricerMobileBottomFrame1}
+        src={isInvertedColors ? setUpRepricerMobileBottomFrameInverted1 : setUpRepricerMobileBottomFrame1}
         style={{ width: "95%" }}
         onDragStart={handleDragStart}
         role="presentation"
@@ -93,7 +103,7 @@ const SetUpRepricer = () => {
         loading="lazy"
       />
       <img
-        src={setUpRepricerMobileBottomFrame2}
+        src={isInvertedColors ? setUpRepricerMobileBottomFrameInverted2 : setUpRepricerMobileBottomFrame2}
         style={{ width: "95%" }}
         onDragStart={handleDragStart}
         role="presentation"
@@ -110,7 +120,7 @@ const SetUpRepricer = () => {
         loading="lazy"
       />
       <img
-        src={setUpRepricerMobileBottomFrame3}
+        src={isInvertedColors ? setUpRepricerMobileBottomFrameInverted3 : setUpRepricerMobileBottomFrame3}
         style={{ width: "95%" }}
         onDragStart={handleDragStart}
         role="presentation"
@@ -120,14 +130,14 @@ const SetUpRepricer = () => {
   ];
 
   return (
-    <SetUpRepricerContainer>
+    <SetUpRepricerContainer $invertedColors={invertColors}>
       <ShapeOne />
       <ShapeTwo />
       <ShapeThree />
 
       <div>
         <Headline>
-          <Heading>
+          <Heading $invertColors={invertColors}>
             <TextMaskAnimation phrases={phrases.slice(0, 1)} delay={0.075} />
           </Heading>
           <HeadingHighlighted>
@@ -135,11 +145,11 @@ const SetUpRepricer = () => {
               <TextMaskAnimation phrases={phrases.slice(1, 2)} delay={0.15} />
             </Sparkles>
           </HeadingHighlighted>
-          <Heading>
+          <Heading $invertColors={invertColors}>
             <TextMaskAnimation phrases={phrases.slice(2)} delay={0.225} />
           </Heading>
         </Headline>
-        <Paragraph>
+        <Paragraph $invertColors={invertColors}>
           <TextMaskAnimation phrases={paragraph} delay={0.3} />
         </Paragraph>
       </div>
