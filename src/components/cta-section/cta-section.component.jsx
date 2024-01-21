@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import CustomButton from "../UI/button/button.component";
 import Sparkles from "../UI/sparkles/sparkles.component";
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
-import ParticlesUi from "../UI/particles/particles.component";
 import ScrollReveal from "../../utils/framer-animations/scroll-reveal/simple-scroll-reveal/scroll-reveal.component";
 import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 
@@ -22,8 +21,6 @@ import {
 const CtaSection = () => {
   return (
     <CtaSectionContainer>
-      <ParticlesUi color="#fff" />
-
       <ScrollReveal key="cta-banner-image" index={1}>
         <FramerMagnetic>
           <CtaBanner

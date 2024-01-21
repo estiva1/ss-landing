@@ -28,7 +28,6 @@ import {
   StyledHeroSvg,
   SubHeadline,
 } from "./hero.styles";
-import ParticlesUi from "../UI/particles/particles.component";
 
 const Hero = () => {
   const [email, setEmail] = useState("");
@@ -59,7 +58,6 @@ const Hero = () => {
 
   return (
     <HeroContainer>
-      {/* <ParticlesUi /> */}
       <HeroContent>
         <Headline>
           <HeroText>
