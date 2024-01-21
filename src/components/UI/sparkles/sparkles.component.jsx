@@ -42,6 +42,7 @@ const Sparkles = ({ color = DEFAULT_COLOR, children, ...delegated }) => {
       nextSparkles.push(sparkle);
       setSparkles(nextSparkles);
     },
+    //density, do NOT change
     prefersReducedMotion ? null : 50,
     prefersReducedMotion ? null : 450
   );

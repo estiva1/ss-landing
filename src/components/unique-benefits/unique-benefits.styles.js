@@ -76,7 +76,7 @@ export const BenefitImageBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 292px;
+  height: 240px;
   border-radius: 32px;
   background: #fff;
   border: 1px solid #c4c4c4;

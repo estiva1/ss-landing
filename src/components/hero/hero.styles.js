@@ -198,7 +198,7 @@ export const StyledHeroSvg = styled.svg`
   }
   @keyframes rotateBigGear {
     to {
-      transform: rotate(360deg);
+      transform: rotate(360deg) translateZ(0);
     }
   }
 
@@ -208,7 +208,7 @@ export const StyledHeroSvg = styled.svg`
   }
   @keyframes rotateSmallGear {
     to {
-      transform: rotate(-360deg);
+      transform: rotate(-360deg) translateZ(0);
     }
   }
 
@@ -218,13 +218,13 @@ export const StyledHeroSvg = styled.svg`
   }
   @keyframes moveParticles {
     0% {
-      transform: rotate(0deg);
+      transform: rotate(0deg) translateZ(0);
     }
     50% {
-      transform: rotate(5deg) scale(1.03);
+      transform: rotate(5deg) scale(1.03) translateZ(0);
     }
     100% {
-      transform: rotate(0deg);
+      transform: rotate(0deg) translateZ(0);
     }
   }
 
@@ -234,13 +234,13 @@ export const StyledHeroSvg = styled.svg`
   }
   @keyframes pulsSparkle {
     0% {
-      transform: scale(0.3);
+      transform: scale(0.3) translateZ(0);
     }
     50% {
-      transform: scale(2);
+      transform: scale(2) translateZ(0);
     }
     100% {
-      transform: scale(0.3);
+      transform: scale(0.3) translateZ(0);
     }
   }
 
@@ -250,7 +250,7 @@ export const StyledHeroSvg = styled.svg`
   }
   @keyframes dollarContourInner {
     to {
-      transform: rotate(360deg);
+      transform: rotate(360deg) translateZ(0);
     }
   }
 
@@ -261,16 +261,16 @@ export const StyledHeroSvg = styled.svg`
   }
   @keyframes robotFaceShieldMove {
     0% {
-      transform: translateX(0);
+      transform: translateX(0) translateZ(0);
     }
     33% {
-      transform: translateX(-20px);
+      transform: translateX(-20px) translateZ(0);
     }
     66% {
-      transform: translateX(3px);
+      transform: translateX(3px) translateZ(0);
     }
     100% {
-      transform: translateX(0px);
+      transform: translateX(0px) translateZ(0);
     }
   }
 
@@ -284,13 +284,13 @@ export const StyledHeroSvg = styled.svg`
   }
   @keyframes robotBodyMove {
     0% {
-      transform: translateY(-2px);
+      transform: translateY(-2px) translateZ(0);
     }
     50% {
-      transform: translateY(10px);
+      transform: translateY(10px) translateZ(0);
     }
     100% {
-      transform: translateY(-2px);
+      transform: translateY(-2px) translateZ(0);
     }
   }
 
