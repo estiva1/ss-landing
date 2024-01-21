@@ -20,6 +20,7 @@ import {
   ShapeTwo,
   TestimonialContainer,
   TestimonialsContainer,
+  Wrapper,
 } from "./testimonials.styles";
 
 const Testimonials = () => {
@@ -51,42 +52,43 @@ const Testimonials = () => {
   ];
 
   return (
-    <TestimonialsContainer>
+    <Wrapper>
       <ShapeOne />
       <ShapeTwo />
       <ShapeThree />
+      <TestimonialsContainer>
+        <div>
+          <MotionHeading>
+            <TextTypingAnimation text={heading} />
+          </MotionHeading>
 
-      <div>
-        <MotionHeading>
-          <TextTypingAnimation text={heading} />
-        </MotionHeading>
+          <Paragraph>
+            <TextTypingAnimation text={paragraph} />
+          </Paragraph>
+        </div>
 
-        <Paragraph>
-          <TextTypingAnimation text={paragraph} />
-        </Paragraph>
-      </div>
+        <Columns>
+          {clients.map((client, index) => (
+            <ColumnContainer key={index}>
+              <TestimonialContainer index={index}>
+                <TestimonialBox
+                  avatar={client.avatar}
+                  clientName={client.name}
+                  clientHeadline={client.headline}
+                  testimonialText={client.testimonialText}
+                />
+              </TestimonialContainer>
+            </ColumnContainer>
+          ))}
+        </Columns>
 
-      <Columns>
-        {clients.map((client, index) => (
-          <ColumnContainer key={index}>
-            <TestimonialContainer index={index}>
-              <TestimonialBox
-                avatar={client.avatar}
-                clientName={client.name}
-                clientHeadline={client.headline}
-                testimonialText={client.testimonialText}
-              />
-            </TestimonialContainer>
-          </ColumnContainer>
-        ))}
-      </Columns>
-
-      <MobileButtonBox>
-        <Link to="/registration">
-          <CustomButton variant="contained">Become a Client Now</CustomButton>
-        </Link>
-      </MobileButtonBox>
-    </TestimonialsContainer>
+        <MobileButtonBox>
+          <Link to="/registration">
+            <CustomButton variant="contained">Become a Client Now</CustomButton>
+          </Link>
+        </MobileButtonBox>
+      </TestimonialsContainer>
+    </Wrapper>
   );
 };
 

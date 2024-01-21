@@ -4,13 +4,21 @@ import { device } from "../../breakpoints.styles";
 import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 import DelayedScrollReveal from "../../utils/framer-animations/scroll-reveal/delayed-scroll-reveal/delayed-scroll-reveal.component";
 
-export const UniqueBenefitsContainer = styled.section`
+export const Wrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f1fbfe;
+`;
+
+export const UniqueBenefitsContainer = styled.div`
+  width: 100%;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 100px 130px;
-  background: #f1fbfe;
   gap: 50px;
   overflow: hidden;
 
@@ -64,7 +72,6 @@ export const ColumnContainer = styled.div`
   height: max-content;
   padding-inline: 16px;
   padding-bottom: 40px;
-  //background-color: rebeccapurple;
 
   @media ${device.xs} {
     width: 100%;

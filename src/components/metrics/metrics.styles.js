@@ -1,16 +1,24 @@
 import styled, { css } from "styled-components";
 import { device } from "../../breakpoints.styles";
 
-export const MetricsContainer = styled.section`
+export const Wrapper = styled.section`
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  z-index: 0;
+`;
+
+export const MetricsContainer = styled.div`
+  width: 100%;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 100px 130px;
   gap: 50px;
-  overflow: hidden;
-  z-index: 0;
 
   @media ${device.xl} {
     padding: 100px 80px;
@@ -73,8 +81,15 @@ export const Columns = styled.div`
 `;
 
 export const ColumnContainer = styled.div`
+  display: flex;
+  justify-content: center;
   width: 50%;
-  margin: auto;
+
+  &:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
   @media ${device.xs} {
     width: 100%;
@@ -85,9 +100,7 @@ export const ItemBox = styled.div`
   display: flex;
   width: 480px;
   flex-direction: column;
-  align-items: flex-start;
   gap: 24px;
-  margin: auto;
 
   @media ${device.xs} {
     width: 100%;

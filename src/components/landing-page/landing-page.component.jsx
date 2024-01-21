@@ -42,13 +42,13 @@ const LandingPage = () => {
   };
 
   return (
-    <RootContainer>
+    <>
       <StickyCursor />
       <HeaderHolder>
         <ProgressBar />
         <Header />
       </HeaderHolder>
-      <main>
+      <RootContainer>
         <Hero />
         <ProfitSection />
         <SetUpRepricer />
@@ -60,9 +60,9 @@ const LandingPage = () => {
         <Metrics />
         <UnmatchableBenefits />
         <SetUpRepricer invertColors />
-      </main>
+      </RootContainer>
       <Footer />
-    </RootContainer>
+    </>
   );
 };
 

@@ -4,21 +4,32 @@ import { motion } from "framer-motion";
 import { Stack } from "@mui/material";
 import { device } from "../../breakpoints.styles";
 
-export const HeroContainer = styled.section`
-  position: relative;
+export const Wrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+  overflow-x: clip;
+
+  @media ${device.xs} {
+    margin-top: 62px;
+  }
+`;
+
+export const HeroContainer = styled.div`
+  width: 100%;
+  max-width: 1440px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   //gap: 100px;
-  margin-top: 90px;
   padding: 40px 130px 100px 130px;
-  overflow-x: clip;
+  isolation: isolate;
 
   @media ${device.xl} {
     padding: 30px 80px 60px 80px;
   }
   @media ${device.xs} {
-    margin-top: 78px;
     padding: 60px 15px;
     flex-direction: column;
     row-gap: 40px;
@@ -89,7 +100,7 @@ export const HeroText = styled(motion.span)`
   }
 `;
 
-export const HeroParagraph = styled.p`
+export const Supporting = styled.p`
   color: #4e5969;
   font-family: Titillium Web;
   font-size: 1.75rem;
@@ -105,7 +116,7 @@ export const HeroParagraph = styled.p`
   }
 `;
 
-export const HeroParagraphHighlighted = styled.strong`
+export const SupportingHighlighted = styled.strong`
   color: #000;
   font-family: Titillium Web;
   font-size: 2.375rem;

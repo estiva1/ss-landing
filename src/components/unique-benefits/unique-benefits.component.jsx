@@ -7,7 +7,7 @@ import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import TextDipserse from "../../utils/framer-animations/text-disperse/text-disperse.component";
 import TextTypingAnimation from "../../utils/framer-animations/text-typing-animation/text-typing-animation.componen";
 
-import benefit1 from "../../assets/benefits/benefit-1.png"
+import benefit1 from "../../assets/benefits/benefit-1.png";
 import benefit2 from "../../assets/benefits/benefit-2.png";
 import benefit3 from "../../assets/benefits/benefit-3.png";
 import benefit4 from "../../assets/benefits/benefit-4.png";
@@ -27,6 +27,7 @@ import {
   MobileButtonBox,
   Paragraph,
   UniqueBenefitsContainer,
+  Wrapper,
 } from "./unique-benefits.styles";
 
 const UniqueBenefits = () => {
@@ -71,42 +72,44 @@ const UniqueBenefits = () => {
   ];
 
   return (
-    <UniqueBenefitsContainer>
-      <Heading>
-        <TextTypingAnimation text={heading} />
-      </Heading>
+    <Wrapper>
+      <UniqueBenefitsContainer>
+        <Heading>
+          <TextTypingAnimation text={heading} />
+        </Heading>
 
-      <Columns>
-        {benefits.map((benefit, index) => (
-          <ColumnContainer key={index}>
-            <BenefitContainer index={index}>
-              <BenefitImageBox>
-                <BenefitImage src={benefit.image} loading="lazy" />
-              </BenefitImageBox>
+        <Columns>
+          {benefits.map((benefit, index) => (
+            <ColumnContainer key={index}>
+              <BenefitContainer index={index}>
+                <BenefitImageBox>
+                  <BenefitImage src={benefit.image} loading="lazy" />
+                </BenefitImageBox>
 
-              <BenefitCaptionBox>
-                <TextDipserse>
-                  <p style={{ margin: 0 }}>{benefit.captionPrimary}</p>
-                </TextDipserse>
-                <CaptionSecondaryBorderBox>
-                  <CaptionSecondary>{benefit.captionSecondary}</CaptionSecondary>
-                </CaptionSecondaryBorderBox>
-              </BenefitCaptionBox>
+                <BenefitCaptionBox>
+                  <TextDipserse>
+                    <p style={{ margin: 0 }}>{benefit.captionPrimary}</p>
+                  </TextDipserse>
+                  <CaptionSecondaryBorderBox>
+                    <CaptionSecondary>{benefit.captionSecondary}</CaptionSecondary>
+                  </CaptionSecondaryBorderBox>
+                </BenefitCaptionBox>
 
-              <Paragraph>{benefit.paragraph}</Paragraph>
-            </BenefitContainer>
-          </ColumnContainer>
-        ))}
-      </Columns>
+                <Paragraph>{benefit.paragraph}</Paragraph>
+              </BenefitContainer>
+            </ColumnContainer>
+          ))}
+        </Columns>
 
-      <MobileButtonBox>
-        <Link to="/registration">
-          <CustomButton variant="contained" endIcon={<EastRoundedIcon />}>
-            Try for FREE
-          </CustomButton>
-        </Link>
-      </MobileButtonBox>
-    </UniqueBenefitsContainer>
+        <MobileButtonBox>
+          <Link to="/registration">
+            <CustomButton variant="contained" endIcon={<EastRoundedIcon />}>
+              Try for FREE
+            </CustomButton>
+          </Link>
+        </MobileButtonBox>
+      </UniqueBenefitsContainer>
+    </Wrapper>
   );
 };
 

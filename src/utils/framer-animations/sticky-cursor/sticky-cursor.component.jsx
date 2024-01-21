@@ -99,7 +99,7 @@ const StickyCursor = () => {
       setIsBackgroundColorMatch(isBackgroundColorMatch);
     };
 
-    const backgroundElements = [...document.querySelectorAll("button, header, section, [data-cursor='pointer']")];
+    const backgroundElements = [...document.querySelectorAll("button, header, main, footer, section, [data-cursor='pointer']")];
 
     backgroundElements.forEach((element) => {
       element.addEventListener("mouseenter", onMouseEnterBackgroundColor, false);

@@ -2,16 +2,24 @@ import styled, { css } from "styled-components";
 import { device } from "../../breakpoints.styles";
 import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 
-export const SetUpRepricerContainer = styled.section`
+export const Wrapper = styled.section`
   position: relative;
-  display: flex;
-  align-items: center;
-  padding: 100px 130px;
-  flex-direction: column;
-  gap: 50px;
   background: ${({ $invertedColors }) => ($invertedColors ? "#0B2447" : "#fff")};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow: hidden; // for floating shapes
   z-index: 0; // to make Header's backdrop-filter working properly
+`;
+
+export const SetUpRepricerContainer = styled.div`
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 130px;
+  gap: 50px;
 
   @media ${device.xl} {
     padding: 100px 80px;

@@ -1,14 +1,22 @@
 import styled, { css } from "styled-components";
 import { device } from "../../breakpoints.styles";
 
-export const UnmatchableBenefitsContainer = styled.section`
+export const Wrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0b2447;
+`;
+
+export const UnmatchableBenefitsContainer = styled.div`
+  width: 100%;
+  max-width: 1440px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 100px 130px;
-  background: #0b2447;
   gap: 50px;
   overflow: hidden;
 
@@ -58,10 +66,11 @@ export const Heading = styled.h2`
 `;
 
 export const Columns = styled.div`
+  width: 100%;
+  max-width: 1440px;
   display: flex;
   flex-flow: row wrap;
   margin-inline: -10px;
-  align-self: stretch;
 
   > *:nth-last-child(-n + 2) {
     margin-bottom: -20px;

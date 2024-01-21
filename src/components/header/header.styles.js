@@ -2,17 +2,26 @@ import styled from "styled-components";
 import { device } from "../../breakpoints.styles";
 import { Link } from "react-router-dom";
 
-export const HeaderContainer = styled.header`
+export const HeaderContainer = styled.div`
+  display: flex;
+  justify-content: center;
   width: 100%;
-  padding: 16px 130px;
+  //max-width: 1440px;
   background-color: #ffffffbf; //bf === 75% of transparency
+  > * {
+    padding: 16px 130px;
+  }
 
   @media ${device.xl} {
-    padding: 16px 80px;
+    > * {
+      padding: 16px 80px;
+    }
   }
 
   @media ${device.xs} {
-    padding: 15px;
+    > * {
+      padding: 15px;
+    }
   }
 `;
 

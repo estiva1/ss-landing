@@ -17,6 +17,7 @@ import {
   Summary,
   UBenefitContainer,
   UnmatchableBenefitsContainer,
+  Wrapper,
 } from "./unmatchable-benefits.styles";
 
 const UnmatchableBenefits = () => {
@@ -60,35 +61,37 @@ const UnmatchableBenefits = () => {
   };
 
   return (
-    <UnmatchableBenefitsContainer>
-      <ScrollReveal index={1}>
-        <Heading>
-          Try our&nbsp;
-          <span>
-            <Heading $highlighted>unmatchable benefits&nbsp;</Heading>
-          </span>
-        </Heading>
-      </ScrollReveal>
+    <Wrapper>
+      <UnmatchableBenefitsContainer>
+        <ScrollReveal index={1}>
+          <Heading>
+            Try our&nbsp;
+            <span>
+              <Heading $highlighted>unmatchable benefits&nbsp;</Heading>
+            </span>
+          </Heading>
+        </ScrollReveal>
 
-      <Columns>
-        {uBenefits.map((benefit, index) => (
-          <ColumnContainer key={index}>
-            <ScrollReveal style={{ height: "100%" }} index={index + 1}>
-              <UBenefitContainer>
-                <Headline>
-                  {benefit.icon}
-                  <div>
-                    <FlippingText text={benefit.label} />
-                  </div>
-                </Headline>
-                <Summary>{benefit.summary}</Summary>
-              </UBenefitContainer>
-            </ScrollReveal>
-          </ColumnContainer>
-        ))}
-      </Columns>
-      <Decal />
-    </UnmatchableBenefitsContainer>
+        <Columns>
+          {uBenefits.map((benefit, index) => (
+            <ColumnContainer key={index}>
+              <ScrollReveal style={{ height: "100%" }} index={index + 1}>
+                <UBenefitContainer>
+                  <Headline>
+                    {benefit.icon}
+                    <div>
+                      <FlippingText text={benefit.label} />
+                    </div>
+                  </Headline>
+                  <Summary>{benefit.summary}</Summary>
+                </UBenefitContainer>
+              </ScrollReveal>
+            </ColumnContainer>
+          ))}
+        </Columns>
+        <Decal />
+      </UnmatchableBenefitsContainer>
+    </Wrapper>
   );
 };
 

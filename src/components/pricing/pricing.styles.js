@@ -2,13 +2,21 @@ import styled from "styled-components";
 import { device } from "../../breakpoints.styles";
 import DelayedScrollReveal from "../../utils/framer-animations/scroll-reveal/delayed-scroll-reveal/delayed-scroll-reveal.component";
 
-export const PricingContainer = styled.section`
+export const Wrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f1fbfe;
+`;
+
+export const PricingContainer = styled.div`
+  width: 100%;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 100px 130px;
-  background: #f1fbfe;
   gap: 50px;
 
   @media ${device.xl} {

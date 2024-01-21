@@ -23,6 +23,7 @@ import {
   PricingContainer,
   PricingVariantsBox,
   SubscriptionHeadline,
+  Wrapper,
 } from "./pricing.styles";
 
 const Pricing = () => {
@@ -41,68 +42,70 @@ const Pricing = () => {
   ];
 
   return (
-    <PricingContainer>
-      <Heading>
-        <TextTypingAnimation text={heading} />
-      </Heading>
+    <Wrapper>
+      <PricingContainer>
+        <Heading>
+          <TextTypingAnimation text={heading} />
+        </Heading>
 
-      <PricingVariantsBox>
-        <BasicSubscription>
-          <SubscriptionHeadline>
-            <PriceVariantsHeading>Basic Subscription</PriceVariantsHeading>
-            <Price>
-              Use for&nbsp;<PriceVariantsHeading $enlarged>$0</PriceVariantsHeading>
-            </Price>
-          </SubscriptionHeadline>
+        <PricingVariantsBox>
+          <BasicSubscription>
+            <SubscriptionHeadline>
+              <PriceVariantsHeading>Basic Subscription</PriceVariantsHeading>
+              <Price>
+                Use for&nbsp;<PriceVariantsHeading $enlarged>$0</PriceVariantsHeading>
+              </Price>
+            </SubscriptionHeadline>
 
-          <Options>
-            {basicSubscriptionOptions.map((option, index) => (
-              <Option key={index} index={index}>
-                <CheckMark />
-                <OptionText>{option}</OptionText>
-              </Option>
-            ))}
-          </Options>
-        </BasicSubscription>
-
-        <PremiumSubscription>
-          <SubscriptionHeadline>
-            <Sparkles>
-              <PriceVariantsHeading $inverted>Premium Plan</PriceVariantsHeading>
-            </Sparkles>
-            <Price $inverted>
-              <PriceVariantsHeading $inverted $enlarged>
-                $99&nbsp;
-              </PriceVariantsHeading>
-              /per month
-            </Price>
-          </SubscriptionHeadline>
-
-          <Columns>
-            {premiumPlanOptions.map((option, index) => (
-              <ColumnContainer key={index}>
-                <Option index={index}>
+            <Options>
+              {basicSubscriptionOptions.map((option, index) => (
+                <Option key={index} index={index}>
                   <CheckMark />
-                  <OptionText $inverted>{option}</OptionText>
+                  <OptionText>{option}</OptionText>
                 </Option>
-              </ColumnContainer>
-            ))}
-          </Columns>
+              ))}
+            </Options>
+          </BasicSubscription>
 
-          <Stack spacing="12px" alignItems="center">
-            <OptionText $inverted>See for yourself with our 3 month trial</OptionText>
-
-            <FramerMagnetic>
+          <PremiumSubscription>
+            <SubscriptionHeadline>
               <Sparkles>
-                <Link to="/registration">
-                  <CustomButton variant="contained">Try it For Free</CustomButton>
-                </Link>
+                <PriceVariantsHeading $inverted>Premium Plan</PriceVariantsHeading>
               </Sparkles>
-            </FramerMagnetic>
-          </Stack>
-        </PremiumSubscription>
-      </PricingVariantsBox>
-    </PricingContainer>
+              <Price $inverted>
+                <PriceVariantsHeading $inverted $enlarged>
+                  $99&nbsp;
+                </PriceVariantsHeading>
+                /per month
+              </Price>
+            </SubscriptionHeadline>
+
+            <Columns>
+              {premiumPlanOptions.map((option, index) => (
+                <ColumnContainer key={index}>
+                  <Option index={index}>
+                    <CheckMark />
+                    <OptionText $inverted>{option}</OptionText>
+                  </Option>
+                </ColumnContainer>
+              ))}
+            </Columns>
+
+            <Stack spacing="12px" alignItems="center">
+              <OptionText $inverted>See for yourself with our 3 month trial</OptionText>
+
+              <FramerMagnetic>
+                <Sparkles>
+                  <Link to="/registration">
+                    <CustomButton variant="contained">Try it For Free</CustomButton>
+                  </Link>
+                </Sparkles>
+              </FramerMagnetic>
+            </Stack>
+          </PremiumSubscription>
+        </PricingVariantsBox>
+      </PricingContainer>
+    </Wrapper>
   );
 };
 

@@ -18,6 +18,7 @@ import {
   ShapeOne,
   ShapeThree,
   ShapeTwo,
+  Wrapper,
 } from "./metrics.styles";
 
 const Metrics = () => {
@@ -46,40 +47,41 @@ const Metrics = () => {
   ];
 
   return (
-    <MetricsContainer>
+    <Wrapper>
       <ShapeOne />
       <ShapeTwo />
       <ShapeThree />
+      <MetricsContainer>
+        <ScrollReveal index={2}>
+          <Heading>
+            Optimizing the metrics that&nbsp;
+            <span>
+              <Heading $highlighted>matter THE MOST&nbsp;</Heading>
+            </span>
+          </Heading>
+        </ScrollReveal>
 
-      <ScrollReveal index={2}>
-        <Heading>
-          Optimizing the metrics that&nbsp;
-          <span>
-            <Heading $highlighted>matter THE MOST&nbsp;</Heading>
-          </span>
-        </Heading>
-      </ScrollReveal>
+        <ScrollReveal index={1}>
+          <Columns>
+            {metrics.map((item, index) => (
+              <ColumnContainer key={index}>
+                <ItemBox>
+                  <Stack direction="row" gap="10px" alignItems="center">
+                    {item.icon}
+                    <ItemLabel>{item.label}</ItemLabel>
+                  </Stack>
 
-      <ScrollReveal index={1}>
-        <Columns>
-          {metrics.map((item, index) => (
-            <ColumnContainer key={index}>
-              <ItemBox>
-                <Stack direction="row" gap="10px" alignItems="center">
-                  {item.icon}
-                  <ItemLabel>{item.label}</ItemLabel>
-                </Stack>
-
-                <Info>
-                  <ItemStatement>{item.statement}</ItemStatement>
-                  <ItemSummary>{item.summary}</ItemSummary>
-                </Info>
-              </ItemBox>
-            </ColumnContainer>
-          ))}
-        </Columns>
-      </ScrollReveal>
-    </MetricsContainer>
+                  <Info>
+                    <ItemStatement>{item.statement}</ItemStatement>
+                    <ItemSummary>{item.summary}</ItemSummary>
+                  </Info>
+                </ItemBox>
+              </ColumnContainer>
+            ))}
+          </Columns>
+        </ScrollReveal>
+      </MetricsContainer>
+    </Wrapper>
   );
 };
 

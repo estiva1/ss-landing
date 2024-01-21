@@ -3,17 +3,24 @@ import { device } from "../../breakpoints.styles";
 import DelayedScrollReveal from "../../utils/framer-animations/scroll-reveal/delayed-scroll-reveal/delayed-scroll-reveal.component";
 import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 
-export const TestimonialsContainer = styled.section`
+export const Wrapper = styled.section`
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; // for floating shapes
+  z-index: 0;
+`;
+
+export const TestimonialsContainer = styled.div`
+  width: 100%;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 100px 130px;
-  background: #fff;
   gap: 50px;
-  overflow: hidden; // for floating shapes
-  z-index: 0;
 
   @media ${device.xl} {
     padding: 100px 80px;

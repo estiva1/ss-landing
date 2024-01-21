@@ -43,6 +43,7 @@ import {
   ShapeOne,
   ShapeThree,
   ShapeTwo,
+  Wrapper,
 } from "./set-up-repricer.styles";
 
 const SetUpRepricer = ({ invertColors = false }) => {
@@ -130,72 +131,73 @@ const SetUpRepricer = ({ invertColors = false }) => {
   ];
 
   return (
-    <SetUpRepricerContainer $invertedColors={invertColors}>
+    <Wrapper $invertedColors={invertColors}>
       <ShapeOne />
       <ShapeTwo />
       <ShapeThree />
+      <SetUpRepricerContainer>
+        <div>
+          <Headline>
+            <Heading $invertColors={invertColors}>
+              <TextMaskAnimation phrases={phrases.slice(0, 1)} delay={0.075} />
+            </Heading>
+            <HeadingHighlighted>
+              <Sparkles>
+                <TextMaskAnimation phrases={phrases.slice(1, 2)} delay={0.15} />
+              </Sparkles>
+            </HeadingHighlighted>
+            <Heading $invertColors={invertColors}>
+              <TextMaskAnimation phrases={phrases.slice(2)} delay={0.225} />
+            </Heading>
+          </Headline>
+          <Paragraph $invertColors={invertColors}>
+            <TextMaskAnimation phrases={paragraph} delay={0.3} />
+          </Paragraph>
+        </div>
 
-      <div>
-        <Headline>
-          <Heading $invertColors={invertColors}>
-            <TextMaskAnimation phrases={phrases.slice(0, 1)} delay={0.075} />
-          </Heading>
-          <HeadingHighlighted>
-            <Sparkles>
-              <TextMaskAnimation phrases={phrases.slice(1, 2)} delay={0.15} />
-            </Sparkles>
-          </HeadingHighlighted>
-          <Heading $invertColors={invertColors}>
-            <TextMaskAnimation phrases={phrases.slice(2)} delay={0.225} />
-          </Heading>
-        </Headline>
-        <Paragraph $invertColors={invertColors}>
-          <TextMaskAnimation phrases={paragraph} delay={0.3} />
-        </Paragraph>
-      </div>
+        <DesktopCarousel>
+          <ScrollReveal style={{ position: "relative" }} index={2}>
+            <AliceCarousel
+              className="alice-carousel"
+              autoPlay
+              autoPlayInterval={2000}
+              infinite
+              disableButtonsControls
+              //animationDuration={1000}
+              //animationEasingFunction="cubic-bezier(0.56, 0.03, 0.12, 1.04)"
+              animationType="fadeout"
+              mouseTracking
+              items={items}
+            />
+            <img src={sticker} style={{ width: "100px", position: "absolute", top: "-30px", right: "40px" }} />
+          </ScrollReveal>
+        </DesktopCarousel>
 
-      <DesktopCarousel>
-        <ScrollReveal style={{ position: "relative" }} index={2}>
-          <AliceCarousel
-            className="alice-carousel"
-            autoPlay
-            autoPlayInterval={2000}
-            infinite
-            disableButtonsControls
-            //animationDuration={1000}
-            //animationEasingFunction="cubic-bezier(0.56, 0.03, 0.12, 1.04)"
-            animationType="fadeout"
-            mouseTracking
-            items={items}
-          />
-          <img src={sticker} style={{ width: "100px", position: "absolute", top: "-30px", right: "40px" }} />
-        </ScrollReveal>
-      </DesktopCarousel>
+        <MobileCarousel>
+          <ScrollReveal index={4}>
+            <AliceCarousel
+              className="alice-carousel"
+              autoPlay
+              autoPlayInterval={2000}
+              infinite
+              disableButtonsControls
+              animationDuration={1000}
+              animationEasingFunction="cubic-bezier(0.56, 0.03, 0.12, 1.04)"
+              animationType="slide"
+              mouseTracking
+              touchTracking
+              items={mobileItems}
+            />
+          </ScrollReveal>
+        </MobileCarousel>
 
-      <MobileCarousel>
-        <ScrollReveal index={4}>
-          <AliceCarousel
-            className="alice-carousel"
-            autoPlay
-            autoPlayInterval={2000}
-            infinite
-            disableButtonsControls
-            animationDuration={1000}
-            animationEasingFunction="cubic-bezier(0.56, 0.03, 0.12, 1.04)"
-            animationType="slide"
-            mouseTracking
-            touchTracking
-            items={mobileItems}
-          />
-        </ScrollReveal>
-      </MobileCarousel>
-
-      <MobileButtonBox>
-        <Link to="/registration">
-          <CustomButton variant="contained">Turn On the Repricer NOW</CustomButton>
-        </Link>
-      </MobileButtonBox>
-    </SetUpRepricerContainer>
+        <MobileButtonBox>
+          <Link to="/registration">
+            <CustomButton variant="contained">Turn On the Repricer NOW</CustomButton>
+          </Link>
+        </MobileButtonBox>
+      </SetUpRepricerContainer>
+    </Wrapper>
   );
 };
 

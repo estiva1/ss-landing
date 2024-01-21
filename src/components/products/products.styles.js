@@ -2,13 +2,22 @@ import styled from "styled-components";
 import { device } from "../../breakpoints.styles";
 import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 
+export const Wrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0b2447;
+`;
+
 export const ProductsContainer = styled.section`
+  width: 100%;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 100px 130px;
-  background: #0b2447;
+  
   gap: 50px;
   overflow: hidden;
 

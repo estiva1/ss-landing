@@ -1,5 +1,5 @@
 import React from "react";
-import { ProfitSectionContainer } from "./profit-section.styles";
+import { ProfitSectionContainer, Wrapper } from "./profit-section.styles";
 import ProfitAmountBox from "../UI/profit-amount-box/profit-amount-box.component";
 import DelayedScrollReveal from "../../utils/framer-animations/scroll-reveal/delayed-scroll-reveal/delayed-scroll-reveal.component";
 
@@ -11,18 +11,15 @@ const ProfitSection = () => {
   ];
 
   return (
-    <ProfitSectionContainer>
-      {profitSectionData.map((box, index) => (
-        <DelayedScrollReveal
-          style={{ width: "100%" }}
-          key={`profit-amount-box-${index}`}
-          index={index}
-          speed={2}
-        >
-          <ProfitAmountBox profit={box.profit} profitIn={box.profitIn} />
-        </DelayedScrollReveal>
-      ))}
-    </ProfitSectionContainer>
+    <Wrapper>
+      <ProfitSectionContainer>
+        {profitSectionData.map((box, index) => (
+          <DelayedScrollReveal key={`profit-amount-box-${index}`} index={index} speed={2}>
+            <ProfitAmountBox profit={box.profit} profitIn={box.profitIn} />
+          </DelayedScrollReveal>
+        ))}
+      </ProfitSectionContainer>
+    </Wrapper>
   );
 };
 

@@ -10,7 +10,7 @@ import { HeaderContainer, HeaderLogo, StyledLink } from "./header.styles";
 const Header = () => {
   return (
     <HeaderContainer>
-      <Stack direction="row" alignItems="center" justifyContent="space-between">
+      <Stack sx={{width: "100%", maxWidth: "1440px" }} direction="row" alignItems="center" justifyContent="space-between">
         <HeaderLogo src={logo} alt="Sales.Support Logo" title="Sales.Support" loading="lazy" />
 
         <FramerMagnetic>

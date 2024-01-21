@@ -24,6 +24,7 @@ import {
   ProductImage,
   ProductsContainer,
   ProductsList,
+  Wrapper,
 } from "./products.styles";
 
 const Products = () => {
@@ -79,41 +80,43 @@ const Products = () => {
   ];
 
   return (
-    <ProductsContainer>
-      <ScrollReveal index={1}>
-        <Heading>
-          Not just Repricing, unleash&nbsp;
-          <span>
-            <Heading $highlighted>the full suite of products&nbsp;</Heading>
-          </span>
-        </Heading>
-      </ScrollReveal>
+    <Wrapper>
+      <ProductsContainer>
+        <ScrollReveal index={1}>
+          <Heading>
+            Not just Repricing, unleash&nbsp;
+            <span>
+              <Heading $highlighted>the full suite of products&nbsp;</Heading>
+            </span>
+          </Heading>
+        </ScrollReveal>
 
-      <ProductsList>
-        {products.map((product, index) => (
-          <ProductContainer key={index}>
-            <ScrollReveal index={index % 2 === 0 ? 1 : 2}>
-              <About>
-                <Caption>{product.caption}</Caption>
-                <Description>{product.description}</Description>
-              </About>
-            </ScrollReveal>
+        <ProductsList>
+          {products.map((product, index) => (
+            <ProductContainer key={index}>
+              <ScrollReveal index={index % 2 === 0 ? 1 : 2}>
+                <About>
+                  <Caption>{product.caption}</Caption>
+                  <Description>{product.description}</Description>
+                </About>
+              </ScrollReveal>
 
-            <ScrollReveal index={index % 2 === 0 ? 2 : 1}>
-              <ProductImage src={product.image} />
-            </ScrollReveal>
-          </ProductContainer>
-        ))}
-      </ProductsList>
+              <ScrollReveal index={index % 2 === 0 ? 2 : 1}>
+                <ProductImage src={product.image} />
+              </ScrollReveal>
+            </ProductContainer>
+          ))}
+        </ProductsList>
 
-      <MobileButtonBox>
-        <Link to="/registration">
-          <CustomButton variant="contained" endIcon={<EastRoundedIcon />}>
-            Start free trial
-          </CustomButton>
-        </Link>
-      </MobileButtonBox>
-    </ProductsContainer>
+        <MobileButtonBox>
+          <Link to="/registration">
+            <CustomButton variant="contained" endIcon={<EastRoundedIcon />}>
+              Start free trial
+            </CustomButton>
+          </Link>
+        </MobileButtonBox>
+      </ProductsContainer>
+    </Wrapper>
   );
 };
 

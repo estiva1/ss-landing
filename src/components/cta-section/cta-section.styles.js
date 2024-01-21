@@ -2,14 +2,24 @@ import styled from "styled-components";
 import { device } from "../../breakpoints.styles";
 import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 
-export const CtaSectionContainer = styled.section`
+export const Wrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1565d8;
+`;
+
+export const CtaSectionContainer = styled.div`
+  width: 100%;
+  max-width: 1440px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 100px 130px;
-  background: #1565d8;
+
   gap: 90px;
+  isolation: isolate;
 
   @media ${device.xl} {
     padding: 100px 80px;
