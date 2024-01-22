@@ -1,33 +1,41 @@
 import { Box } from "@mui/material";
 import { styled } from "styled-components";
+import { device } from "../../breakpoints.styles";
 
-export const RegistrationContainer = styled(Box)`
+export const RegistrationContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0px 130px;
   align-items: center;
+  padding-inline: 130px;
   height: 100vh;
   gap: 50px;
   background: #f1fbfe;
+
+  @media ${device.xs} {
+    padding-inline: 20px;
+  }
 `;
 
-export const CreatePasswordFrame = styled(Box)`
+export const CreatePasswordFrame = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
   width: 400px;
-  max-width: 400px;
-  padding: 48px 40px 32px 40px;
+  padding: 48px;
   align-items: center;
   gap: 32px;
   border-radius: 20px;
   border: 2px solid #6fd5f6;
   background: #fff;
   box-shadow: 4px 4px 25px 0px rgba(111, 213, 246, 0.25);
+
+  @media ${device.xs} {
+    width: 100%;
+  }
 `;
 
-export const CreatePasswordFrameContent = styled(Box)`
+export const CreatePasswordFrameContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,14 +43,14 @@ export const CreatePasswordFrameContent = styled(Box)`
   align-self: stretch;
 `;
 
-export const CreatePasswordFrameContentTop = styled(Box)`
+export const Headline = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 17px;
 `;
 
-export const CreatePasswordFrameContentBottom = styled(Box)`
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,7 +58,7 @@ export const CreatePasswordFrameContentBottom = styled(Box)`
   align-self: stretch;
 `;
 
-export const InputsContainer = styled(Box)`
+export const InputsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -58,7 +66,7 @@ export const InputsContainer = styled(Box)`
   align-self: stretch;
 `;
 
-export const InputItem = styled(Box)`
+export const InputBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -94,7 +102,7 @@ export const StyledTextField = styled.input`
   }
 `;
 
-export const PasswordFrameHeadingText = styled.h3`
+export const Heading = styled.h1`
   color: #000;
   margin: 0;
   text-align: center;
@@ -105,7 +113,7 @@ export const PasswordFrameHeadingText = styled.h3`
   line-height: 1.25rem;
 `;
 
-export const PasswordFrameSubHeadingText = styled.h4`
+export const Support = styled.span`
   color: #4e5969;
   margin: 0;
   font-family: Titillium Web;
@@ -115,7 +123,7 @@ export const PasswordFrameSubHeadingText = styled.h4`
   line-height: 1.125rem;
 `;
 
-export const InputNameText = styled.h4`
+export const InputLabel = styled.label`
   color: #000;
   margin: 0;
   font-family: Titillium Web;
@@ -125,7 +133,7 @@ export const InputNameText = styled.h4`
   line-height: 1.125rem;
 `;
 
-export const SpanText = styled.h6`
+export const FooterAgreement = styled.span`
   color: #c4c4c4;
   margin: 0;
   text-align: center;
@@ -134,4 +142,23 @@ export const SpanText = styled.h6`
   font-style: normal;
   font-weight: 400;
   line-height: 0.75rem;
+`;
+
+export const Hyperlink = styled.a`
+  text-decoration: none;
+  text-decoration-line: underline;
+  color: inherit;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(157, 167, 178);
+  }
+
+  &:focus {
+    outline: 0.125rem solid #1565D8;
+    border-radius: 0.375rem;
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  }
 `;

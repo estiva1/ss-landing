@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import { device } from "../../breakpoints.styles";
 import { Link } from "react-router-dom";
+import { device } from "../../breakpoints.styles";
 
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  //max-width: 1440px;
   background-color: #ffffffbf; //bf === 75% of transparency
+
   > * {
     padding: 16px 130px;
   }

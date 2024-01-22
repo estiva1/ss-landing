@@ -84,7 +84,7 @@ const Testimonials = () => {
 
         <MobileButtonBox>
           <Link to="/registration">
-            <CustomButton variant="contained">Become a Client Now</CustomButton>
+            <CustomButton variant="contained">Try it for Free</CustomButton>
           </Link>
         </MobileButtonBox>
       </TestimonialsContainer>

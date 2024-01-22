@@ -9,7 +9,6 @@ const Dropdown = ({ data = {}, placeholder = "", setSelectedValue, disabled }) =
   const handleValueChange = (event, newValue) => {
     setValue(newValue);
 
-    // Map selected option to corresponding value
     let selectedValue;
     switch (newValue) {
       case "If you're FBA Seller...":
@@ -21,7 +20,6 @@ const Dropdown = ({ data = {}, placeholder = "", setSelectedValue, disabled }) =
       case "If you're Agency...":
         selectedValue = 2;
         break;
-      // Add more cases as needed
       default:
         selectedValue = null;
     }

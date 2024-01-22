@@ -1,28 +1,28 @@
 import React, { useState } from "react";
-import { Box } from "@mui/material";
+import { Link } from "react-router-dom";
 
-import {
-  CreatePasswordFrame,
-  CreatePasswordFrameContent,
-  CreatePasswordFrameContentBottom,
-  CreatePasswordFrameContentTop,
-  InputItem,
-  InputNameText,
-  InputsContainer,
-  PasswordFrameHeadingText,
-  PasswordFrameSubHeadingText,
-  RegistrationContainer,
-  SpanText,
-  StyledTextField,
-} from "./registration.styles";
-
-import { StyledButton } from "../UI/button/button.styles";
-
+import { Box, IconButton } from "@mui/material";
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import WestRoundedIcon from "@mui/icons-material/WestRounded";
 
 import companyLogo from "../../assets/logo.png";
-import { Link } from "react-router-dom";
+import { StyledButton } from "../UI/button/button.styles";
+
+import {
+  CreatePasswordFrame,
+  CreatePasswordFrameContent,
+  FooterAgreement,
+  Form,
+  Heading,
+  Headline,
+  Hyperlink,
+  InputBox,
+  InputLabel,
+  InputsContainer,
+  RegistrationContainer,
+  StyledTextField,
+  Support,
+} from "./registration.styles";
 
 const Registration = () => {
   const [email, setEmail] = useState("");
@@ -44,32 +44,37 @@ const Registration = () => {
         }}
         component="img"
         src={companyLogo}
-        alt="Company Logo"
+        alt="Sales.Support Logo"
+        title="Sales.Support"
       />
       <CreatePasswordFrame>
-        <CreatePasswordFrameContent>
-          <CreatePasswordFrameContentTop>
-            <PasswordFrameHeadingText>
-              Just create a password for easier access to your Repricer account
-            </PasswordFrameHeadingText>
-            <PasswordFrameSubHeadingText>No credit card required, all features included.</PasswordFrameSubHeadingText>
-          </CreatePasswordFrameContentTop>
+        <Link to="/">
+          <IconButton sx={{ position: "absolute", top: "15px", left: "15px", color: "#1565d8" }}>
+            <WestRoundedIcon />
+          </IconButton>
+        </Link>
 
-          <CreatePasswordFrameContentBottom>
+        <CreatePasswordFrameContent>
+          <Headline>
+            <Heading>Just create a password for easier access to your Repricer account</Heading>
+            <Support>No credit card required, all features included.</Support>
+          </Headline>
+
+          <Form>
             <InputsContainer>
-              <InputItem>
-                <InputNameText>Email</InputNameText>
+              <InputBox>
+                <InputLabel>Email</InputLabel>
                 <StyledTextField
                   id="email"
                   name="email"
-                  placeholder="johndoe@gmail.com"
+                  placeholder="Email"
                   value={email}
                   onChange={handleEmailChange}
                 />
-              </InputItem>
+              </InputBox>
 
-              <InputItem>
-                <InputNameText>Password</InputNameText>
+              <InputBox>
+                <InputLabel>Password</InputLabel>
                 <StyledTextField
                   id="password"
                   name="password"
@@ -78,21 +83,20 @@ const Registration = () => {
                   value={password}
                   onChange={handlePasswordChange}
                 />
-              </InputItem>
+              </InputBox>
             </InputsContainer>
-            <StyledButton sx={{ minWidth: "100%" }} type="submit" variant="contained" endIcon={<EastRoundedIcon />}>
+            <StyledButton sx={{ alignSelf: "stretch" }} type="submit" variant="contained" endIcon={<EastRoundedIcon />}>
               Start free trial
             </StyledButton>
-          </CreatePasswordFrameContentBottom>
+          </Form>
         </CreatePasswordFrameContent>
 
-        <SpanText>By Signing Up you agree to Terms & Conditions</SpanText>
-
-        <Link to="/">
-          <WestRoundedIcon
-            sx={{ position: "absolute", top: "15px", left: "15px", width: "20px", color: "#1565d8", cursor: "pointer" }}
-          />
-        </Link>
+        <FooterAgreement>
+          By Signing Up you agree to&nbsp;
+          <Hyperlink target="_blank" rel="noopener" href="https://sales.support/terms">
+            Terms & Conditions
+          </Hyperlink>
+        </FooterAgreement>
       </CreatePasswordFrame>
     </RegistrationContainer>
   );
