@@ -21,7 +21,6 @@ const TextDipserse = ({ children }) => {
   const splitWord = (word, indexOfWord) => {
     let chars = [];
     word.split("").forEach((char, i) => {
-      // Check if the character is a space
       if (char === " ") {
         // If it's a space, add a non-breaking space (&nbsp;) element
         chars.push(

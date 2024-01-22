@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 
 const FramerCounter = ({ startVal = 0, endVal = 0, duration = 1 }) => {
   const [ref, inView] = useInView({ triggerOnce: true });

@@ -29,6 +29,7 @@ export const Wrapper = styled.span`
 export const SparkleWrapper = styled.span`
   position: absolute;
   display: block;
+
   @media (prefers-reduced-motion: no-preference) {
     animation: ${comeInOut} 1700ms forwards;
   }
@@ -36,6 +37,7 @@ export const SparkleWrapper = styled.span`
 
 export const SparkleSvg = styled.svg`
   display: block;
+
   @media (prefers-reduced-motion: no-preference) {
     animation: ${spin} 2000ms linear;
   }
@@ -43,6 +45,6 @@ export const SparkleSvg = styled.svg`
 
 export const ChildWrapper = styled.strong`
   position: relative;
-  z-index: 1;
   font-weight: bold;
+  z-index: 1;
 `;

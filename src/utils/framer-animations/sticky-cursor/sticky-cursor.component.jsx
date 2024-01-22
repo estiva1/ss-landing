@@ -9,19 +9,11 @@ const StickyCursor = () => {
   const [isPointer, setIsPointer] = useState(false);
   const [isBackgroundColorMatch, setIsBackgroundColorMatch] = useState(false);
 
-  const cursorSize = 20;
-
   const mouse = {
     x: useMotionValue(0),
     y: useMotionValue(0),
   };
 
-  const scale = {
-    x: useMotionValue(1),
-    y: useMotionValue(1),
-  };
-
-  //Smooth out the mouse values
   const smoothOptions = { damping: 20, stiffness: 300, mass: 0.8 };
   const smoothMouse = {
     x: useSpring(mouse.x, smoothOptions),
@@ -99,7 +91,9 @@ const StickyCursor = () => {
       setIsBackgroundColorMatch(isBackgroundColorMatch);
     };
 
-    const backgroundElements = [...document.querySelectorAll("button, header, main, footer, section, [data-cursor='pointer']")];
+    const backgroundElements = [
+      ...document.querySelectorAll("button, header, main, footer, section, [data-cursor='pointer']"),
+    ];
 
     backgroundElements.forEach((element) => {
       element.addEventListener("mouseenter", onMouseEnterBackgroundColor, false);

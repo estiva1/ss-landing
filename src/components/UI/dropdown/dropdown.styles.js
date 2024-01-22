@@ -11,7 +11,6 @@ export const StyledAutocomplete = styled(Autocomplete)`
     border-radius: 40px;
     border: 1px solid #1565d8;
     background: #e8f0fc;
-    //line-height: 1rem;
     fieldset {
       border: none !important;
     }

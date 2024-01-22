@@ -24,9 +24,6 @@ import {
 } from "./testimonials.styles";
 
 const Testimonials = () => {
-  const heading = "Clients Feedback on our The Best Repricing solution";
-  const paragraph = "See what Clients think of our service and unclose the ways to your success!";
-
   const clients = [
     {
       avatar: client1,
@@ -50,6 +47,9 @@ const Testimonials = () => {
         "Comprehensive analytics and insights help refine my strategy for maximum growth. If you're serious about success on Amazon, Sales.Support is a game-changer!",
     },
   ];
+
+  const heading = "Clients Feedback on our The Best Repricing solution";
+  const paragraph = "See what Clients think of our service and unclose the ways to your success!";
 
   return (
     <Wrapper>

@@ -52,7 +52,6 @@ export const Heading = styled.h2`
 
   @media ${device.xs} {
     font-size: 1.5rem;
-    //line-height: 132%;
   }
 `;
 
@@ -62,7 +61,6 @@ export const HeadingHighlighted = styled(Heading)`
 
   @media ${device.xs} {
     font-size: 1.5rem;
-    //line-height: 132%;
   }
 `;
 export const Paragraph = styled.span`

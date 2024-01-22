@@ -162,8 +162,8 @@ const Reasons = () => {
       text: "Set default rules and competitor's rule",
     },
   ];
+
   const [tab, setTab] = useState(0);
-  const [inputSelect, setInputSelect] = useState("");
   const dropdownOptions = ["If you're FBA Seller...", "If you're 3PL Seller...", "If you're Agency..."];
 
   const handleTabChange = (event, newTab) => {
@@ -202,8 +202,8 @@ const Reasons = () => {
               <CustomTabPanel key={0} index={0} value={tab}>
                 <Columns>
                   {reasons.slice(0, 4).map((reason, index) => (
-                    <ColumnContainer>
-                      <ReasonBox key={index}>
+                    <ColumnContainer key={index}>
+                      <ReasonBox>
                         <IconRoundBox>{reason.icon}</IconRoundBox>
                         <ReasonText>{reason.text}</ReasonText>
                       </ReasonBox>
@@ -216,8 +216,8 @@ const Reasons = () => {
               <CustomTabPanel key={1} index={1} value={tab}>
                 <Columns>
                   {reasons.slice(4, 8).map((reason, index) => (
-                    <ColumnContainer>
-                      <ReasonBox key={index}>
+                    <ColumnContainer key={index}>
+                      <ReasonBox>
                         <IconRoundBox>{reason.icon}</IconRoundBox>
                         <ReasonText>{reason.text}</ReasonText>
                       </ReasonBox>
@@ -230,8 +230,8 @@ const Reasons = () => {
               <CustomTabPanel key={2} index={2} value={tab}>
                 <Columns>
                   {reasons.slice(8).map((reason, index) => (
-                    <ColumnContainer>
-                      <ReasonBox key={index}>
+                    <ColumnContainer key={index}>
+                      <ReasonBox>
                         <IconRoundBox>{reason.icon}</IconRoundBox>
                         <ReasonText>{reason.text}</ReasonText>
                       </ReasonBox>

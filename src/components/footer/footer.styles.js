@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { device } from "../../breakpoints.styles";
 
 export const FooterContainer = styled.footer`
   padding-block: 32px;

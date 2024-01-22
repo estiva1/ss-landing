@@ -28,6 +28,7 @@ import {
 
 const Pricing = () => {
   const heading = "Unlock the price for our all-in-one Repricing solution";
+
   const basicSubscriptionOptions = ["Catalog Analyzer", "Purchase Order History", "Vendor CRM", "Removals", "Invoices"];
   const premiumPlanOptions = [
     "Catalog Analyzer",

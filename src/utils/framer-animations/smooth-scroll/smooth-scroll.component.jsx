@@ -1,6 +1,6 @@
 // UNSTABLE
 
-import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 
 import { useScroll, useSpring, useTransform } from "framer-motion";
 import { ScrollBody } from "./smooth-scroll.styles";

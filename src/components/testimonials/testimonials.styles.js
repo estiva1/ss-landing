@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
 import { device } from "../../breakpoints.styles";
-import DelayedScrollReveal from "../../utils/framer-animations/scroll-reveal/delayed-scroll-reveal/delayed-scroll-reveal.component";
+
 import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
+import DelayedScrollReveal from "../../utils/framer-animations/scroll-reveal/delayed-scroll-reveal/delayed-scroll-reveal.component";
 
 export const Wrapper = styled.section`
   position: relative;

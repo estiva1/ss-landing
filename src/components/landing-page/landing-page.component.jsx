@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Hero from "../hero/hero.component";
+import Footer from "../footer/footer.component";
 import Header from "../header/header.component";
 import Metrics from "../metrics/metrics.component";
 import Pricing from "../pricing/pricing.component";
+import Reasons from "../reasons/reasons.component";
 import Products from "../products/products.component";
 import CtaSection from "../cta-section/cta-section.component";
 import Testimonials from "../testimonials/testimonials.component";
@@ -15,33 +17,9 @@ import UnmatchableBenefits from "../unmatchable-benefits/unmatchable-benefits.co
 import StickyCursor from "../../utils/framer-animations/sticky-cursor/sticky-cursor.component";
 
 import { HeaderHolder, RootContainer } from "./landing-page.style";
-import Footer from "../footer/footer.component";
-import Reasons from "../reasons/reasons.component";
+import SmoothScroll from "../../utils/framer-animations/smooth-scroll/smooth-scroll.component";
 
 const LandingPage = () => {
-  const [email, setEmail] = useState("");
-  const [error, setError] = useState(null);
-
-  function isValidEmail(email) {
-    return /\S+@\S+\.\S+/.test(email);
-  }
-
-  const handleChange = (event) => {
-    setEmail(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    setError(null);
-
-    if (isValidEmail(email)) {
-      console.log("The email is valid");
-    } else {
-      console.log("Email is invalid");
-    }
-  };
-
   return (
     <>
       <StickyCursor />

@@ -1,7 +1,9 @@
 import React from "react";
-import { ProfitSectionContainer, Wrapper } from "./profit-section.styles";
+
 import ProfitAmountBox from "../UI/profit-amount-box/profit-amount-box.component";
 import DelayedScrollReveal from "../../utils/framer-animations/scroll-reveal/delayed-scroll-reveal/delayed-scroll-reveal.component";
+
+import { ProfitSectionContainer, Wrapper } from "./profit-section.styles";
 
 const ProfitSection = () => {
   const profitSectionData = [

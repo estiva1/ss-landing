@@ -119,7 +119,7 @@ export const Caption = styled.h3`
 
   @media ${device.xs} {
     font-size: 1.25rem;
-    line-height: 156%; /* 1.95rem */
+    line-height: 156%;
   }
 `;
 
@@ -134,7 +134,7 @@ export const Description = styled.p`
 
   @media ${device.xs} {
     font-size: 1rem;
-    line-height: 140%; /* 1.95rem */
+    line-height: 140%;
   }
 `;
 

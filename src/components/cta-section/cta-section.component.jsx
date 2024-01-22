@@ -1,9 +1,10 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
+
 import CustomButton from "../UI/button/button.component";
 import Sparkles from "../UI/sparkles/sparkles.component";
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
+
 import ScrollReveal from "../../utils/framer-animations/scroll-reveal/simple-scroll-reveal/scroll-reveal.component";
 import FramerMagnetic from "../../utils/framer-animations/framer-magnetic/framer-magnetic.component";
 
@@ -139,7 +140,7 @@ const CtaSection = () => {
           </FramerMagnetic>
         </ScrollReveal>
 
-        <ScrollReveal key="hero-image" index={2}>
+        <ScrollReveal key="cta-content" index={2}>
           <ActionContainer>
             <Headline>
               <Heading>Sign up for free today!</Heading>

@@ -31,7 +31,6 @@ import {
 } from "./unique-benefits.styles";
 
 const UniqueBenefits = () => {
-  const heading = "Embrace the unique benefits that elevate your experience";
   const benefits = [
     {
       image: benefit1,
@@ -70,6 +69,8 @@ const UniqueBenefits = () => {
       paragraph: "Automatically set the minimum and maximum prices",
     },
   ];
+
+  const heading = "Embrace the unique benefits that elevate your experience";
 
   return (
     <Wrapper>
