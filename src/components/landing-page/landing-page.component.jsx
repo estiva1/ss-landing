@@ -16,6 +16,7 @@ import StickyCursor from "../../utils/framer-animations/sticky-cursor/sticky-cur
 
 import { HeaderHolder, RootContainer } from "./landing-page.style";
 import Footer from "../footer/footer.component";
+import Reasons from "../reasons/reasons.component";
 
 const LandingPage = () => {
   const [email, setEmail] = useState("");
@@ -59,6 +60,7 @@ const LandingPage = () => {
         <CtaSection />
         <Metrics />
         <UnmatchableBenefits />
+        <Reasons />
         <SetUpRepricer invertColors />
       </RootContainer>
       <Footer />

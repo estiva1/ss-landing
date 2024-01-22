@@ -9,7 +9,7 @@ export const Wrapper = styled.section`
   background: #0b2447;
 `;
 
-export const ProductsContainer = styled.section`
+export const ProductsContainer = styled.div`
   width: 100%;
   max-width: 1440px;
   display: flex;
@@ -17,7 +17,7 @@ export const ProductsContainer = styled.section`
   align-items: center;
   justify-content: center;
   padding: 100px 130px;
-  
+
   gap: 50px;
   overflow: hidden;
 
@@ -116,6 +116,11 @@ export const Caption = styled.h3`
   line-height: 120%;
   margin: 0;
   margin-bottom: 8px;
+
+  @media ${device.xs} {
+    font-size: 1.25rem;
+    line-height: 156%; /* 1.95rem */
+  }
 `;
 
 export const Description = styled.p`
@@ -126,6 +131,11 @@ export const Description = styled.p`
   font-weight: 400;
   line-height: 1.5rem;
   margin: 0;
+
+  @media ${device.xs} {
+    font-size: 1rem;
+    line-height: 140%; /* 1.95rem */
+  }
 `;
 
 export const ProductImage = styled.img`

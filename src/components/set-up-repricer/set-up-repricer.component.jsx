@@ -136,8 +136,8 @@ const SetUpRepricer = ({ invertColors = false }) => {
       <ShapeTwo />
       <ShapeThree />
       <SetUpRepricerContainer>
-        <div>
-          <Headline>
+        <Headline>
+          <div>
             <Heading $invertColors={invertColors}>
               <TextMaskAnimation phrases={phrases.slice(0, 1)} delay={0.075} />
             </Heading>
@@ -149,11 +149,11 @@ const SetUpRepricer = ({ invertColors = false }) => {
             <Heading $invertColors={invertColors}>
               <TextMaskAnimation phrases={phrases.slice(2)} delay={0.225} />
             </Heading>
-          </Headline>
+          </div>
           <Paragraph $invertColors={invertColors}>
             <TextMaskAnimation phrases={paragraph} delay={0.3} />
           </Paragraph>
-        </div>
+        </Headline>
 
         <DesktopCarousel>
           <ScrollReveal style={{ position: "relative" }} index={2}>

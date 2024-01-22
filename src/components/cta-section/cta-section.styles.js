@@ -7,6 +7,7 @@ export const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   background: #1565d8;
+  overflow: hidden;
 `;
 
 export const CtaSectionContainer = styled.div`
@@ -109,6 +110,10 @@ export const Decal = styled.span`
 
 export const MobileButtonBox = styled(FramerMagnetic)`
   @media ${device.xs} {
-    align-self: stretch;
+    width: 100%;
+    > * {
+      display: grid;
+      align-self: stretch;
+    }
   }
 `;

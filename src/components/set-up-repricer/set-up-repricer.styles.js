@@ -31,12 +31,12 @@ export const SetUpRepricerContainer = styled.div`
 `;
 
 export const Headline = styled.div`
-  //display: flex;
-  align-items: baseline;
-  gap: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 
   @media ${device.xs} {
-    gap: 5px;
+    gap: 3px;
   }
 `;
 
