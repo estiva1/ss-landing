@@ -56,7 +56,7 @@ const Registration = () => {
 
         <CreatePasswordFrameContent>
           <Headline>
-            <Heading>Just create a password for easier access to your Repricer account</Heading>
+            {/* <Heading>Just create a password for easier access to your Repricer account</Heading> */}
             <Support>No credit card required, all features included.</Support>
           </Headline>
 
@@ -73,7 +73,7 @@ const Registration = () => {
                 />
               </InputBox>
 
-              <InputBox>
+              {/* <InputBox>
                 <InputLabel>Password</InputLabel>
                 <StyledTextField
                   id="password"
@@ -83,7 +83,7 @@ const Registration = () => {
                   value={password}
                   onChange={handlePasswordChange}
                 />
-              </InputBox>
+              </InputBox> */}
             </InputsContainer>
             <StyledButton sx={{ alignSelf: "stretch" }} type="submit" variant="contained" endIcon={<EastRoundedIcon />}>
               Start free trial

@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 
 import Hero from "../hero/hero.component";
 import Footer from "../footer/footer.component";
@@ -17,9 +18,11 @@ import UnmatchableBenefits from "../unmatchable-benefits/unmatchable-benefits.co
 import StickyCursor from "../../utils/framer-animations/sticky-cursor/sticky-cursor.component";
 
 import { HeaderHolder, RootContainer } from "./landing-page.style";
-import SmoothScroll from "../../utils/framer-animations/smooth-scroll/smooth-scroll.component";
 
 const LandingPage = () => {
+  const lenis = useLenis(({ scroll }) => {
+  });
+
   return (
     <>
       <StickyCursor />
@@ -27,20 +30,22 @@ const LandingPage = () => {
         <ProgressBar />
         <Header />
       </HeaderHolder>
-      <RootContainer>
-        <Hero />
-        <ProfitSection />
-        <SetUpRepricer />
-        <UniqueBenefits />
-        <Testimonials />
-        <Pricing />
-        <Products />
-        <CtaSection />
-        <Metrics />
-        <UnmatchableBenefits />
-        <Reasons />
-        <SetUpRepricer invertColors />
-      </RootContainer>
+      <ReactLenis root>
+        <RootContainer>
+          <Hero />
+          <ProfitSection />
+          <SetUpRepricer />
+          <UniqueBenefits />
+          <Testimonials />
+          <Pricing />
+          <Products />
+          <CtaSection />
+          <Metrics />
+          <UnmatchableBenefits />
+          <Reasons />
+          <SetUpRepricer invertColors />
+        </RootContainer>
+      </ReactLenis>
       <Footer />
     </>
   );
