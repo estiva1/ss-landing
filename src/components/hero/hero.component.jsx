@@ -71,11 +71,19 @@ const Hero = () => {
           </Headline>
           <SubHeadline>
             <ScrollReveal key="hero-paragraph" index={1}>
-              <Supporting>
-                The only Ai Repricer that will automatically&nbsp;
-                <SupportingHighlighted>increase your sales by 30%</SupportingHighlighted>, or&nbsp;
-                <SupportingHighlighted>we'll pay you $100</SupportingHighlighted>&nbsp;for wasting your time
-              </Supporting>
+              <>
+                <Supporting style={{ whiteSpace: "pre-line" }}>
+                  The only Ai Repricer that will automatically&nbsp;{`\n`}
+                </Supporting>
+                <span style={{ whiteSpace: "pre-line" }}>
+                  <SupportingHighlighted>increase your sales by 30%</SupportingHighlighted>
+                  <Supporting>, or&nbsp;{`\n`}</Supporting>
+                </span>
+                <span style={{ alignItems: "baseline" }}>
+                  <SupportingHighlighted>we'll pay you $100</SupportingHighlighted>
+                  <Supporting>&nbsp;for wasting your time</Supporting>
+                </span>
+              </>
             </ScrollReveal>
           </SubHeadline>
 

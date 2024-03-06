@@ -29,29 +29,51 @@ export const HeroContainer = styled.div`
   @media ${device.xl} {
     padding: 30px 80px 60px 80px;
   }
-  @media ${device.xs} {
-    padding: 60px 15px;
+  @media ${device.lg} {
+    padding: 20px 60px 40px 60px;
+  }
+  @media ${device.smd} {
+    padding: 20px 50px 40px 50px;
     flex-direction: column;
     row-gap: 40px;
+  }
+  @media ${device.sm} {
+    padding: 20px 30px 40px 30px;
+  }
+  @media ${device.xs} {
+    padding: 60px 15px;
   }
 `;
 
 export const HeroContent = styled.div`
-  width: 680px;
+  max-width: 680px;
   padding-top: 60px;
 
   @media ${device.xl} {
-    width: 620px;
+    max-width: 620px;
   }
-  @media ${device.xs} {
-    width: 100%;
+  @media ${device.lg} {
+    max-width: 440px;
+    padding-top: 30px;
+  }
+  @media ${device.md} {
+    max-width: 410px;
     padding-top: 0;
+  }
+  /* @media ${device.smd} {
+    max-width: 450px;
+  } */
+  @media ${device.smd} {
+    max-width: 100%;
   }
 `;
 
 export const Headline = styled.div`
   margin-bottom: 32px;
 
+  @media ${device.smd} {
+    margin-bottom: 24px;
+  }
   @media ${device.xs} {
     margin-bottom: 16px;
   }
@@ -60,7 +82,7 @@ export const Headline = styled.div`
 export const SubHeadline = styled.div`
   margin-bottom: 56px;
 
-  @media ${device.xs} {
+  @media ${device.smd} {
     margin-bottom: 50px;
   }
 `;
@@ -93,6 +115,10 @@ export const HeroText = styled(motion.span)`
       }
   `}
 
+  @media ${device.lg} {
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+  }
   @media ${device.xs} {
     font-size: 1.875rem;
     line-height: 2.175rem;
@@ -100,7 +126,7 @@ export const HeroText = styled(motion.span)`
   }
 `;
 
-export const Supporting = styled.p`
+export const Supporting = styled.span`
   color: #4e5969;
   font-family: Titillium Web;
   font-size: 1.75rem;
@@ -110,6 +136,10 @@ export const Supporting = styled.p`
   margin: 0;
   transition: all 0.25s ease-in;
 
+  @media ${device.lg} {
+    font-size: 1.4rem;
+    line-height: 160%;
+  }
   @media ${device.xs} {
     font-size: 1.375rem;
     line-height: 154%;
@@ -117,19 +147,41 @@ export const Supporting = styled.p`
 `;
 
 export const SupportingHighlighted = styled.strong`
+  position: relative;
   color: #000;
   font-family: Titillium Web;
   font-size: 2.375rem;
   font-style: normal;
   font-weight: 700;
   line-height: 170%;
-  background-image: linear-gradient(#f0e996 0%, #f0e996 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 90%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background: #f0e996;
+    transform: skew(-0.03turn);
+    z-index: -1;
+  }
+
+  @media ${device.lg} {
+    font-size: 1.875rem;
+    line-height: 160%;
+  }
 
   @media ${device.xs} {
     font-size: 1.625rem;
     line-height: 154%;
+    background-image: linear-gradient(#f0e996 0%, #f0e996 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+
+    &::after {
+      all: unset;
+    }
   }
 `;
 
@@ -202,6 +254,19 @@ const applyBaseStyleForSvgPath = () => {
 
 export const StyledHeroSvg = styled.svg`
   width: 400px;
+
+  @media ${device.lg} {
+    width: 350px;
+  }
+  @media ${device.md} {
+    width: 228px;
+  }
+  @media ${device.smd} {
+    width: 450px;
+  }
+  @media ${device.sm} {
+    width: 350px;
+  }
 
   .big-gear {
     ${applyBaseStyleForSvgPath};

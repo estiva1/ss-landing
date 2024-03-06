@@ -33,7 +33,7 @@ const LandingPage = () => {
       <ReactLenis root>
         <RootContainer>
           <Hero />
-          <ProfitSection />
+          {/* <ProfitSection />
           <SetUpRepricer />
           <UniqueBenefits />
           <Testimonials />
@@ -43,7 +43,7 @@ const LandingPage = () => {
           <Metrics />
           <UnmatchableBenefits />
           <Reasons />
-          <SetUpRepricer invertColors />
+          <SetUpRepricer invertColors /> */}
         </RootContainer>
       </ReactLenis>
       <Footer />
