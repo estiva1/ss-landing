@@ -17,6 +17,17 @@ export const StyledButton = styled(Button)`
     background-color: #1565d8;
     white-space: nowrap;
 
+    ${({ $inverted }) =>
+      $inverted &&
+      `
+      color: #000;
+      background-color: #f0e996;
+
+      &:hover {
+        background-color: #D3C960;
+      }
+    `}
+
     ${({ $white }) =>
       $white &&
       `

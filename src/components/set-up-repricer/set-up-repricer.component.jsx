@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import CustomButton from "../UI/button/button.component";
 import Sparkles from "../UI/sparkles/sparkles.component";
+import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import TextMaskAnimation from "../../utils/framer-animations/text-mask-animation/text-mask-animation.component";
 import ScrollReveal from "../../utils/framer-animations/scroll-reveal/simple-scroll-reveal/scroll-reveal.component";
 
@@ -191,7 +192,13 @@ const SetUpRepricer = ({ invertColors = false }) => {
 
         <MobileButtonBox>
           <Link to="/registration">
-            <CustomButton variant="contained">Turn On the Repricer NOW</CustomButton>
+            <CustomButton
+              variant="contained"
+              inverted={invertColors}
+              endIcon={invertColors ? <EastRoundedIcon /> : null}
+            >
+              {invertColors ? "Start now" : "Turn On the Repricer NOW"}
+            </CustomButton>
           </Link>
         </MobileButtonBox>
       </SetUpRepricerContainer>
