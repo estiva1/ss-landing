@@ -177,7 +177,7 @@ const Reasons = () => {
     <Wrapper>
       <ReasonsContainer>
         <Headline>
-          <Heading>Top reasons to start using Sale.Support Repricer</Heading>
+          <Heading>Top reasons to start using Repricer Support</Heading>
           <Paragraph>Your all-in-one repricing software now you can...</Paragraph>
         </Headline>
         <Box display="flex" flexDirection="column" width="100%">
