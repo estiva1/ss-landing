@@ -16,8 +16,11 @@ export const ProfitAmountBoxContainer = styled.div`
     width: 340px;
     padding: 16px;
   }
-
-  @media ${device.xs} {
+  @media ${device.lg} {
+    width: max-content;
+    padding: 16px;
+  }
+  @media ${device.smd} {
     flex-direction: row;
     width: 100%;
     gap: 16px;
@@ -30,9 +33,18 @@ export const TopSection = styled.div`
   align-items: flex-end;
   gap: 24px;
 
-  @media ${device.xs} {
-    align-items: center;
+  @media ${device.lg} {
     gap: 16px;
+  }
+  @media ${device.md} {
+    align-items: baseline;
+  }
+  @media ${device.smd} {
+    gap: 24px;
+  }
+  @media ${device.xs} {
+    gap: 16px;
+    align-items: center;
   }
 `;
 
@@ -73,7 +85,13 @@ export const ProfitAmount = styled.h2`
   @media ${device.xl} {
     font-size: 4.2rem;
   }
-  @media ${device.xs} {
+  @media ${device.lg} {
+    font-size: 3.75rem;
+  }
+  @media ${device.md} {
+    font-size: 2.5rem;
+  }
+  @media ${device.smd} {
     font-size: 3.125rem;
   }
 `;
@@ -102,7 +120,13 @@ export const ProfitAmountFlipped = styled.h2`
   @media ${device.xl} {
     font-size: 4.2rem;
   }
-  @media ${device.xs} {
+  @media ${device.lg} {
+    font-size: 3.75rem;
+  }
+  @media ${device.md} {
+    font-size: 2.5rem;
+  }
+  @media ${device.smd} {
     font-size: 3.125rem;
   }
 `;
@@ -128,6 +152,9 @@ export const ProfitIn = styled.span`
   @media ${device.xl} {
     font-size: 2.875rem;
   }
+  @media ${device.md} {
+    font-size: 2.3rem;
+  }
   @media ${device.xs} {
     font-size: 1.5rem;
     font-weight: 600;
@@ -143,9 +170,19 @@ export const ProfitAmountLabel = styled.span`
   line-height: 120%;
   padding-bottom: 11px;
 
-  @media ${device.xs} {
+  @media ${device.lg} {
     font-size: 1.125rem;
     font-weight: 600;
+  }
+  @media ${device.md} {
+    font-size: 0.975rem;
+  }
+  @media ${device.smd} {
+    font-size: 1.5rem;
+    padding-bottom: 0;
+  }
+  @media ${device.xs} {
+    font-size: 1.125rem;
     padding-bottom: 0;
   }
 `;

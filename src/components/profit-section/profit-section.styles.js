@@ -20,13 +20,22 @@ export const ProfitSectionContainer = styled.div`
   @media ${device.xl} {
     padding: 40px 80px;
   }
-  @media ${device.xs} {
-    padding: 40px 15px;
+  @media ${device.lg} {
+    padding: 40px 60px;
+  }
+  @media ${device.smd} {
+    padding: 40px 50px;
     flex-direction: column;
     row-gap: 32px;
 
     > * {
       width: 100%;
     }
+  }
+  @media ${device.sm} {
+    padding: 40px 30px;
+  }
+  @media ${device.xs} {
+    padding: 40px 15px;
   }
 `;
