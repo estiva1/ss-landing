@@ -41,6 +41,7 @@ export const Headline = styled.div`
 `;
 
 export const Heading = styled.h2`
+  display: inline;
   color: ${({ $invertColors }) => ($invertColors ? "#fff" : "#000")};
   text-align: center;
   font-family: Titillium Web;

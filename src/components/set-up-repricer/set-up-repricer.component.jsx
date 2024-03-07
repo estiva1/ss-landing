@@ -47,7 +47,6 @@ import {
 } from "./set-up-repricer.styles";
 
 const SetUpRepricer = ({ invertColors = false }) => {
-  const phrases = ["Set up your", "Repricer in less then 5 Minutes", "or else we give you 3 months free!"];
   const paragraph = ["Sales.Support Ai Repricer is your ultimate Amazon repricing solution to:"];
 
   const isInvertedColors = invertColors;
@@ -137,26 +136,25 @@ const SetUpRepricer = ({ invertColors = false }) => {
       <ShapeThree />
       <SetUpRepricerContainer>
         <Headline>
-          <div>
-            <Heading $invertColors={invertColors}>
-              <TextMaskAnimation phrases={phrases.slice(0, 1)} delay={0.075} />
-            </Heading>
-            <HeadingHighlighted>
-              <Sparkles>
-                <TextMaskAnimation phrases={phrases.slice(1, 2)} delay={0.15} />
-              </Sparkles>
-            </HeadingHighlighted>
-            <Heading $invertColors={invertColors}>
-              <TextMaskAnimation phrases={phrases.slice(2)} delay={0.225} />
-            </Heading>
-          </div>
+          <ScrollReveal key="set-up-repricer-heading" index={1}>
+            <div style={{ textAlign: "center" }}>
+              <Heading $invertColors={invertColors}>Set up your&nbsp;</Heading>
+              <HeadingHighlighted>
+                <Sparkles>Repricer in less then 5 Minutes&nbsp;</Sparkles>
+              </HeadingHighlighted>
+              <Heading $invertColors={invertColors} style={{ whiteSpace: "pre-line" }}>
+                or else{`\n`}we give you 3 months free!
+              </Heading>
+            </div>
+          </ScrollReveal>
+
           <Paragraph $invertColors={invertColors}>
             <TextMaskAnimation phrases={paragraph} delay={0.3} />
           </Paragraph>
         </Headline>
 
         <DesktopCarousel>
-          <ScrollReveal style={{ position: "relative" }} index={2}>
+          <ScrollReveal key="set-up-repricer-carousel" style={{ position: "relative" }} index={2}>
             <AliceCarousel
               className="alice-carousel"
               autoPlay

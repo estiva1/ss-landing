@@ -34,16 +34,16 @@ const LandingPage = () => {
         <RootContainer>
           <Hero />
           <ProfitSection />
-          {/* <SetUpRepricer />
-          <UniqueBenefits />
+          <SetUpRepricer />
+          {/* <UniqueBenefits />
           <Testimonials />
           <Pricing />
           <Products />
           <CtaSection />
           <Metrics />
           <UnmatchableBenefits />
-          <Reasons />
-          <SetUpRepricer invertColors /> */}
+          <Reasons /> */}
+          <SetUpRepricer invertColors />
         </RootContainer>
       </ReactLenis>
       <Footer />
