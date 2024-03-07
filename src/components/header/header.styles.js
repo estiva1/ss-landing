@@ -7,22 +7,25 @@ export const HeaderContainer = styled.div`
   justify-content: center;
   width: 100%;
   background-color: #ffffffbf; //bf === 75% of transparency
-  padding: 16px 130px;
 
-  @media ${device.xl} {
-    padding: 16px 80px;
-  }
-  @media ${device.lg} {
-    padding: 16px 60px 16px 60px;
-  }
-  @media ${device.smd} {
-    padding: 16px 50px 16px 50px;
-  }
-  @media ${device.sm} {
-    padding: 16px 30px 16px 30px;
-  }
-  @media ${device.xs} {
-    padding: 15px;
+  > :first-child {
+    padding: 16px 130px;
+
+    @media ${device.xl} {
+      padding: 16px 80px;
+    }
+    @media ${device.lg} {
+      padding: 16px 60px 16px 60px;
+    }
+    @media ${device.smd} {
+      padding: 16px 50px 16px 50px;
+    }
+    @media ${device.sm} {
+      padding: 16px 30px 16px 30px;
+    }
+    @media ${device.xs} {
+      padding: 15px;
+    }
   }
 `;
 

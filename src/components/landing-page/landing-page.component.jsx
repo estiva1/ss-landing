@@ -33,8 +33,8 @@ const LandingPage = () => {
       <ReactLenis root>
         <RootContainer>
           <Hero />
-          {/* <ProfitSection />
-          <SetUpRepricer />
+          <ProfitSection />
+          {/* <SetUpRepricer />
           <UniqueBenefits />
           <Testimonials />
           <Pricing />
