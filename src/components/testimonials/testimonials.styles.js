@@ -99,6 +99,9 @@ export const ColumnContainer = styled.div`
   padding-inline: 20px;
   padding-bottom: 40px;
 
+  @media ${device.lg} {
+    padding-inline: 8px;
+  }
   @media ${device.md} {
     width: 100%;
     padding-bottom: 30px;

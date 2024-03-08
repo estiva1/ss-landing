@@ -10,7 +10,7 @@ export const TestimonialBoxContainer = styled.div`
   border-radius: 20px;
 
   @media ${device.lg} {
-    width: 286px;
+    width: 262px;
   }
   @media ${device.md} {
     width: 100%;
@@ -44,6 +44,9 @@ export const TestimonialBoxBody = styled.div`
   border: 1px solid #c4c4c4;
   border-radius: 0px 0px 20px 20px;
 
+  @media ${device.lg} {
+    height: 284px;
+  }
   @media ${device.md} {
     height: auto;
   }
