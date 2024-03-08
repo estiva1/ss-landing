@@ -24,6 +24,15 @@ export const SetUpRepricerContainer = styled.div`
   @media ${device.xl} {
     padding: 100px 80px;
   }
+  @media ${device.lg} {
+    padding: 80px 60px;
+  }
+  @media ${device.smd} {
+    padding: 60px 50px;
+  }
+  @media ${device.sm} {
+    padding: 60px 30px;
+  }
   @media ${device.xs} {
     padding: 60px 15px;
     gap: 40px;
