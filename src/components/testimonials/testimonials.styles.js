@@ -26,6 +26,15 @@ export const TestimonialsContainer = styled.div`
   @media ${device.xl} {
     padding: 100px 80px;
   }
+  @media ${device.lg} {
+    padding: 80px 60px;
+  }
+  @media ${device.smd} {
+    padding: 60px 50px;
+  }
+  @media ${device.sm} {
+    padding: 60px 30px;
+  }
   @media ${device.xs} {
     padding: 60px 15px;
     gap: 40px;
@@ -73,7 +82,7 @@ export const Columns = styled.div`
     margin-bottom: -40px;
   }
 
-  @media ${device.xs} {
+  @media ${device.md} {
     > *:nth-last-child(-n + 3) {
       margin-bottom: 0;
     }
@@ -90,7 +99,7 @@ export const ColumnContainer = styled.div`
   padding-inline: 20px;
   padding-bottom: 40px;
 
-  @media ${device.xs} {
+  @media ${device.md} {
     width: 100%;
     padding-bottom: 30px;
   }

@@ -35,9 +35,9 @@ const LandingPage = () => {
           <Hero />
           <ProfitSection />
           <SetUpRepricer />
-          {/* <UniqueBenefits />
+          {/* <UniqueBenefits /> */}
           <Testimonials />
-          <Pricing />
+          {/* <Pricing />
           <Products />
           <CtaSection />
           <Metrics />
