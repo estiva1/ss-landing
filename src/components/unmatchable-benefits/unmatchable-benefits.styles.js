@@ -23,6 +23,15 @@ export const UnmatchableBenefitsContainer = styled.div`
   @media ${device.xl} {
     padding: 100px 80px;
   }
+  @media ${device.lg} {
+    padding: 80px 60px;
+  }
+  @media ${device.smd} {
+    padding: 60px 50px;
+  }
+  @media ${device.sm} {
+    padding: 60px 30px;
+  }
   @media ${device.xs} {
     padding: 60px 15px;
     gap: 40px;
@@ -76,7 +85,7 @@ export const Columns = styled.div`
     margin-bottom: -20px;
   }
 
-  @media ${device.xs} {
+  @media ${device.smd} {
     > *:nth-last-child(-n + 2) {
       margin-bottom: 0;
     }
@@ -92,7 +101,7 @@ export const ColumnContainer = styled.div`
   padding-inline: 10px;
   padding-bottom: 20px;
 
-  @media ${device.xs} {
+  @media ${device.smd} {
     width: 100%;
   }
 `;
@@ -109,7 +118,7 @@ export const UBenefitContainer = styled.section`
   background: #1565d8;
   box-shadow: 4px 4px 25px 0px rgba(111, 213, 246, 0.25);
 
-  @media ${device.xs} {
+  @media ${device.smd} {
     padding: 20px;
     gap: 8px;
   }
@@ -239,7 +248,7 @@ export const Decal = styled.span`
     left: 80px;
   }
 
-  @media ${device.xs} {
+  @media ${device.smd} {
     display: none;
   }
 `;

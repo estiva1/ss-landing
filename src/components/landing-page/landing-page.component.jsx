@@ -20,8 +20,7 @@ import StickyCursor from "../../utils/framer-animations/sticky-cursor/sticky-cur
 import { HeaderHolder, RootContainer } from "./landing-page.style";
 
 const LandingPage = () => {
-  const lenis = useLenis(({ scroll }) => {
-  });
+  const lenis = useLenis(({ scroll }) => {});
 
   return (
     <>
@@ -40,9 +39,9 @@ const LandingPage = () => {
           {/* <Pricing />
           <Products />
           <CtaSection />
-          <Metrics />
+          <Metrics /> */}
           <UnmatchableBenefits />
-          <Reasons /> */}
+          {/* <Reasons /> */}
           <SetUpRepricer invertColors />
         </RootContainer>
       </ReactLenis>
