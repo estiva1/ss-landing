@@ -24,6 +24,15 @@ export const ReasonsContainer = styled.div`
   @media ${device.xl} {
     padding: 100px 80px;
   }
+  @media ${device.lg} {
+    padding: 80px 60px;
+  }
+  @media ${device.smd} {
+    padding: 60px 50px;
+  }
+  @media ${device.sm} {
+    padding: 60px 30px;
+  }
   @media ${device.xs} {
     padding: 60px 15px;
     gap: 40px;
@@ -74,7 +83,7 @@ export const Paragraph = styled.span`
 export const SelectWrapper = styled.div`
   display: none;
 
-  @media ${device.xs} {
+  @media ${device.md} {
     display: block;
     width: 100%;
     margin-bottom: 40px;
@@ -89,7 +98,7 @@ export const TabsWrapper = styled.div`
   width: max-content;
   align-self: center;
 
-  @media ${device.xs} {
+  @media ${device.md} {
     display: none;
   }
 `;
@@ -105,7 +114,7 @@ export const Columns = styled.div`
     margin-bottom: -40px;
   }
 
-  @media ${device.xs} {
+  @media ${device.sm} {
     > *:nth-last-child(-n + 2) {
       margin-bottom: 0;
     }
@@ -125,7 +134,7 @@ export const ColumnContainer = styled.div`
     width: 100%;
   }
 
-  @media ${device.xs} {
+  @media ${device.sm} {
     width: 50%;
 
     &:last-child {

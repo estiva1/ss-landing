@@ -1,10 +1,15 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 import Box from "@mui/material/Box";
-import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
 import { styled } from "@mui/material/styles";
+import EastRoundedIcon from "@mui/icons-material/EastRounded";
+
+import CustomButton from "../UI/button/button.component";
+import Dropdown from "../UI/dropdown/dropdown.component";
 import {
   ColumnContainer,
   Columns,
@@ -32,10 +37,6 @@ import {
   TabsWrapper,
   Wrapper,
 } from "./reasons.styles";
-import Dropdown from "../UI/dropdown/dropdown.component";
-import { Link } from "react-router-dom";
-import CustomButton from "../UI/button/button.component";
-import EastRoundedIcon from "@mui/icons-material/EastRounded";
 
 const StyledTabs = styled((props) => (
   <Tabs {...props} TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" /> }} />
