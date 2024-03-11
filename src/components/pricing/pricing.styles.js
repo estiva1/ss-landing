@@ -22,6 +22,15 @@ export const PricingContainer = styled.div`
   @media ${device.xl} {
     padding: 100px 80px;
   }
+  @media ${device.lg} {
+    padding: 80px 60px;
+  }
+  @media ${device.smd} {
+    padding: 60px 50px;
+  }
+  @media ${device.sm} {
+    padding: 60px 30px;
+  }
   @media ${device.xs} {
     padding: 60px 15px;
     gap: 40px;
@@ -54,7 +63,7 @@ export const PricingVariantsBox = styled.div`
   background: #fff;
   overflow: hidden;
 
-  @media ${device.xs} {
+  @media ${device.md} {
     display: block;
   }
 `;
@@ -68,6 +77,10 @@ export const BasicSubscription = styled.div`
   background: #fff;
   border-radius: 20px;
 
+  @media ${device.lg} {
+    gap: 36px;
+    padding: 36px 48px;
+  }
   @media ${device.xs} {
     gap: 24px;
     padding: 32px 10px;
@@ -90,7 +103,24 @@ export const ColumnContainer = styled.div`
   padding-inline: 12px;
   padding-bottom: 24px;
 
-  @media ${device.xs} {
+  @media ${device.smd} {
+    width: 50%;
+  }
+  @media ${device.sm} {
+    width: 100%;
+  }
+`;
+
+export const ColumnContainerBasic = styled.div`
+  width: 100%;
+  height: max-content;
+  padding-inline: 12px;
+  padding-bottom: 24px;
+
+  @media ${device.md} {
+    width: 50%;
+  }
+  @media ${device.sm} {
     width: 100%;
   }
 `;
@@ -131,17 +161,17 @@ export const Price = styled.span`
   line-height: 120%;
 `;
 
-export const Options = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-  align-self: stretch;
-`;
+// export const Options = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   gap: 24px;
+//   align-self: stretch;
+// `;
 
 export const Option = styled(DelayedScrollReveal)`
   display: flex;
-  align-items: center;
+  // align-items: center;
   gap: 12px;
 `;
 
