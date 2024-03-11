@@ -23,6 +23,15 @@ export const MetricsContainer = styled.div`
   @media ${device.xl} {
     padding: 100px 80px;
   }
+  @media ${device.lg} {
+    padding: 80px 60px;
+  }
+  @media ${device.smd} {
+    padding: 60px 50px;
+  }
+  @media ${device.sm} {
+    padding: 60px 30px;
+  }
   @media ${device.xs} {
     padding: 60px 15px;
     gap: 40px;
@@ -91,7 +100,7 @@ export const ColumnContainer = styled.div`
     justify-content: center;
   }
 
-  @media ${device.xs} {
+  @media ${device.md} {
     width: 100%;
   }
 `;
@@ -100,10 +109,14 @@ export const ItemBox = styled.div`
   display: flex;
   width: 480px;
   flex-direction: column;
+  padding-inline: 10px;
   gap: 24px;
 
-  @media ${device.xs} {
+  @media ${device.md} {
     width: 100%;
+    padding-inline: 0;
+  }
+  @media ${device.xs} {
     gap: 12px;
   }
 `;
