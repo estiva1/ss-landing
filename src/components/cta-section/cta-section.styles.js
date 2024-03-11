@@ -18,15 +18,24 @@ export const CtaSectionContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 100px 130px;
-
   gap: 90px;
   isolation: isolate;
 
   @media ${device.xl} {
     padding: 100px 80px;
   }
-  @media ${device.xs} {
+  @media ${device.lg} {
+    padding: 80px 60px;
+    gap: 70px;
+  }
+  @media ${device.smd} {
     flex-direction: column-reverse;
+    padding: 60px 50px;
+  }
+  @media ${device.sm} {
+    padding: 60px 30px;
+  }
+  @media ${device.xs} {
     padding: 60px 15px;
     gap: 40px;
   }
@@ -43,8 +52,10 @@ export const Heading = styled.h2`
   margin: 0;
   margin-bottom: 24px;
 
-  @media ${device.xs} {
+  @media ${device.md} {
     text-align: start;
+  }
+  @media ${device.xs} {
     font-size: 1.5rem;
     line-height: 132%;
     margin-bottom: 8px;
@@ -66,7 +77,7 @@ export const Info = styled.span`
 `;
 
 export const ActionContainer = styled.div`
-  @media ${device.xs} {
+  @media ${device.smd} {
     width: 100%;
   }
 `;
@@ -82,7 +93,7 @@ export const Headline = styled.div`
 export const CtaBanner = styled.svg`
   width: 338px;
 
-  @media ${device.xs} {
+  @media ${device.smd} {
     width: 100%;
   }
 `;
@@ -103,7 +114,7 @@ export const Decal = styled.span`
     right: 80px;
   }
 
-  @media ${device.xs} {
+  @media ${device.smd} {
     display: none;
   }
 `;
