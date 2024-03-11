@@ -86,6 +86,8 @@ export const Columns = styled.div`
   }
 
   @media ${device.smd} {
+    margin-inline: -10px;
+    
     > *:nth-last-child(-n + 2) {
       margin-bottom: 0;
     }
@@ -102,6 +104,7 @@ export const ColumnContainer = styled.div`
   padding-bottom: 20px;
 
   @media ${device.smd} {
+    padding-inline: 0;
     width: 100%;
   }
 `;
