@@ -17,12 +17,20 @@ export const ProductsContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 100px 130px;
-
   gap: 50px;
   overflow: hidden;
 
   @media ${device.xl} {
     padding: 100px 80px;
+  }
+  @media ${device.lg} {
+    padding: 80px 60px;
+  }
+  @media ${device.smd} {
+    padding: 60px 50px;
+  }
+  @media ${device.sm} {
+    padding: 60px 30px;
   }
   @media ${device.xs} {
     padding: 60px 15px;
@@ -73,6 +81,9 @@ export const ProductsList = styled.div`
   align-self: stretch;
   gap: 100px;
 
+  @media ${device.smd} {
+    gap: 64px;
+  }
   @media ${device.xs} {
     gap: 32px;
   }
@@ -89,7 +100,7 @@ export const ProductContainer = styled.div`
     flex-direction: row-reverse;
   }
 
-  @media ${device.xs} {
+  @media ${device.md} {
     flex-direction: column-reverse;
     gap: 12px;
 
@@ -100,9 +111,9 @@ export const ProductContainer = styled.div`
 `;
 
 export const About = styled.div`
-  width: 500px;
+  width: fit-content;
 
-  @media ${device.xs} {
+  @media ${device.md} {
     width: 100%;
   }
 `;
@@ -141,8 +152,6 @@ export const Description = styled.p`
 export const ProductImage = styled.img`
   width: 640px;
   height: 100%;
-  flex-shrink: 0;
-
   border-radius: 8px;
   border: 2px solid #00a3ff;
   box-shadow: 4px 4px 25px 0px rgba(111, 213, 246, 0.25);
@@ -151,7 +160,7 @@ export const ProductImage = styled.img`
     width: 520px;
   }
 
-  @media only screen and (${device.xs}) {
+  @media only screen and (${device.md}) {
     width: 100%;
   }
 `;
