@@ -101,7 +101,7 @@ const Products = () => {
                 </About>
               </ScrollReveal>
 
-              <ScrollReveal index={index % 2 === 0 ? 2 : 1}>
+              <ScrollReveal style={{ width: "inherit" }} index={index % 2 === 0 ? 2 : 1}>
                 <ProductImage src={product.image} />
               </ScrollReveal>
             </ProductContainer>
