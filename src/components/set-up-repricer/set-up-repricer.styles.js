@@ -60,6 +60,9 @@ export const Heading = styled.h2`
   line-height: 100%;
   margin: 0;
 
+  @media ${device.md} {
+    font-size: 1.75rem;
+  }
   @media ${device.xs} {
     font-size: 1.5rem;
   }
@@ -69,10 +72,14 @@ export const HeadingHighlighted = styled(Heading)`
   color: #1565d8;
   font-size: 2.5rem;
 
+  @media ${device.md} {
+    font-size: 1.75rem;
+  }
   @media ${device.xs} {
     font-size: 1.5rem;
   }
 `;
+
 export const Paragraph = styled.span`
   color: ${({ $invertColors }) => ($invertColors ? "#fff" : "#4e5969")};
   text-align: center;
@@ -84,6 +91,9 @@ export const Paragraph = styled.span`
   margin: 0;
   margin-top: 8px;
 
+  @media ${device.md} {
+    font-size: 1.15rem;
+  }
   @media ${device.xs} {
     font-size: 1rem;
   }
