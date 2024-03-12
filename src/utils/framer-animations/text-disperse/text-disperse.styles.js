@@ -12,9 +12,15 @@ export const Introline = styled.div`
   letter-spacing: 0.0225rem;
   text-transform: uppercase;
 
+  @media ${device.lg} {
+    font-size: 1.5rem;
+  }
+  @media ${device.sm} {
+    font-size: 2rem;
+    letter-spacing: 0.01875rem;
+  }
   @media ${device.xs} {
     font-size: 1.875rem;
-    letter-spacing: 0.01875rem;
   }
 
   &:nth-of-type(5),

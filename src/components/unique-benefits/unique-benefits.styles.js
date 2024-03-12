@@ -25,6 +25,15 @@ export const UniqueBenefitsContainer = styled.div`
   @media ${device.xl} {
     padding: 100px 80px;
   }
+  @media ${device.lg} {
+    padding: 80px 60px;
+  }
+  @media ${device.smd} {
+    padding: 60px 50px;
+  }
+  @media ${device.sm} {
+    padding: 60px 30px;
+  }
   @media ${device.xs} {
     padding: 60px 15px;
     gap: 40px;
@@ -41,7 +50,7 @@ export const Heading = styled.h2`
   line-height: 120%;
   margin: 0;
 
-  @media ${device.xs} {
+  @media ${device.sm} {
     font-size: 1.5rem;
     line-height: 132%;
   }
@@ -56,7 +65,7 @@ export const Columns = styled.div`
     margin-bottom: -40px;
   }
 
-  @media ${device.xs} {
+  @media ${device.sm} {
     > *:nth-last-child(-n + 3) {
       margin-bottom: 0;
     }
@@ -73,7 +82,10 @@ export const ColumnContainer = styled.div`
   padding-inline: 16px;
   padding-bottom: 40px;
 
-  @media ${device.xs} {
+  @media ${device.md} {
+    width: 50%;
+  }
+  @media ${device.sm} {
     width: 100%;
     padding-bottom: 30px;
   }
@@ -83,8 +95,8 @@ export const BenefitImageBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 240px;
-  border-radius: 32px;
+  //height: 240px;
+  border-radius: 16px;
   background: #fff;
   border: 1px solid #c4c4c4;
   //box-shadow: 3.235px 3.235px 20.217px 0px rgba(111, 213, 246, 0.25), 1.2px 1.2px 2px #00a3ff;
@@ -98,7 +110,7 @@ export const BenefitContainer = styled(DelayedScrollReveal)`
   align-items: flex-start;
   gap: 16px;
 
-  @media ${device.xs} {
+  @media ${device.sm} {
     gap: 8px;
   }
 
@@ -145,9 +157,15 @@ export const CaptionPrimary = styled.span`
   letter-spacing: 0.0225rem;
   text-transform: uppercase;
 
+  @media ${device.lg} {
+    font-size: 1.5rem;
+  }
+  @media ${device.sm} {
+    font-size: 2rem;
+    letter-spacing: 0.01875rem;
+  }
   @media ${device.xs} {
     font-size: 1.875rem;
-    letter-spacing: 0.01875rem;
   }
 `;
 
@@ -166,7 +184,7 @@ export const Paragraph = styled.p`
 `;
 
 export const MobileButtonBox = styled(FramerMagnetic)`
-  @media ${device.xs} {
+  @media ${device.sm} {
     align-self: stretch;
   }
 `;
