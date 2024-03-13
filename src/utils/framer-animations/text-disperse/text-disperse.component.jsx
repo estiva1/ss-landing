@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+
 import { disperse } from "./anim";
 import { Introline } from "./text-disperse.styles";
 

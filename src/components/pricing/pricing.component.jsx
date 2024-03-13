@@ -14,11 +14,9 @@ import {
   ColumnContainer,
   ColumnContainerBasic,
   Columns,
-  ColumnsBasic,
   Heading,
   Option,
   OptionText,
-  Options,
   PremiumSubscription,
   Price,
   PriceVariantsHeading,
@@ -62,8 +60,8 @@ const Pricing = () => {
 
             <Columns>
               {basicSubscriptionOptions.map((option, index) => (
-                <ColumnContainerBasic>
-                  <Option key={index} index={index}>
+                <ColumnContainerBasic key={index} index={index}>
+                  <Option>
                     <CheckMark />
                     <OptionText>{option}</OptionText>
                   </Option>

@@ -39,7 +39,7 @@ export const HeaderLogo = styled.img`
 export const StyledLink = styled(Link)`
   display: block;
 
-  @media ${device.xs} {
+  @media ${device.sm} {
     display: none;
   }
 `;
